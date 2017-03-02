@@ -5,7 +5,21 @@ set(CMAKE_CXX_STANDARD 11)
 enable_testing()
 
 # Source files
-set(SOURCE_FILES src/hello.cpp include/hello.h) # Add new source files here
+SET(SOURCE_FILES
+        src/Animalia/Aves/Aves.cpp
+        src/Animalia/Aves/Aves.h
+        src/Animalia/Mammals/Mammals.cpp
+        src/Animalia/Mammals/Mammals.h
+        src/Animalia/Pisces/Pisces.cpp
+        src/Animalia/Pisces/Pisces.h
+        src/Animalia/Reptile/Reptile.cpp
+        src/Animalia/Reptile/Reptile.h
+        src/Cell/Habitat/Habitat.cpp
+        src/Cell/Habitat/Habitat.h
+        src/Renderable/Renderable.h
+        src/Zoo/Zoo.cpp
+        src/Zoo/Zoo.h
+        ) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
 
 # Load Google Test settings
@@ -17,7 +31,10 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 # Test files
-set(TEST_FILES test/hello_test.cpp) # Add new test files here
-add_executable(virtualzoo_test test/test.cpp ${TEST_FILES} ${SOURCE_FILES})
+SET(TEST_FILES
+        test/test.cpp
+        test/Zoo_test.cpp
+        ) # Add new test files here
+add_executable(virtualzoo_test ${TEST_FILES} ${SOURCE_FILES})
 target_link_libraries(virtualzoo_test ${PThreadLib} ${GTEST_BOTH_LIBRARIES})
-GTEST_ADD_TESTS(virtualzoo_test "" test/test.cpp ${TEST_FILES} ${SOURCE_FILES})
+GTEST_ADD_TESTS(virtualzoo_test "" ${TEST_FILES} ${SOURCE_FILES})
