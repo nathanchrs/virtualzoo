@@ -14,6 +14,7 @@ Orangutan::Orangutan() {
     landAnimal=true;
     waterAnimal=false;
     airAnimal=false;
+    reproduction="vivipar";
     //Position belum
 }
 
@@ -21,5 +22,5 @@ Orangutan::Orangutan() {
   * @return Experience yang dirasakan ketika berinteraksi dengan Orangutan.
   */
 string Orangutan::Interact() {
-    return "The Orangutan is hanging around the trees, picking every fruits and eating them.";
+    return "The orangutan is hanging around the trees, picking every fruits and eating them.";
 }

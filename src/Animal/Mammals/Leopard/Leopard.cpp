@@ -14,6 +14,7 @@ Leopard::Leopard() {
     landAnimal=true;
     waterAnimal=false;
     airAnimal=false;
+    reproduction="vivipar";
     //Position belum
 }
 
@@ -21,5 +22,5 @@ Leopard::Leopard() {
   * @return Experience yang dirasakan ketika berinteraksi dengan Leopard.
   */
 string Leopard::Interact() {
-    return "The Leopard is sleeping with their family."
+    return "The leopard is sleeping with their family."
 }

@@ -11,6 +11,7 @@ Tiger::Tiger() {
     landAnimal = true;
     waterAnimal = false;
     airAnimal = false;
+    reproduction = "vivipar";
     //Position belum
 }
 

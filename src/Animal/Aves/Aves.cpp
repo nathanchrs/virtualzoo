@@ -4,6 +4,5 @@
   * Menciptakan Aves yang memiliki skinType "Feather" dan reproduction "Ovipar".
   */
 Aves::Aves() {
-    reproduction="Ovipar";
     skinType="Feather";
 }

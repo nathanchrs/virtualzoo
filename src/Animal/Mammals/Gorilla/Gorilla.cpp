@@ -14,6 +14,7 @@ Gorilla::Gorilla() {
     landAnimal=true;
     waterAnimal=false;
     airAnimal=false;
+    reproduction="vivipar";
     //Position belum
 }
 
@@ -21,5 +22,5 @@ Gorilla::Gorilla() {
   * @return Experience yang dirasakan ketika berinteraksi dengan Gorilla.
   */
 string Gorilla::Interact() {
-    return "The Gorilla is looking happy as it is telling you to play with him.";
+    return "The gorilla is playing with its toy.";
 }
