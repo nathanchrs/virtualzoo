@@ -22,5 +22,5 @@ Leopard::Leopard() {
   * @return Experience yang dirasakan ketika berinteraksi dengan Leopard.
   */
 string Leopard::Interact() {
-    return "The leopard is sleeping with their family."
+    return "The leopard is sleeping with their family.";
 }
