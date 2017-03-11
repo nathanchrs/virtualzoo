@@ -9,17 +9,17 @@
 #include "../../Diet/Carnivore/Carnivore.h"
 
 /** @class Leopard
-  * Kelas Leopard yang merepesentasikan Leopard.
+  * Kelas Leopard yang merepesentasikan macan tutul.
   */
 class Leopard : public Mammals, public Carnivore{
 public:
     /** @brief Constructor.
-      * Menciptakan Leopard.
+      * Menciptakan macan tutul.
       */
-    Leopard();
+    Leopard(int _weight);
 
-    /** @brief Melakukan interaksi dengan Leopard.
-      * @return Experience yang dirasakan ketika berinteraksi dengan Leopard.
+    /** @brief Melakukan interaksi dengan macan tutul.
+      * @return Experience yang dirasakan ketika berinteraksi dengan macan tutul.
       */
     string Interact();
 };

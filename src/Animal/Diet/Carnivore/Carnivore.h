@@ -13,7 +13,7 @@ public:
       * Menciptakan hewan karnivora dengan berat tertentu.
       * @param _weight Berat dari hewan.
       */
-    Carnivore();
+    Carnivore(int _weight);
 
     /** @brief Menghitung banyaknya makanan yang dikonsumsi setiap hari relatif terhadap berat badannnya.
       * @return Banyaknya makanan yang dikonsumsi setiap hari.

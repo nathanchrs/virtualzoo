@@ -9,18 +9,18 @@
 #include "../Mammals.h"
 #include "../../Diet/Carnivore/Carnivore.h"
 
-/** @class Lion
-  * Kelas Lion yang merepesentasikan Lion.
+/** @class Tiger
+  * Kelas Tiger yang merepesentasikan harimau.
   */
 class Tiger : public Mammals, public Carnivore {
 public:
     /** @brief Constructor.
-      * Menciptakan Tiger.
+      * Menciptakan harimau.
       */
-    Tiger();
+    Tiger(int _weight);
 
-    /** @brief Melakukan interaksi dengan Tiger.
-      * @return Experience yang dirasakan ketika berinteraksi dengan Tiger.
+    /** @brief Melakukan interaksi dengan harimau.
+      * @return Experience yang dirasakan ketika berinteraksi dengan harimau.
       */
     string Interact();
 };

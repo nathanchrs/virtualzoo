@@ -10,17 +10,17 @@
 #include "../../Diet/Carnivore/Carnivore.h"
 
 /** @class Lion
-  * Kelas Lion yang merepesentasikan Lion.
+  * Kelas Lion yang merepesentasikan singa.
   */
 class Lion : public Mammals, public Carnivore{
 public:
     /** @brief Constructor.
-      * Menciptakan Lion.
+      * Menciptakan singa.
       */
-    Lion();
+    Lion(int _weight);
 
     /** @brief Melakukan interaksi dengan Lion.
-      * @return Experience yang dirasakan ketika berinteraksi dengan Lion.
+      * @return Experience yang dirasakan ketika berinteraksi dengan singa.
       */
     string Interact();
 };

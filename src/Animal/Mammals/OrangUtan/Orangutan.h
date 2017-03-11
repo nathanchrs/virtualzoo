@@ -9,17 +9,17 @@
 #include "../../Diet/Omnivore/Omnivore.h"
 
 /** @class Orangutan
-  * Kelas Orangutan yang merepesentasikan Orangutan.
+  * Kelas Orangutan yang merepesentasikan orangutan.
   */
 class Orangutan : public Mammals, public Omnivore {
 public:
     /** @brief Constructor.
-      * Menciptakan Orangutan.
+      * Menciptakan orangutan.
       */
-    Orangutan();
+    Orangutan(int _weight);
 
-    /** @brief Melakukan interaksi dengan Orangutan.
-      * @return Experience yang dirasakan ketika berinteraksi dengan Orangutan.
+    /** @brief Melakukan interaksi dengan orangutan.
+      * @return Experience yang dirasakan ketika berinteraksi dengan orangutan.
       */
     string Interact();
 };

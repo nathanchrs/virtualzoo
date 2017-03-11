@@ -9,17 +9,17 @@
 #include "../../Diet/Omnivore/Omnivore.h"
 
 /** @class Gorilla
-  * Kelas Gorilla yang merepesentasikan Gorilla.
+  * Kelas Gorilla yang merepesentasikan gorilla.
   */
 class Gorilla : public Mammals, public Omnivore {
 public:
     /** @brief Constructor.
-      * Menciptakan Gorilla.
+      * Menciptakan gorilla.
       */
-    Gorilla();
+    Gorilla(int _weight);
 
-    /** @brief Melakukan interaksi dengan Gorilla.
-      * @return Experience yang dirasakan ketika berinteraksi dengan Gorilla.
+    /** @brief Melakukan interaksi dengan gorilla.
+      * @return Experience yang dirasakan ketika berinteraksi dengan gorilla.
       */
     string Interact();
 };
