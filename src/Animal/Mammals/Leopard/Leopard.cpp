@@ -3,3 +3,23 @@
 //
 
 #include "Leopard.h"
+
+/** @brief Constructor.
+  * Menciptakan Leopard.
+  */
+Leopard::Leopard() {
+    name="Leopard";
+    description="Leopard is an animal from Africa and Asia. It is one of the five 'big cats' with ability to adapt various habitats and could run at speeds of up to 58 kmph. This vivipar animal has land as its habitat.";
+    wild=false;
+    landAnimal=true;
+    waterAnimal=false;
+    airAnimal=false;
+    //Position belum
+}
+
+/** @brief Melakukan interaksi dengan Leopard.
+  * @return Experience yang dirasakan ketika berinteraksi dengan Leopard.
+  */
+string Leopard::Interact() {
+    return "The Leopard is sleeping with their family."
+}
