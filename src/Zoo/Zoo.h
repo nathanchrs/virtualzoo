@@ -30,8 +30,7 @@ public:
     Zoo& operator=(const Zoo&);
 
 protected:
-    std::string name;
-    std::string reproduction;
+
 };
 
 #endif //ZOO_H
