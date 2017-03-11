@@ -20,7 +20,7 @@ SET(SOURCE_FILES
         src/Zoo/Zoo.cpp
         src/Zoo/Zoo.h
         src/Point/Point.cpp
-        src/Point/Point.h) # Add new source files here
+        src/Point/Point.h src/Animal/Diet/Diet.h src/Animal/Diet/Carnivore/Carnivore.cpp src/Animal/Diet/Carnivore/Carnivore.h src/Animal/Diet/Herbivore/Herbivore.cpp src/Animal/Diet/Herbivore/Herbivore.h src/Animal/Diet/Omnivore/Omnivore.cpp src/Animal/Diet/Omnivore/Omnivore.h src/Animal/Mammals/OrangUtan/Orangutan.cpp src/Animal/Mammals/OrangUtan/Orangutan.h) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
 
 # Load Google Test settings
