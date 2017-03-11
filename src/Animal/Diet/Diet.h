@@ -1,7 +1,3 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #ifndef DIET_H
 #define DIET_H
 
