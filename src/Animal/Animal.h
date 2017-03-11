@@ -12,13 +12,13 @@ public:
       * Merupakan pure virtual function.
       * @return string yang menggambarkan experience yang dapat didengar, dirasakan, atau dilihat seorang pengunjung.
       */
-    virtual string interact() = 0;
+    virtual string Interact() = 0;
 
    /** @brief Bergerak ke posisi lain.
      * @param x Nilai perubahan absis.
      * @param y Nilai perubahan ordinat.
      */
-    void move(int x, int y);
+    void Move(int x, int y);
 
     /** @brief Memeriksa apakah hewan buas atau tidak.
       * @return True jika hewan adalah hewan buas dan False jika tidak.
@@ -38,7 +38,7 @@ public:
     /** @brief Memeriksa apakah hewan adalah hewan udara atau tidak.
       * @return True jika hewan adalah hewan udara dan False jika tidak.
       */
-    bool isAirAnimal();
+    bool IsAirAnimal();
 
 protected :
     string name;

@@ -13,17 +13,17 @@ public:
     /** @brief Memeriksa apakah hewan karnivora atau tidak.
       * @return True jika hewan adalah hewan karnivora dan False jika tidak.
       */
-    bool isCarnivore();
+    bool IsCarnivore();
 
     /** @brief Memeriksa apakah hewan herbivora atau tidak.
       * @return True jika hewan adalah hewan herbivora dan False jika tidak.
       */
-    bool isHerbivore();
+    bool IsHerbivore();
 
     /** @brief Memeriksa apakah hewan omnivora atau tidak.
       * @return True jika hewan adalah hewan omnivora dan False jika tidak.
       */
-    bool isOmnivore();
+    bool IsOmnivore();
 
     /** @brief Menghitung banyaknya makanan yang dikonsumsi setiap hari relatif terhadap berat badannnya.
       * Merupakan pure virtual function.

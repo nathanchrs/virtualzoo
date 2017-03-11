@@ -5,14 +5,13 @@
 #ifndef ORANGUTAN_H
 #define ORANGUTAN_H
 
-
-#include "../../Animal.h"
+#include "../Mammals.h"
 #include "../../Diet/Omnivore/Omnivore.h"
 
 /** @class Orangutan
   * Kelas Orangutan yang merepesentasikan Orangutan.
   */
-class Orangutan : public Animal, public Omnivore {
+class Orangutan : public Mammals, public Omnivore {
 public:
     /** @brief Constructor.
       * Menciptakan Orangutan.
@@ -22,7 +21,7 @@ public:
     /** @brief Melakukan interaksi dengan Orangutan.
       * @return Experience yang dirasakan ketika berinteraksi dengan Orangutan.
       */
-    string interact();
+    string Interact();
 };
 
 #endif //ORANGUTAN_H
