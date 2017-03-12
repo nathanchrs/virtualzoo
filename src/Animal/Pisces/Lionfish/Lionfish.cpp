@@ -6,5 +6,5 @@ Lionfish::Lionfish(int _weight) : Pisces("Lionfish"), Carnivore(_weight) {
 }
 
 string Lionfish::interact() const {
-    return "Whoa! I thought it was plant. It is lionfish!"; // TODO interaction
+    return "Whoa! I thought it was plant. It is lionfish!";
 }

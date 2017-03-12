@@ -6,5 +6,5 @@ Barracuda::Barracuda(int _weight) : Pisces("Barracuda"), Carnivore(_weight) {
 }
 
 string Barracuda::interact() const {
-    return "The barracuda is eating."; // TODO interaction
+    return "The barracuda is eating.";
 }
