@@ -9,9 +9,10 @@
 class Mammals : public Animal{
 public:
     /** @brief Constructor.
-     * Menciptakan Mamalia yang memiliki skinType "Hair" dan reproduction "Vivipar".
+     * Menciptakan Mamalia yang memiliki skinType "Fur" dan reproduction "Vivipar".
+     * @param name Nama hewan
      */
-    Mammals();
+    Mammals(const string &name);
 };
 
 #endif //MAMMALS_H

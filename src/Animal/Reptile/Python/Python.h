@@ -17,7 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan ular piton.
       * @return Experience yang dirasakan ketika berinteraksi dengan ular piton.
       */
-    string Interact();
+    string interact() const;
 };
 
 

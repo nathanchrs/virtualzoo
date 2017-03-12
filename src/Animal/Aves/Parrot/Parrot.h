@@ -16,8 +16,7 @@ class Parrot : public Aves, public Herbivore {
     /** @brief Melakukan interaksi dengan burung beo.
       * @return Experience yang dirasakan ketika berinteraksi dengan burung beo.
       */
-    string Interact();
+    string interact() const;
 };
-
 
 #endif //PARROT_H

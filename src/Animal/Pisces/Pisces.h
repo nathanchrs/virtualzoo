@@ -9,9 +9,10 @@
 class Pisces : public Animal {
 public:
     /** @brief Constructor.
-      * Menciptakan Pisces yang memiliki skinType "Scale" dan reproduction "?".
+      * Menciptakan Pisces yang memiliki skinType "Scales" dan reproduction "Ovipar".
+      * @param name Nama hewan
       */
-    Pisces();
+    Pisces(const string &name);
 };
 
 #endif //PISCES_H

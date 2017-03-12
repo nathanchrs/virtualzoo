@@ -1,5 +1,9 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "Python.h"
+
+Python::Python(int _weight) : Reptile("Python"), Carnivore(_weight) {
+    description = "<Python description>"; //TODO description
+}
+
+string Python::interact() const {
+    return "<Python interaction>"; // TODO interaction
+}

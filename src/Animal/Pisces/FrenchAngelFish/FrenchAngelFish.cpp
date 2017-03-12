@@ -1,5 +1,9 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "FrenchAngelFish.h"
+
+FrenchAngelFish::FrenchAngelFish(int _weight) : Pisces("FrenchAngelFish"), Herbivore(_weight) {
+    description = "<FrenchAngelFish description>"; //TODO description
+}
+
+string FrenchAngelFish::interact() const {
+    return "<FrenchAngelFish interaction>"; // TODO interaction
+}

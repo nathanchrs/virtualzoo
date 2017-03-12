@@ -1,5 +1,9 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "Lionfish.h"
+
+Lionfish::Lionfish(int _weight) : Pisces("Lionfish"), Carnivore(_weight) {
+    description = "<Lionfish description>"; //TODO description
+}
+
+string Lionfish::interact() const {
+    return "<Lionfish interaction>"; // TODO interaction
+}

@@ -1,7 +1,6 @@
 #ifndef PIGEON_H
 #define PIGEON_H
 
-
 #include "../Aves.h"
 #include "../../Diet/Herbivore/Herbivore.h"
 
@@ -18,8 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan burung merpati.
       * @return Experience yang dirasakan ketika berinteraksi dengan burung merpati.
       */
-    string Interact();
+    string interact() const;
 };
-
 
 #endif //PIGEON_H

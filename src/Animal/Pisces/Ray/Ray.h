@@ -17,7 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan ikan pari.
       * @return Experience yang dirasakan ketika berinteraksi dengan ikan pari.
       */
-    string Interact();
+    string interact() const;
 };
 
 

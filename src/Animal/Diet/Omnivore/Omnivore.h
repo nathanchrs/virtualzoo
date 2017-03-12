@@ -10,6 +10,7 @@
 
 class Omnivore : public Diet{
 public:
+
     /** @brief Constructor.
       * Menciptakan hewan omnivora dengan berat tertentu.
       * @param _weight Berat dari hewan.
@@ -19,7 +20,8 @@ public:
     /** @brief Menghitung banyaknya makanan yang dikonsumsi setiap hari relatif terhadap berat badannnya.
       * @return Banyaknya makanan yang dikonsumsi setiap hari.
       */
-    int GetTotalFood();
+    int calculateTotalFood() const;
+
 };
 
 

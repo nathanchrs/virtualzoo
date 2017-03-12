@@ -1,5 +1,9 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "KomodoDragon.h"
+
+KomodoDragon::KomodoDragon(int _weight) : Reptile("KomodoDragon"), Carnivore(_weight) {
+    description = "<KomodoDragon description>"; //TODO description
+}
+
+string KomodoDragon::interact() const {
+    return "<KomodoDragon interaction>"; // TODO interaction
+}

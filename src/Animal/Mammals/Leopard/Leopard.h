@@ -1,7 +1,3 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #ifndef LEOPARD_H
 #define LEOPARD_H
 
@@ -21,8 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan macan tutul.
       * @return Experience yang dirasakan ketika berinteraksi dengan macan tutul.
       */
-    string Interact();
+    string interact() const;
 };
-
 
 #endif //LEOPARD_H

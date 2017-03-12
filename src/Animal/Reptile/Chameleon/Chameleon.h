@@ -17,7 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan bunglon.
       * @return Experience yang dirasakan ketika berinteraksi dengan bunglon.
       */
-    string Interact();
+    string interact() const;
 };
 
 

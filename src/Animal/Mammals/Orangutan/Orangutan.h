@@ -1,7 +1,3 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #ifndef ORANGUTAN_H
 #define ORANGUTAN_H
 
@@ -21,7 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan orangutan.
       * @return Experience yang dirasakan ketika berinteraksi dengan orangutan.
       */
-    string Interact();
+    string interact() const;
 };
 
 #endif //ORANGUTAN_H

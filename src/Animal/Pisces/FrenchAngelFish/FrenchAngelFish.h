@@ -17,7 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan french angelfish.
       * @return Experience yang dirasakan ketika berinteraksi dengan french angelfish.
       */
-    string Interact();
+    string interact() const;
 };
 
 

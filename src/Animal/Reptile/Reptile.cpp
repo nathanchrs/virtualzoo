@@ -1,8 +1,6 @@
 #include "Reptile.h"
 
 /** @brief Constructor.
-  * Menciptakan Reptil yang memiliki skinType "Scutes" dan reproduction "Ovovivipar".
+  * Menciptakan Reptil yang memiliki skinType "Scales" dan reproduction "Ovipar".
   */
-Reptile::Reptile() {
-    skinType="Scutes";
-}
+Reptile::Reptile(const string &name) : Animal(name), skinType(SkinType::Scales), reproduction(Reproduction::Ovipar) {}

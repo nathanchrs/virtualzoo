@@ -1,5 +1,7 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "Omnivore.h"
+
+Omnivore::Omnivore(int _weight) : Diet(_weight) {}
+
+int Omnivore::calculateTotalFood() const {
+    return weight; // TODO multiply by food requirements
+}

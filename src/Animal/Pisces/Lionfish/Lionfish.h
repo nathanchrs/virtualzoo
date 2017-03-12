@@ -17,7 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan lionfish.
       * @return Experience yang dirasakan ketika berinteraksi dengan lionfish.
       */
-    string Interact();
+    string interact const();
 };
 
 

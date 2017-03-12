@@ -1,7 +1,6 @@
 #ifndef SEAHORSE_H
 #define SEAHORSE_H
 
-
 #include "../Pisces.h"
 #include "../../Diet/Carnivore/Carnivore.h"
 
@@ -18,8 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan kuda laut.
       * @return Experience yang dirasakan ketika berinteraksi dengan kuda laut.
       */
-    string Interact();
+    string interact() const;
 };
-
 
 #endif //SEAHORSE_H

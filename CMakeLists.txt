@@ -28,11 +28,12 @@ SET(SOURCE_FILES
         src/Animal/Diet/Herbivore/Herbivore.h
         src/Animal/Diet/Omnivore/Omnivore.cpp
         src/Animal/Diet/Omnivore/Omnivore.h
-        src/Animal/Mammals/OrangUtan/Orangutan.cpp
-        src/Animal/Mammals/OrangUtan/Orangutan.h
+        src/Animal/Mammals/Orangutan/Orangutan.cpp
+        src/Animal/Mammals/Orangutan/Orangutan.h
         src/Animal/Mammals/Gorilla/Gorilla.cpp
         src/Animal/Mammals/Gorilla/Gorilla.h
         src/Animal/Animal.cpp
+        src/Animal/Animal.h
         src/Animal/Mammals/Leopard/Leopard.cpp
         src/Animal/Mammals/Leopard/Leopard.h
         src/Animal/Mammals/Lion/Lion.cpp
@@ -58,7 +59,7 @@ SET(SOURCE_FILES
         src/Animal/Pisces/Ray/Ray.cpp
         src/Animal/Pisces/Ray/Ray.h
         src/Animal/Pisces/Seahorse/Seahorse.cpp
-        src/Animal/Pisces/Seahorse/Seahorse.h src/Animal/Reptile/Chameleon/Chameleon.cpp src/Animal/Reptile/Chameleon/Chameleon.h src/Animal/Reptile/Cobra/Cobra.cpp src/Animal/Reptile/Cobra/Cobra.h src/Animal/Reptile/Iguana/Iguana.cpp src/Animal/Reptile/Iguana/Iguana.h src/Animal/Reptile/KomodoDragon/KomodoDragon.cpp src/Animal/Reptile/KomodoDragon/KomodoDragon.h src/Animal/Reptile/Python/Python.cpp src/Animal/Reptile/Python/Python.h) # Add new source files here
+        src/Animal/Pisces/Seahorse/Seahorse.h src/Animal/Reptile/Chameleon/Chameleon.cpp src/Animal/Reptile/Chameleon/Chameleon.h src/Animal/Reptile/Cobra/Cobra.cpp src/Animal/Reptile/Cobra/Cobra.h src/Animal/Reptile/Iguana/Iguana.cpp src/Animal/Reptile/Iguana/Iguana.h src/Animal/Reptile/KomodoDragon/KomodoDragon.cpp src/Animal/Reptile/KomodoDragon/KomodoDragon.h src/Animal/Reptile/Python/Python.cpp src/Animal/Reptile/Python/Python.h src/Animal/Diet/Diet.cpp) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
 
 # Load Google Test settings

@@ -13,6 +13,9 @@
   */
 class Gorilla : public Mammals, public Omnivore {
 public:
+
+    Gorilla();
+
     /** @brief Constructor.
       * Menciptakan gorilla.
       */
@@ -21,7 +24,7 @@ public:
     /** @brief Melakukan interaksi dengan gorilla.
       * @return Experience yang dirasakan ketika berinteraksi dengan gorilla.
       */
-    string Interact();
+    string interact() const;
 };
 
 

@@ -2,56 +2,62 @@
 #define ANIMAL_H
 #include <string>
 #include "../Point/Point.h"
-
+#include "../Renderable/Renderable.h"
 using namespace std;
 
 /** @class Animal
   * Kelas abstrak Animal yang merepesentasikan seekor hewan.
   */
-class Animal {
+class Animal : public Renderable {
 public:
+
+    enum Reproduction { Ovipar, Vivipar, Ovovivipar };
+    enum SkinType { Feather, Fur, Scales };
+
+    Animal(const string &name);
+
+    string getName() const;
+
+    void setName(const string &name);
+
+    string getDescription() const;
+
+    void setDescription(const string &description);
+
+    /**
+     * @brief Memeriksa apakah hewan buas atau tidak.
+     * @return True jika hewan adalah hewan buas dan False jika tidak.
+     */
+    bool isWild() const;
+
+    void setWild(bool wild);
+
+    Reproduction getReproduction() const;
+
+    void setReproduction(const Reproduction &reproduction);
+
+    SkinType getSkinType() const;
+
+    void setSkinType(const SkinType &skinType);
+
+    Point getPosition() const;
+
+    void setPosition(const Point &position);
+
     /** @brief Melakukan interaksi dengan seekor hewan.
       * Merupakan pure virtual function.
       * @return string yang menggambarkan experience yang dapat didengar, dirasakan, atau dilihat seorang pengunjung.
       */
-    virtual string Interact() = 0;
-
-   /** @brief Bergerak ke posisi lain.
-     * @param x Nilai perubahan absis.
-     * @param y Nilai perubahan ordinat.
-     */
-    void Move(int x, int y);
-
-    /** @brief Memeriksa apakah hewan buas atau tidak.
-      * @return True jika hewan adalah hewan buas dan False jika tidak.
-      */
-    bool IsWild();
-
-    /** @brief Memeriksa apakah hewan adalah hewan darat atau tidak.
-      * @return True jika hewan adalah hewan darat dan False jika tidak.
-      */
-    bool IsLandAnimal();
-
-    /** @brief Memeriksa apakah hewan adalah hewan air atau tidak.
-      * @return True jika hewan adalah hewan air dan False jika tidak.
-      */
-    bool IsWaterAnimal();
-
-    /** @brief Memeriksa apakah hewan adalah hewan udara atau tidak.
-      * @return True jika hewan adalah hewan udara dan False jika tidak.
-      */
-    bool IsAirAnimal();
+    virtual string interact() = 0;
 
 protected :
     string name;
-    string reproduction;
+    Reproduction reproduction;
+    SkinType skinType;
     string description;
-    string skinType;
     bool wild;
-    bool landAnimal;
-    bool waterAnimal;
-    bool airAnimal;
     Point position;
 };
+
 
 #endif //ANIMALIA_H

@@ -1,5 +1,9 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "Iguana.h"
+
+Iguana::Iguana(int _weight) : Reptile("Iguana"), Carnivore(_weight) {
+    description = "<Iguana description>"; //TODO description
+}
+
+string Iguana::interact() const {
+    return "<Iguana interaction>"; // TODO interaction
+}

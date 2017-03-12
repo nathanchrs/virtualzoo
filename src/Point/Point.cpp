@@ -10,18 +10,18 @@ Point::Point(int x, int y) {
     this -> y = y;
 }
 
-int Point::GetAbsis() {
+int Point::getX() {
     return x;
 }
 
-int Point::GetOrdinat() {
+int Point::getY() {
     return y;
 }
 
-void Point::SetAbsis(int _X) {
+void Point::setX(int _X) {
     x = _X;
 }
 
-void Point::SetOrdinat(int _Y) {
+void Point::setY(int _Y) {
     y = _Y;
 }

@@ -1,5 +1,8 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "Eagle.h"
+
+Eagle::Eagle(int _weight) : Aves("Eagle"), Carnivore(_weight) {}
+
+string Eagle::interact() const {
+    return "<Interaksi dengan eagle>"; // TODO proper interaction
+}
+

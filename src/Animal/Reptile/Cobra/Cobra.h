@@ -17,7 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan ular kobra.
       * @return Experience yang dirasakan ketika berinteraksi dengan ular kobra.
       */
-    string Interact()l
+    string interact() const;
 };
 
 

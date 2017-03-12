@@ -1,5 +1,7 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "Parrot.h"
+
+Parrot::Parrot(int _weight) : Aves("Parrot"), Herbivore(_weight) {}
+
+string Parrot::interact() const {
+    return "<Interaksi dengan parrot>"; // TODO proper interaction
+}

@@ -9,9 +9,10 @@
 class Reptile : public Animal {
 public:
     /** @brief Constructor.
-      * Menciptakan Reptil yang memiliki skinType "Scutes" dan reproduction "Ovovivipar".
+      * Menciptakan Reptil yang memiliki skinType "Scales" dan reproduction "Ovipar".
+      * @param name Nama hewan
       */
-    Reptile();
+    Reptile(const string &name);
 };
 
 #endif //REPTILE_H

@@ -1,7 +1,3 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #ifndef POINT_H
 #define POINT_H
 
@@ -25,22 +21,22 @@ public:
     /** @brief Mengambil nilai absis.
       * @return Nilai absis.
       */
-    int GetAbsis();
+    int getX();
 
     /** @brief Mengambil nilai ordinat.
       * @return Nilai ordinat.
       */
-    int GetOrdinat ();
+    int getY();
 
     /** @brief Set nilai absis.
       * @param _X Nilai absis.
       */
-    void SetAbsis (int _X);
+    void setX(int _X);
 
     /** @brief Set nilai ordinat.
       * @param _Y Nilai ordinat.
       */
-    void SetOrdinat (int _Y);
+    void setY(int _Y);
 
 private:
     int x;

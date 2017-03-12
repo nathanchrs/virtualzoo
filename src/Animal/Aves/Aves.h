@@ -6,12 +6,14 @@
 /** @class Aves
   * Kelas abstrak Aves yang merepesentasikan kelas hewan Aves.
   */
-class Aves : public Animal{
+class Aves : public Animal {
 public:
-    /** @brief Constructor.
-      * Menciptakan Aves yang memiliki skinType "Feather" dan reproduction "Ovipar".
-      */
-    Aves();
+    /**
+     * @brief Constructor.
+     * Menciptakan Aves yang memiliki skinType "Feather" dan reproduction "Ovipar".
+     * @param name Nama hewan
+     */
+    Aves(const string &name);
 };
 
 #endif //AVES_H

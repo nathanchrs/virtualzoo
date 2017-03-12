@@ -17,7 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan burung hantu.
       * @return Experience yang dirasakan ketika berinteraksi dengan burung hantu.
       */
-    string Interact();
+    string interact() const;
 };
 
 

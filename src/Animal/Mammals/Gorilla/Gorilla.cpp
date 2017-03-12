@@ -1,26 +1,10 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "Gorilla.h"
 
-/** @brief Constructor.
-  * Menciptakan Gorilla.
-  */
-Gorilla::Gorilla() {
-    name="Gorilla";
-    description="Gorilla is an animal from Africa. It is the largest living primate and the closest living relatives to human. This vivipar animal has land as its habitat.";
-    wild=false;
-    landAnimal=true;
-    waterAnimal=false;
-    airAnimal=false;
-    reproduction="vivipar";
-    //Position belum
+Gorilla::Gorilla(int _weight) : Mammals("Gorilla"), Omnivore(_weight) {
+    description = "Gorilla is an animal from Africa. It is the largest living primate and the closest living relatives"
+                  " to humans. This vivipar animal has land as its habitat.";
 }
 
-/** @brief Melakukan interaksi dengan Gorilla.
-  * @return Experience yang dirasakan ketika berinteraksi dengan Gorilla.
-  */
-string Gorilla::Interact() {
+string Gorilla::interact() const {
     return "The gorilla is playing with its toy.";
 }

@@ -17,8 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan ikan barakuda.
       * @return Experience yang dirasakan ketika berinteraksi dengan ikan barakuda.
       */
-    string Interact();
+    string interact() const;
 };
-
 
 #endif //BARRACUDA_H

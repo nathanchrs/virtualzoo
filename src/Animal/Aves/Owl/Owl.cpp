@@ -1,5 +1,7 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #include "Owl.h"
+
+Owl::Owl(int _weight) : Aves("Owl"), Carnivore(_weight) {}
+
+string Owl::interact() const {
+    return "<Interaksi dengan owl>"; // TODO proper interaction
+}

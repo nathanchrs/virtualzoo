@@ -17,7 +17,7 @@ public:
     /** @brief Melakukan interaksi dengan iguana.
       * @return Experience yang dirasakan ketika berinteraksi dengan iguana.
       */
-    string Interact();
+    string interact() const;
 };
 
 
