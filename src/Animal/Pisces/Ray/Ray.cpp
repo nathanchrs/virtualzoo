@@ -9,5 +9,5 @@ Ray::Ray(int _weight) : Pisces("Ray"), Carnivore(_weight, 0.25) {
 }
 
 string Ray::interact() const {
-    return "The ray is swimming as floating through the water.";
+    return "The ray is swimming as floating through the water";
 }

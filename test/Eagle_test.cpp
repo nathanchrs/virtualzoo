@@ -11,18 +11,18 @@ protected:
 };
 
 TEST_F(EagleTest, EagleConstructorWithParameter) {
-    Eagle Igel(100);
-    ASSERT_EQ(Igel.getName(),"Eagle");
-    ASSERT_EQ(Igel.getSkinType(),Animal::Feather);
-    ASSERT_EQ(Igel.getReproduction(),Animal::Ovipar);
-    ASSERT_TRUE(Igel.isAirAnimal());
-    ASSERT_TRUE(Igel.IsCarnivore());
-    ASSERT_TRUE(Igel.calculateTotalMeat()>0);
-    ASSERT_TRUE(Igel.calculateTotalVegetable()==0);
-    ASSERT_TRUE(!Igel.isWild());
+    Eagle Test(100);
+    ASSERT_EQ(Test.getName(),"Eagle");
+    ASSERT_EQ(Test.getSkinType(),Animal::Feather);
+    ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
+    ASSERT_TRUE(Test.isAirAnimal());
+    ASSERT_TRUE(Test.IsCarnivore());
+    ASSERT_TRUE(Test.calculateTotalMeat()>0);
+    ASSERT_TRUE(Test.calculateTotalVegetable()==0);
+    ASSERT_TRUE(!Test.isWild());
 }
 
 TEST_F(EagleTest, EagleInteraction) {
-    Eagle Igel(100);
-    ASSERT_EQ(Igel.interact(),"The eagle is eating its food that the zoo keeper gave");
+    Eagle Test(100);
+    ASSERT_EQ(Test.interact(),"The eagle is eating its food that the zoo keeper gave");
 }

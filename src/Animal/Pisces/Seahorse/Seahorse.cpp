@@ -10,5 +10,5 @@ Seahorse::Seahorse(int _weight) : Pisces("Seahorse"), Carnivore(_weight, 0.20) {
 }
 
 string Seahorse::interact() const {
-    return "The seahorse is camouflaging, preparing to ambush its prey.";
+    return "The seahorse is camouflaging, preparing to ambush its prey";
 }

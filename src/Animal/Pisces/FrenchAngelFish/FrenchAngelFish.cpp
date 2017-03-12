@@ -10,5 +10,5 @@ FrenchAngelFish::FrenchAngelFish(int _weight) : Pisces("FrenchAngelFish"), Herbi
 }
 
 string FrenchAngelFish::interact() const {
-    return "Splash! It is swimming.";
+    return "Splash! It is swimming";
 }
