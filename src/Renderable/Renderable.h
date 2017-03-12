@@ -14,12 +14,12 @@ public:
     /**
      * @brief Mengembalikan posisi X untuk pencetakan objek.
      */
-     virtual int getX() = 0;
+     virtual int getX() const = 0;
 
     /**
      * @brief Mengembalikan posisi Y untuk pencetakan objek.
      */
-     virtual int getY() = 0;
+     virtual int getY() const = 0;
 
 };
 

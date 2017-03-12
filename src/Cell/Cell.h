@@ -33,15 +33,15 @@ public:
     /** @brief Mengambil nilai absis dari posisi Cell.
       * @return Nilai absis dari posisi Cell.
       */
-    int getX();
+    int getX() const;
 
     /**@brief Mengambil nilai ordinat dari posisi Cell.
       * @return Nilai ordinat dari posisi Cell.
       */
-    int getY();
+    int getY() const;
 protected:
     const bool accessible;
-    const Point position;
+    Point position;
 };
 
 #endif //CELL_H

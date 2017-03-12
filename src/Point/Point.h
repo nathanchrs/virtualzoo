@@ -21,12 +21,12 @@ public:
     /** @brief Mengambil nilai absis.
       * @return Nilai absis.
       */
-    int getX();
+    int getX() const;
 
     /** @brief Mengambil nilai ordinat.
       * @return Nilai ordinat.
       */
-    int getY();
+    int getY() const;
 
     /** @brief Set nilai absis.
       * @param _X Nilai absis.
