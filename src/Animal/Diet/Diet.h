@@ -24,10 +24,17 @@ public:
       */
     bool IsOmnivore() const;
 
-    /** @brief Menghitung banyaknya makanan yang dikonsumsi setiap hari relatif terhadap berat badannnya.
-      * @return Banyaknya makanan yang dikonsumsi setiap hari.
+    /** @brief Menghitung banyaknya daging yang dikonsumsi setiap hari relatif terhadap berat badannnya.
+      * Kelas virtual
+      * @return Banyaknya daging yang dikonsumsi setiap hari.
       */
-    int calculateTotalFood() const;
+    virtual int calculateTotalMeat() const = 0;
+
+    /** @brief Menghitung banyaknya sayuran yang dikonsumsi setiap hari relatif terhadap berat badannnya.
+      * Kelas virtual
+      * @return Banyaknya sayuran yang dikonsumsi setiap hari.
+      */
+    virtual int calculateTotalVegetable() const = 0;
 
 protected:
     int weight;

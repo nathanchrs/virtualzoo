@@ -12,10 +12,6 @@ public:
       */
     Behaviour(bool _wild);
 
-    /** @brief Destructor.
-      */
-    virtual ~Behaviour();
-
     /** @brief Memeriksa apakah hewan buas atau tidak.
       * @return True jika hewan adalah hewan buas dan False jika tidak.
       */

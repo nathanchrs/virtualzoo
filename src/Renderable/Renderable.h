@@ -9,17 +9,17 @@ public:
     /** @brief Mengembalikan satu karakter yang merepesentasikan bentuk objek yang bersangkutan di atas console teks.
      * Merupakan pure virtual function.
      */
-      virtual void render() = 0;
+      //virtual void render() = 0;
 
     /**
      * @brief Mengembalikan posisi X untuk pencetakan objek.
      */
-     virtual int getX() const = 0;
+     //virtual int getX() const = 0;
 
     /**
      * @brief Mengembalikan posisi Y untuk pencetakan objek.
      */
-     virtual int getY() const = 0;
+     //virtual int getY() const = 0;
 
 };
 

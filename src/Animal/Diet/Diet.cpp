@@ -13,6 +13,3 @@ bool Diet::IsHerbivore() const {
 bool Diet::IsOmnivore() const {
     return (carnivore && herbivore);
 }
-int Diet::calculateTotalFood() const {
-    return weight*ratio;
-}

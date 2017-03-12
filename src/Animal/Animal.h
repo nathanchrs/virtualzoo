@@ -16,8 +16,6 @@ public:
 
     Animal(const string &name);
 
-    virtual ~Animal();
-
     string getName() const;
 
     string getDescription() const;
@@ -49,7 +47,7 @@ public:
       * Merupakan pure virtual function.
       * @return string yang menggambarkan experience yang dapat didengar, dirasakan, atau dilihat seorang pengunjung.
       */
-    virtual string interact() = 0;
+    virtual string interact() const = 0;
 
 protected :
     string name;

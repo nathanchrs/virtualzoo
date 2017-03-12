@@ -2,10 +2,6 @@
 
 Animal::Animal(const string &name) : name(name) {}
 
-Animal :: ~Animal(){
-
-}
-
 string Animal::getName() const {
     return name;
 }

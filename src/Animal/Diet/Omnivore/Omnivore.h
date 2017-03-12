@@ -16,6 +16,16 @@ public:
       * @param _weight Berat dari hewan.
       */
     Omnivore(int _weight, double _ratio);
+
+    /** @brief Menghitung banyaknya daging yang dikonsumsi setiap hari relatif terhadap berat badannnya.
+      * @return Banyaknya daging yang dikonsumsi setiap hari.
+      */
+    int calculateTotalMeat() const;
+
+    /** @brief Menghitung banyaknya sayuran yang dikonsumsi setiap hari relatif terhadap berat badannnya.
+      * @return Banyaknya sayuran yang dikonsumsi setiap hari.
+      */
+    int calculateTotalVegetable() const;
 };
 
 
