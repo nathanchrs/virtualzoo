@@ -5,6 +5,9 @@ Cobra::Cobra(int _weight) : Reptile("Cobra"), Carnivore(_weight, 0.15) {
                   " snakes on Earth. Their elegance, prideful stance and venomous bite have made them both respected and"
                   " feared. Cobras occur throughout Africa, the Middle East, India, Southeast Asia, and Indonesia."
                   " This ovipar animal has land as its habitat.";
+    airAnimal = false;
+    landAnimal = true;
+    waterAnimal = false;
 }
 
 string Cobra::interact() const {

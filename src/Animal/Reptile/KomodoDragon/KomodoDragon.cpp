@@ -5,6 +5,9 @@ KomodoDragon::KomodoDragon(int _weight) : Reptile("KomodoDragon"), Carnivore(_we
                   " Flores, Gili Motang, and Padar. It has been claimed that they have a venomous bite; there are two"
                   " glands in the lower jaw which secrete several toxic proteins. This ovipar animal has land as its"
                   " habitat";
+    airAnimal = false;
+    landAnimal = true;
+    waterAnimal = false;
 }
 
 string KomodoDragon::interact() const {

@@ -5,6 +5,9 @@ Chameleon::Chameleon(int _weight) : Reptile("Chameleon"), Carnivore(_weight, 0.0
                   " Chameleons primarily live in the mainland of sub-Saharan Africa and on the island of Madagascar."
                   " These species come in a range of colors, and many species have the ability to change color."
                   " This ovipar animal has land as its habitat.";
+    airAnimal = false;
+    landAnimal = true;
+    waterAnimal = false;
 }
 
 string Chameleon::interact() const {
