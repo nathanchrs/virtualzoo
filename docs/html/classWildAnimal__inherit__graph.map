@@ -1,7 +1,0 @@
-<map id="WildAnimal" name="WildAnimal">
-<area shape="rect" id="node3" href="$classWildCobra.html" title="{WildCobra\n||+ WildCobra()\l+ interact()\l}" alt="" coords="5,344,108,436"/>
-<area shape="rect" id="node4" href="$classWildLion.html" title="{WildLion\n||}" alt="" coords="133,351,205,429"/>
-<area shape="rect" id="node5" href="$classWildPython.html" title="{WildPython\n||}" alt="" coords="229,351,319,429"/>
-<area shape="rect" id="node6" href="$classWildTiger.html" title="{WildTiger\n||}" alt="" coords="343,351,421,429"/>
-<area shape="rect" id="node2" href="$classBehaviour.html" title="{Behaviour\n|# wild\l|+ Behaviour()\l+ ~Behaviour()\l+ isWild()\l}" alt="" coords="167,5,275,112"/>
-</map>

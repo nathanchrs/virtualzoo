@@ -1,6 +1,0 @@
-<map id="Herbivore" name="Herbivore">
-<area shape="rect" id="node3" href="$classFrenchAngelFish.html" title="{FrenchAngelFish\n||+ FrenchAngelFish()\l+ interact()\l}" alt="" coords="5,359,145,451"/>
-<area shape="rect" id="node4" href="$classParrot.html" title="{Parrot\n||}" alt="" coords="169,366,227,443"/>
-<area shape="rect" id="node5" href="$classPigeon.html" title="{Pigeon\n||+ Pigeon()\l+ interact()\l}" alt="" coords="251,359,337,451"/>
-<area shape="rect" id="node2" href="$classDiet.html" title="{Diet\n|# weight\l# ratio\l# carnivore\l# herbivore\l|+ Diet()\l+ IsCarnivore()\l+ IsHerbivore()\l+ IsOmnivore()\l+ calculateTotalFood()\l}" alt="" coords="122,5,274,185"/>
-</map>

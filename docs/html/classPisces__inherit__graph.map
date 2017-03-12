@@ -1,9 +1,0 @@
-<map id="Pisces" name="Pisces">
-<area shape="rect" id="node4" href="$classBarracuda.html" title="{Barracuda\n||+ Barracuda()\l+ interact()\l}" alt="" coords="5,675,107,767"/>
-<area shape="rect" id="node5" href="$classFrenchAngelFish.html" title="{FrenchAngelFish\n||+ FrenchAngelFish()\l+ interact()\l}" alt="" coords="131,675,271,767"/>
-<area shape="rect" id="node6" href="$classLionfish.html" title="{Lionfish\n||+ Lionfish()\l+ interact()\l}" alt="" coords="295,675,382,767"/>
-<area shape="rect" id="node7" href="$classRay.html" title="{Ray\n||+ Ray()\l+ interact()\l}" alt="" coords="407,675,492,767"/>
-<area shape="rect" id="node8" href="$classSeahorse.html" title="{Seahorse\n||+ Seahorse()\l+ interact()\l}" alt="" coords="517,675,614,767"/>
-<area shape="rect" id="node2" href="$classAnimal.html" title="{Animal\n|# name\l# reproduction\l# skinType\l# description\l# airAnimal\l# landAnimal\l# waterAnimal\l# position\l|+ Animal()\l+ ~Animal()\l+ getName()\l+ getDescription()\l+ isAirAnimal()\l+ isLandAnimal()\l+ isWaterAnimal()\l+ getReproduction()\l+ getSkinType()\l+ getPosition()\l+ setPosition()\l+ interact()\l}" alt="" coords="270,160,407,501"/>
-<area shape="rect" id="node3" href="$classRenderable.html" title="{Renderable\n||+ render()\l+ getX()\l+ getY()\l}" alt="" coords="295,5,383,112"/>
-</map>

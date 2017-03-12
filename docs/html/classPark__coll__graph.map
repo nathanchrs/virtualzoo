@@ -1,6 +1,0 @@
-<map id="Park" name="Park">
-<area shape="rect" id="node2" href="$classFacility.html" title="{Facility\n|# facilityType\l|+ Facility()\l+ ~Facility()\l}" alt="" coords="51,419,151,511"/>
-<area shape="rect" id="node3" href="$classCell.html" title="{Cell\n|# accessible\l|+ Cell()\l+ ~Cell()\l+ isAccessible()\l+ setPosition()\l+ getX()\l+ getY()\l}" alt="" coords="43,219,159,369"/>
-<area shape="rect" id="node4" href="$classRenderable.html" title="{Renderable\n||+ render()\l+ getX()\l+ getY()\l}" alt="" coords="5,27,93,134"/>
-<area shape="rect" id="node5" href="$classPoint.html" title="{Point\n||+ Point()\l+ Point()\l+ getX()\l+ getY()\l+ setX()\l+ setY()\l}" alt="" coords="117,5,189,156"/>
-</map>

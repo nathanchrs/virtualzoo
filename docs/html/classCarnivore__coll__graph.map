@@ -1,3 +1,0 @@
-<map id="Carnivore" name="Carnivore">
-<area shape="rect" id="node2" href="$classDiet.html" title="{Diet\n|# weight\l# ratio\l# carnivore\l# herbivore\l|+ Diet()\l+ IsCarnivore()\l+ IsHerbivore()\l+ IsOmnivore()\l+ calculateTotalFood()\l}" alt="" coords="5,5,157,185"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="Habitat" name="Habitat">
-<area shape="rect" id="node4" href="$classAirHabitat.html" title="{AirHabitat\n||+ AirHabitat()\l+ ~AirHabitat()\l+ render()\l}" alt="" coords="5,513,113,620"/>
-<area shape="rect" id="node5" href="$classLandHabitat.html" title="{LandHabitat\n||+ LandHabitat()\l+ ~LandHabitat()\l+ render()\l}" alt="" coords="138,513,258,620"/>
-<area shape="rect" id="node6" href="$classWaterHabitat.html" title="{WaterHabitat\n||+ WaterHabitat()\l+ ~WaterHabitat()\l+ render()\l}" alt="" coords="283,513,409,620"/>
-<area shape="rect" id="node2" href="$classCell.html" title="{Cell\n|# accessible\l# position\l|+ Cell()\l+ ~Cell()\l+ isAccessible()\l+ setPosition()\l+ getX()\l+ getY()\l}" alt="" coords="140,160,256,325"/>
-<area shape="rect" id="node3" href="$classRenderable.html" title="{Renderable\n||+ render()\l+ getX()\l+ getY()\l}" alt="" coords="154,5,242,112"/>
-</map>

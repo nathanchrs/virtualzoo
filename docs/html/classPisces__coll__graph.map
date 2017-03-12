@@ -1,5 +1,0 @@
-<map id="Pisces" name="Pisces">
-<area shape="rect" id="node2" href="$classAnimal.html" title="{Animal\n|# name\l# reproduction\l# skinType\l# description\l# airAnimal\l# landAnimal\l# waterAnimal\l|+ Animal()\l+ ~Animal()\l+ getName()\l+ getDescription()\l+ isAirAnimal()\l+ isLandAnimal()\l+ isWaterAnimal()\l+ getReproduction()\l+ getSkinType()\l+ getPosition()\l+ setPosition()\l+ interact()\l}" alt="" coords="33,219,170,545"/>
-<area shape="rect" id="node3" href="$classRenderable.html" title="{Renderable\n||+ render()\l+ getX()\l+ getY()\l}" alt="" coords="5,27,93,134"/>
-<area shape="rect" id="node4" href="$classPoint.html" title="{Point\n||+ Point()\l+ Point()\l+ getX()\l+ getY()\l+ setX()\l+ setY()\l}" alt="" coords="117,5,189,156"/>
-</map>

@@ -40,6 +40,10 @@ bin/*
 !bin/.gitkeep
 cmake-build-debug
 
+# Doxygen output
+docs/*
+!docs/.gitkeep
+
 # CMake files
 CMakeCache.txt
 CMakeFiles
