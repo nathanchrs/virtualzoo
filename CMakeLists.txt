@@ -92,7 +92,25 @@ SET(SOURCE_FILES
         src/Cell/Facility/Road/Exit/Exit.cpp
         src/Cell/Facility/Road/Exit/Exit.h
         src/Cage/Cage.cpp
-        src/Cage/Cage.h src/Animal/Behaviour/Behaviour.cpp src/Animal/Behaviour/Behaviour.h src/Animal/Behaviour/TameAnimal/TameAnimal.cpp src/Animal/Behaviour/TameAnimal/TameAnimal.h src/Animal/Behaviour/WildAnimal/WildAnimal.cpp src/Animal/Behaviour/WildAnimal/WildAnimal.h src/Animal/Reptile/WildCobra/WildCobra.cpp src/Animal/Reptile/WildCobra/WildCobra.h src/Animal/Reptile/WildPython/WildPython.cpp src/Animal/Reptile/WildPython/WildPython.h src/Animal/Mammals/WildLion/WildLion.cpp src/Animal/Mammals/WildLion/WildLion.h src/Animal/Mammals/WildTiger/WildTiger.cpp src/Animal/Mammals/WildTiger/WildTiger.h src/Animal/Aves/WildEagle/WildEagle.h src/Animal/Aves/WildEagle/WildEagle.cpp src/Animal/Pisces/WildBarracuda/WildBarracuda.h src/Animal/Pisces/WildBarracuda/WildBarracuda.cpp test/Eagle_test.cpp) # Add new source files here
+        src/Cage/Cage.h
+        src/Animal/Behaviour/Behaviour.cpp
+        src/Animal/Behaviour/Behaviour.h
+        src/Animal/Behaviour/TameAnimal/TameAnimal.cpp
+        src/Animal/Behaviour/TameAnimal/TameAnimal.h
+        src/Animal/Behaviour/WildAnimal/WildAnimal.cpp
+        src/Animal/Behaviour/WildAnimal/WildAnimal.h
+        src/Animal/Reptile/WildCobra/WildCobra.cpp
+        src/Animal/Reptile/WildCobra/WildCobra.h
+        src/Animal/Reptile/WildPython/WildPython.cpp
+        src/Animal/Reptile/WildPython/WildPython.h
+        src/Animal/Mammals/WildLion/WildLion.cpp
+        src/Animal/Mammals/WildLion/WildLion.h
+        src/Animal/Mammals/WildTiger/WildTiger.cpp
+        src/Animal/Mammals/WildTiger/WildTiger.h
+        src/Animal/Aves/WildEagle/WildEagle.h
+        src/Animal/Aves/WildEagle/WildEagle.cpp
+        src/Animal/Pisces/WildBarracuda/WildBarracuda.h
+        src/Animal/Pisces/WildBarracuda/WildBarracuda.cpp) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
 
 # Load Google Test settings
@@ -107,7 +125,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 SET(TEST_FILES
         test/test.cpp
         test/Zoo_test.cpp
-        src/Animal/Mammals/Lion/Lion.cpp src/Animal/Mammals/Lion/Lion.h) # Add new test files here
+        test/Eagle_test.cpp) # Add new test files here
 add_executable(virtualzoo_test ${TEST_FILES} ${SOURCE_FILES})
 target_link_libraries(virtualzoo_test ${PThreadLib} ${GTEST_BOTH_LIBRARIES})
 GTEST_ADD_TESTS(virtualzoo_test "" ${TEST_FILES} ${SOURCE_FILES})
