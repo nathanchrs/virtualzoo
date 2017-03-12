@@ -11,7 +11,7 @@ protected:
 };
 
 TEST_F(EagleTest, EagleConstructorWithParameter) {
-    Eagle Igel(70);
+    Eagle Igel(100);
     ASSERT_EQ(Igel.getName(),"Eagle");
     ASSERT_EQ(Igel.getSkinType(),Animal::Feather);
     ASSERT_EQ(Igel.getReproduction(),Animal::Ovipar);
@@ -23,6 +23,6 @@ TEST_F(EagleTest, EagleConstructorWithParameter) {
 }
 
 TEST_F(EagleTest, EagleInteraction) {
-    Eagle Igel(70);
+    Eagle Igel(100);
     ASSERT_EQ(Igel.interact(),"The eagle is eating its food that the zoo keeper gave");
 }
