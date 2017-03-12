@@ -23,5 +23,5 @@ WildCobra::WildCobra(int _weight) : Reptile("WildCobra"), Carnivore(_weight, 0.3
 }
 
 string WildCobra::interact() const {
-    return "The cobra wag its tail and make some sizzle sound like 'Ssssttt!'";
+    return "SSHHH!";
 }

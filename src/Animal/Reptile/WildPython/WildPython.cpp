@@ -22,5 +22,5 @@ WildPython::Python(int _weight) : Reptile("WildPython"), Carnivore(_weight, 0.40
 }
 
 string WildPython::interact() const {
-    return "The python is squeezing a chicken that the zookeper gave";
+    return "SHAAHH!";
 }
