@@ -12,7 +12,7 @@ class WildPython : public Reptile, public Carnivore, public WildAnimal{
     /** @brief Constructor.
          * Menciptakan ular piton yang buas.
          */
-    Python(int _weight);
+    WildPython(int _weight);
 
     /** @brief Melakukan interaksi dengan ular piton yang buas.
       * @return Experience yang dirasakan ketika berinteraksi dengan ular piton yang buas.
