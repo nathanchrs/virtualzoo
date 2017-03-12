@@ -7,7 +7,7 @@
 /** @class Cell
   * Kelas abstrak Cell yang merepesentasikan petak tanah berukuran 1m x 1m.
   */
-class Cell : public Renderable{
+class Cell : public Renderable {
 public:
     /** @brief Constructor.
       * Menciptakan sebuah Cell dengan status aksesibilitas tertentu.
@@ -39,6 +39,9 @@ public:
       * @return Nilai ordinat dari posisi Cell.
       */
     int getY();
+
+    int getZ() const { return 1; };
+
 protected:
     const bool accessible;
     const Point position;

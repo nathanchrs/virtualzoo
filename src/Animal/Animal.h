@@ -44,6 +44,8 @@ public:
 
     void setPosition(const Point &position);
 
+    int getZ() const { return 2; };
+
     /** @brief Melakukan interaksi dengan seekor hewan.
       * Merupakan pure virtual function.
       * @return string yang menggambarkan experience yang dapat didengar, dirasakan, atau dilihat seorang pengunjung.
