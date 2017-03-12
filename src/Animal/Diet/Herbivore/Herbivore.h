@@ -9,13 +9,7 @@ public:
       * Menciptakan hewan herbivora dengan berat tertentu.
       * @param _weight Berat dari hewan.
       */
-    Herbivore(int _weight);
-
-    /** @brief Menghitung banyaknya makanan yang dikonsumsi setiap hari relatif terhadap berat badannnya.
-      * @return Banyaknya makanan yang dikonsumsi setiap hari.
-      */
-    int calculateTotalFood() const;
-
+    Herbivore(int _weight, double _ratio);
 };
 
 #endif //HERBIVORE_H

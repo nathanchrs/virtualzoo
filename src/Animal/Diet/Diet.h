@@ -7,7 +7,7 @@
 class Diet {
 public:
 
-    Diet(int _weight);
+    Diet(int _weight, double _ratio);
 
     /** @brief Memeriksa apakah hewan karnivora atau tidak.
       * @return True jika hewan adalah hewan karnivora dan False jika tidak.
@@ -25,13 +25,13 @@ public:
     bool IsOmnivore() const;
 
     /** @brief Menghitung banyaknya makanan yang dikonsumsi setiap hari relatif terhadap berat badannnya.
-      * Merupakan pure virtual function.
       * @return Banyaknya makanan yang dikonsumsi setiap hari.
       */
-    virtual int calculateTotalFood() const = 0;
+    int calculateTotalFood() const;
 
 protected:
     int weight;
+    double ratio;
     bool carnivore;
     bool herbivore;
 };

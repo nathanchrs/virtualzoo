@@ -15,13 +15,7 @@ public:
       * Menciptakan hewan omnivora dengan berat tertentu.
       * @param _weight Berat dari hewan.
       */
-    Omnivore(int _weight);
-
-    /** @brief Menghitung banyaknya makanan yang dikonsumsi setiap hari relatif terhadap berat badannnya.
-      * @return Banyaknya makanan yang dikonsumsi setiap hari.
-      */
-    int calculateTotalFood() const;
-
+    Omnivore(int _weight, double _ratio);
 };
 
 

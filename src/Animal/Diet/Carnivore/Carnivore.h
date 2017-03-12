@@ -9,13 +9,7 @@ public:
       * Menciptakan hewan karnivora dengan berat tertentu.
       * @param _weight Berat dari hewan.
       */
-    Carnivore(int _weight);
-
-    /** @brief Menghitung banyaknya makanan yang dikonsumsi setiap hari relatif terhadap berat badannnya.
-      * @return Banyaknya makanan yang dikonsumsi setiap hari.
-      */
-    int calculateTotalFood() const;
-
+    Carnivore(int _weight, double _ratio);
 };
 
 #endif //CARNIVORE_H
