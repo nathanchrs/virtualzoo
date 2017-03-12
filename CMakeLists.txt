@@ -16,11 +16,10 @@ SET(SOURCE_FILES
         src/Animal/Reptile/Reptile.h
         src/Cell/Habitat/Habitat.cpp
         src/Cell/Habitat/Habitat.h
-        src/Renderable/Renderable.h
+        src/Renderer/Renderable.h
         src/Zoo/Zoo.cpp
         src/Zoo/Zoo.h
-        src/Point/Point.cpp
-        src/Point/Point.h
+        src/Renderer/Point.h
         src/Animal/Diet/Diet.h
         src/Animal/Diet/Carnivore/Carnivore.cpp
         src/Animal/Diet/Carnivore/Carnivore.h
@@ -72,7 +71,7 @@ SET(SOURCE_FILES
         src/Animal/Reptile/Python/Python.h
         src/Animal/Diet/Diet.cpp
         src/Cell/Cell.h
-        src/Cell/Cell.cpp src/Cell/Habitat/AirHabitat/AirHabitat.cpp src/Cell/Habitat/AirHabitat/AirHabitat.h src/Cell/Habitat/LandHabitat/LandHabitat.cpp src/Cell/Habitat/LandHabitat/LandHabitat.h src/Cell/Habitat/WaterHabitat/WaterHabitat.cpp src/Cell/Habitat/WaterHabitat/WaterHabitat.h src/Cell/Facility/Facility.cpp src/Cell/Facility/Facility.h src/Cell/Facility/Park/Park.cpp src/Cell/Facility/Park/Park.h src/Cell/Facility/Restaurant/Restaurant.cpp src/Cell/Facility/Restaurant/Restaurant.h src/Cell/Facility/Road/Road.cpp src/Cell/Facility/Road/Road.h src/Cell/Facility/Road/Entrance/Entrance.cpp src/Cell/Facility/Road/Entrance/Entrance.h src/Cell/Facility/Road/Exit/Exit.cpp src/Cell/Facility/Road/Exit/Exit.h) # Add new source files here
+        src/Cell/Cell.cpp src/Cell/Habitat/AirHabitat/AirHabitat.cpp src/Cell/Habitat/AirHabitat/AirHabitat.h src/Cell/Habitat/LandHabitat/LandHabitat.cpp src/Cell/Habitat/LandHabitat/LandHabitat.h src/Cell/Habitat/WaterHabitat/WaterHabitat.cpp src/Cell/Habitat/WaterHabitat/WaterHabitat.h src/Cell/Facility/Facility.cpp src/Cell/Facility/Facility.h src/Cell/Facility/Park/Park.cpp src/Cell/Facility/Park/Park.h src/Cell/Facility/Restaurant/Restaurant.cpp src/Cell/Facility/Restaurant/Restaurant.h src/Cell/Facility/Road/Road.cpp src/Cell/Facility/Road/Road.h src/Cell/Facility/Road/Entrance/Entrance.cpp src/Cell/Facility/Road/Entrance/Entrance.h src/Cell/Facility/Road/Exit/Exit.cpp src/Cell/Facility/Road/Exit/Exit.h src/Renderer/Renderer.h src/Renderer/ConsoleRenderer/BasicConsoleRenderer.cpp src/Renderer/ConsoleRenderer/BasicConsoleRenderer.h src/Renderer/ConsoleRenderer/FrameBuffer.cpp src/Renderer/ConsoleRenderer/FrameBuffer.h) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
 
 # Load Google Test settings

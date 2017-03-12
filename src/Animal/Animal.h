@@ -1,8 +1,8 @@
 #ifndef ANIMAL_H
 #define ANIMAL_H
 #include <string>
-#include "../Point/Point.h"
-#include "../Renderable/Renderable.h"
+#include "../Renderer/Point.h"
+#include "../Renderer/Renderable.h"
 using namespace std;
 
 /** @class Animal

@@ -1,6 +1,8 @@
 #ifndef RENDERABLE_H
 #define RENDERABLE_H
 
+#include "Point.h"
+
 /** @class Renderable
   * Kelas abstrak Renderable yang merepresentasikan perilaku objek yang dapat digambar di atas layar.
   */
@@ -12,14 +14,9 @@ public:
       virtual void render() = 0;
 
     /**
-     * @brief Mengembalikan posisi X untuk pencetakan objek.
+     * @brief Mengembalikan posisi untuk pencetakan objek.
      */
-     virtual int getX() = 0;
-
-    /**
-     * @brief Mengembalikan posisi Y untuk pencetakan objek.
-     */
-     virtual int getY() = 0;
+     virtual Point getPosition() = 0;
 
 };
 

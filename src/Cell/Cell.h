@@ -1,8 +1,8 @@
 #ifndef CELL_H
 #define CELL_H
 
-#include "../Renderable/Renderable.h"
-#include "../Point/Point.h"
+#include "../Renderer/Renderable.h"
+#include "../Renderer/Point.h"
 
 /** @class Cell
   * Kelas abstrak Cell yang merepesentasikan petak tanah berukuran 1m x 1m.
