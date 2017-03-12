@@ -7,7 +7,7 @@
 /** @class Iguana
   * Kelas Iguana yang merepesentasikan iguana.
   */
-class Iguana : public Reptile, public Omnivore{
+class Iguana : public Reptile, public Omnivore {
 public:
     /** @brief Constructor.
       * Menciptakan iguana.

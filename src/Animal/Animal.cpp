@@ -34,7 +34,7 @@ void Animal::setPosition(const Point &position) {
     Animal::position = position;
 }
 
-Reproduction Animal::getReproduction() const {
+Animal::Reproduction Animal::getReproduction() const {
     return reproduction;
 }
 
@@ -42,7 +42,7 @@ void Animal::setReproduction(const Reproduction &reproduction) {
     Animal::reproduction = reproduction;
 }
 
-SkinType Animal::getSkinType() const {
+Animal::SkinType Animal::getSkinType() const {
     return skinType;
 }
 
