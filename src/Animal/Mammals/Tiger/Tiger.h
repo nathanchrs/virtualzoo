@@ -3,11 +3,12 @@
 
 #include "../Mammals.h"
 #include "../../Diet/Carnivore/Carnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Tiger
   * Kelas Tiger yang merepesentasikan harimau.
   */
-class Tiger : public Mammals, public Carnivore {
+class Tiger : public Mammals, public Carnivore, public TameAnimal {
 public:
     /** @brief Constructor.
       * Menciptakan harimau.

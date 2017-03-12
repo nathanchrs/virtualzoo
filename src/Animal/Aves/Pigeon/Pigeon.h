@@ -3,11 +3,12 @@
 
 #include "../Aves.h"
 #include "../../Diet/Herbivore/Herbivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Pigeon
   * Kelas Pigeon yang merepesentasikan burung merpati.
   */
-class Pigeon : public Aves, public Herbivore {
+class Pigeon : public Aves, public Herbivore, public TameAnimal {
 public:
     /** @brief Constructor.
      * Menciptakan burung merpati.

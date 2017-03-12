@@ -3,11 +3,12 @@
 
 #include "../Pisces.h"
 #include "../../Diet/Herbivore/Herbivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class FrenchAngelFish
   * Kelas FrenchAngelFish yang merepesentasikan french angelfish.
   */
-class FrenchAngelFish : public Pisces, public Herbivore {
+class FrenchAngelFish : public Pisces, public Herbivore, public TameAnimal {
 public:
     /** @brief Constructor.
       * Menciptakan french angelfish.

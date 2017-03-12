@@ -3,11 +3,12 @@
 
 #include "../Pisces.h"
 #include "../../Diet/Carnivore/Carnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Lionfish
   * Kelas Lionfish yang merepesentasikan lionfish.
   */
-class Lionfish : public Pisces, public Carnivore {
+class Lionfish : public Pisces, public Carnivore, public TameAnimal {
 public:
     /** @brief Constructor.
       * Menciptakan lionfish.

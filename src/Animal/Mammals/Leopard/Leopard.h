@@ -3,11 +3,12 @@
 
 #include "../Mammals.h"
 #include "../../Diet/Carnivore/Carnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Leopard
   * Kelas Leopard yang merepesentasikan macan tutul.
   */
-class Leopard : public Mammals, public Carnivore{
+class Leopard : public Mammals, public Carnivore, public TameAnimal{
 public:
     /** @brief Constructor.
       * Menciptakan macan tutul.

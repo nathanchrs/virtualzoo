@@ -3,11 +3,12 @@
 
 #include "../Pisces.h"
 #include "../../Diet/Carnivore/Carnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Seahorse
   * Kelas Seahorse yang merepesentasikan kuda laut.
   */
-class Seahorse : public Pisces, public Carnivore{
+class Seahorse : public Pisces, public Carnivore, public TameAnimal{
 public:
     /** @brief Constructor.
       * Menciptakan kuda laut.

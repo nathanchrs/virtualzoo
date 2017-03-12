@@ -7,11 +7,12 @@
 
 #include "../Mammals.h"
 #include "../../Diet/Omnivore/Omnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Gorilla
   * Kelas Gorilla yang merepesentasikan gorilla.
   */
-class Gorilla : public Mammals, public Omnivore {
+class Gorilla : public Mammals, public Omnivore, public TameAnimal {
 public:
 
     Gorilla();
