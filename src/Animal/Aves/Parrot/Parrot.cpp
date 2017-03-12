@@ -4,6 +4,9 @@ Parrot::Parrot(int _weight) : Aves("Parrot"), Herbivore(_weight, 0.05) {
     description = "Parrot is an animal that can be found in South America and Australasia."
                   "Parrots are intelligent birds. They have relatively large brains, they can learn, and they can use"
                   " simple tools. This ovipar animal has land and air as its habitat";
+    airAnimal = true;
+    landAnimal = true;
+    waterAnimal = false;
 }
 
 string Parrot::interact() const {
