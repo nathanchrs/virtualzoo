@@ -1,7 +1,11 @@
 #include "Parrot.h"
 
-Parrot::Parrot(int _weight) : Aves("Parrot"), Herbivore(_weight) {}
+Parrot::Parrot(int _weight) : Aves("Parrot"), Herbivore(_weight) {
+    description = "Parrot is an animal that can be found in South America and Australasia."
+                  "Parrots are intelligent birds. They have relatively large brains, they can learn, and they can use"
+                  " simple tools. This ovipar animal has land and air as its habitat";
+}
 
 string Parrot::interact() const {
-    return "<Interaksi dengan parrot>"; // TODO proper interaction
+    return "Parrot is imitate someone voice that said 'I'm handsome!'";
 }
