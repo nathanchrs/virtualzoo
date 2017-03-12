@@ -1,6 +1,6 @@
 #include "WildPython.h"
 
-WildPython::Python(int _weight) : Reptile("WildPython"), Carnivore(_weight, 0.40), WildAnimal(12) {
+WildPython::WildPython(int _weight) : Reptile("WildPython"), Carnivore(_weight, 0.40), WildAnimal(12) {
     description = "Pythons are one of the largest snakes. Unlike many other snake species, pythons don’t produce venom."
             " Pythons are constrictors. They kill their prey by squeezing them until they stop breathing."
             " This ovipar animal has land as its habitat.";
