@@ -1,0 +1,135 @@
+\hypertarget{classCell}{\section{Cell Class Reference}
+\label{classCell}\index{Cell@{Cell}}
+}
+
+
+{\ttfamily \#include $<$Cell.\+h$>$}
+
+Inheritance diagram for Cell\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classCell}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCell_a38aede1bc2a5d27ee327109c1cb646ab}{Cell} (bool \+\_\+accessible)
+\begin{DoxyCompactList}\small\item\em Constructor. Menciptakan sebuah \hyperlink{classCell}{Cell} dengan status aksesibilitas tertentu. \end{DoxyCompactList}\item 
+\hypertarget{classCell_a9fa559f7a28e2b4336c6879ca09304d8}{virtual \hyperlink{classCell_a9fa559f7a28e2b4336c6879ca09304d8}{$\sim$\+Cell} ()}\label{classCell_a9fa559f7a28e2b4336c6879ca09304d8}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classCell_aef7a11f9388d041cebb90d15ab2890ad}{is\+Accessible} () const 
+\begin{DoxyCompactList}\small\item\em Memeriksa status aksesibilitas dari \hyperlink{classCell}{Cell}. \end{DoxyCompactList}\item 
+void \hyperlink{classCell_a53dfa4264f46ca0a8c65004731793aa9}{set\+Position} (const \hyperlink{classPoint}{Point} \&\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Menset posisi dari \hyperlink{classCell}{Cell}. \end{DoxyCompactList}\item 
+int \hyperlink{classCell_a78d82b277e8fb2e1c3e70286bcc85314}{get\+X} () const 
+\begin{DoxyCompactList}\small\item\em Mengambil nilai absis dari posisi \hyperlink{classCell}{Cell}. \end{DoxyCompactList}\item 
+int \hyperlink{classCell_a2df3d69f5d0c10a1e1f02c5f89045e0a}{get\+Y} () const 
+\begin{DoxyCompactList}\small\item\em Mengambil nilai ordinat dari posisi \hyperlink{classCell}{Cell}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCell_a4c07dcb183072ac6fa92b3414a02b26b}{const bool {\bfseries accessible}}\label{classCell_a4c07dcb183072ac6fa92b3414a02b26b}
+
+\item 
+\hypertarget{classCell_a95e83c73197426f8da1b62809c00041e}{\hyperlink{classPoint}{Point} {\bfseries position}}\label{classCell_a95e83c73197426f8da1b62809c00041e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Kelas abstrak \hyperlink{classCell}{Cell} yang merepesentasikan petak tanah berukuran 1m x 1m. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCell_a38aede1bc2a5d27ee327109c1cb646ab}{\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\subsubsection[{Cell}]{\setlength{\rightskip}{0pt plus 5cm}Cell\+::\+Cell (
+\begin{DoxyParamCaption}
+\item[{bool}]{\+\_\+accessible}
+\end{DoxyParamCaption}
+)}}\label{classCell_a38aede1bc2a5d27ee327109c1cb646ab}
+
+
+Constructor. Menciptakan sebuah \hyperlink{classCell}{Cell} dengan status aksesibilitas tertentu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+accessible} & Status aksesibilitas dari \hyperlink{classCell}{Cell}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCell_a78d82b277e8fb2e1c3e70286bcc85314}{\index{Cell@{Cell}!get\+X@{get\+X}}
+\index{get\+X@{get\+X}!Cell@{Cell}}
+\subsubsection[{get\+X}]{\setlength{\rightskip}{0pt plus 5cm}int Cell\+::get\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCell_a78d82b277e8fb2e1c3e70286bcc85314}
+
+
+Mengambil nilai absis dari posisi \hyperlink{classCell}{Cell}. 
+
+\begin{DoxyReturn}{Returns}
+Nilai absis dari posisi \hyperlink{classCell}{Cell}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_af0e3e758db2aad1d0d874fc98736614f}{Renderable}.
+
+\hypertarget{classCell_a2df3d69f5d0c10a1e1f02c5f89045e0a}{\index{Cell@{Cell}!get\+Y@{get\+Y}}
+\index{get\+Y@{get\+Y}!Cell@{Cell}}
+\subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Cell\+::get\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCell_a2df3d69f5d0c10a1e1f02c5f89045e0a}
+
+
+Mengambil nilai ordinat dari posisi \hyperlink{classCell}{Cell}. 
+
+\begin{DoxyReturn}{Returns}
+Nilai ordinat dari posisi \hyperlink{classCell}{Cell}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classRenderable_a6af0fc98ab82083dce18e9ea970480e0}{Renderable}.
+
+\hypertarget{classCell_aef7a11f9388d041cebb90d15ab2890ad}{\index{Cell@{Cell}!is\+Accessible@{is\+Accessible}}
+\index{is\+Accessible@{is\+Accessible}!Cell@{Cell}}
+\subsubsection[{is\+Accessible}]{\setlength{\rightskip}{0pt plus 5cm}bool Cell\+::is\+Accessible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCell_aef7a11f9388d041cebb90d15ab2890ad}
+
+
+Memeriksa status aksesibilitas dari \hyperlink{classCell}{Cell}. 
+
+\begin{DoxyReturn}{Returns}
+Status aksesibiltas dari \hyperlink{classCell}{Cell} (true jika bisa diakses dan false jika tidak). 
+\end{DoxyReturn}
+\hypertarget{classCell_a53dfa4264f46ca0a8c65004731793aa9}{\index{Cell@{Cell}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Cell@{Cell}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Cell\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point} \&}]{\+\_\+position}
+\end{DoxyParamCaption}
+)}}\label{classCell_a53dfa4264f46ca0a8c65004731793aa9}
+
+
+Menset posisi dari \hyperlink{classCell}{Cell}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+position} & Posisi dari \hyperlink{classCell}{Cell}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Cell/Cell.\+h\item 
+src/\+Cell/Cell.\+cpp\end{DoxyCompactItemize}

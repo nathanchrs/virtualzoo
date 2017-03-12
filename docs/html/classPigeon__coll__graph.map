@@ -1,0 +1,10 @@
+<map id="Pigeon" name="Pigeon">
+<area shape="rect" id="node2" href="$classAves.html" title="{Aves\n||+ Aves()\l}" alt="" coords="96,595,168,672"/>
+<area shape="rect" id="node3" href="$classAnimal.html" title="{Animal\n|# name\l# reproduction\l# skinType\l# description\l# airAnimal\l# landAnimal\l# waterAnimal\l|+ Animal()\l+ ~Animal()\l+ getName()\l+ getDescription()\l+ isAirAnimal()\l+ isLandAnimal()\l+ isWaterAnimal()\l+ getReproduction()\l+ getSkinType()\l+ getPosition()\l+ setPosition()\l+ interact()\l}" alt="" coords="33,219,170,545"/>
+<area shape="rect" id="node4" href="$classRenderable.html" title="{Renderable\n||+ render()\l+ getX()\l+ getY()\l}" alt="" coords="5,27,93,134"/>
+<area shape="rect" id="node5" href="$classPoint.html" title="{Point\n||+ Point()\l+ Point()\l+ getX()\l+ getY()\l+ setX()\l+ setY()\l}" alt="" coords="117,5,189,156"/>
+<area shape="rect" id="node6" href="$classHerbivore.html" title="{Herbivore\n||+ Herbivore()\l}" alt="" coords="221,595,320,672"/>
+<area shape="rect" id="node7" href="$classDiet.html" title="{Diet\n|# weight\l# ratio\l# carnivore\l# herbivore\l|+ Diet()\l+ IsCarnivore()\l+ IsHerbivore()\l+ IsOmnivore()\l+ calculateTotalFood()\l}" alt="" coords="195,292,347,472"/>
+<area shape="rect" id="node8" href="$classTameAnimal.html" title="{TameAnimal\n||+ TameAnimal()\l}" alt="" coords="356,595,471,672"/>
+<area shape="rect" id="node9" href="$classBehaviour.html" title="{Behaviour\n|# wild\l|+ Behaviour()\l+ ~Behaviour()\l+ isWild()\l}" alt="" coords="371,329,479,435"/>
+</map>

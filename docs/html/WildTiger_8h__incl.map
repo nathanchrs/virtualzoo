@@ -1,0 +1,10 @@
+<map id="src/Animal/Mammals/WildTiger/WildTiger.h" name="src/Animal/Mammals/WildTiger/WildTiger.h">
+<area shape="rect" id="node2" href="$Mammals_8h.html" title="../Mammals.h" alt="" coords="147,102,250,129"/>
+<area shape="rect" id="node7" href="$Carnivore_8h.html" title="../../Diet/Carnivore\l/Carnivore.h" alt="" coords="275,95,405,136"/>
+<area shape="rect" id="node9" href="$WildAnimal_8h.html" title="../../Behaviour/WildAnimal\l/WildAnimal.h" alt="" coords="430,95,605,136"/>
+<area shape="rect" id="node3" href="$Animal_8h.html" title="../Animal.h" alt="" coords="176,184,261,211"/>
+<area shape="rect" id="node5" href="$Point_8h.html" title="../Point/Point.h" alt="" coords="5,259,115,285"/>
+<area shape="rect" id="node6" href="$Renderable_8h.html" title="../Renderable/Renderable.h" alt="" coords="139,259,320,285"/>
+<area shape="rect" id="node8" href="$Diet_8h.html" title="../Diet.h" alt="" coords="305,184,375,211"/>
+<area shape="rect" id="node10" href="$Behaviour_8h.html" title="../Behaviour.h" alt="" coords="466,184,569,211"/>
+</map>

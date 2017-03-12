@@ -1,0 +1,9 @@
+<map id="Iguana" name="Iguana">
+<area shape="rect" id="node2" href="$classReptile.html" title="{Reptile\n||+ Reptile()\l}" alt="" coords="59,549,142,627"/>
+<area shape="rect" id="node3" href="$classAnimal.html" title="{Animal\n|# name\l# reproduction\l# skinType\l# description\l# airAnimal\l# landAnimal\l# waterAnimal\l# position\l|+ Animal()\l+ ~Animal()\l+ getName()\l+ getDescription()\l+ isAirAnimal()\l+ isLandAnimal()\l+ isWaterAnimal()\l+ getReproduction()\l+ getSkinType()\l+ getPosition()\l+ setPosition()\l+ interact()\l}" alt="" coords="5,160,143,501"/>
+<area shape="rect" id="node4" href="$classRenderable.html" title="{Renderable\n||+ render()\l+ getX()\l+ getY()\l}" alt="" coords="30,5,118,112"/>
+<area shape="rect" id="node5" href="$classOmnivore.html" title="{Omnivore\n||+ Omnivore()\l}" alt="" coords="194,549,293,627"/>
+<area shape="rect" id="node6" href="$classDiet.html" title="{Diet\n|# weight\l# ratio\l# carnivore\l# herbivore\l|+ Diet()\l+ IsCarnivore()\l+ IsHerbivore()\l+ IsOmnivore()\l+ calculateTotalFood()\l}" alt="" coords="167,241,319,421"/>
+<area shape="rect" id="node7" href="$classTameAnimal.html" title="{TameAnimal\n||+ TameAnimal()\l}" alt="" coords="329,549,443,627"/>
+<area shape="rect" id="node8" href="$classBehaviour.html" title="{Behaviour\n|# wild\l|+ Behaviour()\l+ ~Behaviour()\l+ isWild()\l}" alt="" coords="344,277,452,384"/>
+</map>

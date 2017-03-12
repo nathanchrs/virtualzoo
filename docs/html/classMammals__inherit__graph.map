@@ -1,0 +1,11 @@
+<map id="Mammals" name="Mammals">
+<area shape="rect" id="node4" href="$classGorilla.html" title="{Gorilla\n||+ Gorilla()\l+ Gorilla()\l+ interact()\l}" alt="" coords="5,675,91,781"/>
+<area shape="rect" id="node5" href="$classLeopard.html" title="{Leopard\n||+ Leopard()\l+ interact()\l}" alt="" coords="115,682,203,774"/>
+<area shape="rect" id="node6" href="$classLion.html" title="{Lion\n||+ Lion()\l+ interact()\l}" alt="" coords="227,682,312,774"/>
+<area shape="rect" id="node7" href="$classOrangutan.html" title="{Orangutan\n||+ Orangutan()\l+ interact()\l}" alt="" coords="337,682,439,774"/>
+<area shape="rect" id="node8" href="$classTiger.html" title="{Tiger\n||+ Tiger()\l+ interact()\l}" alt="" coords="464,682,549,774"/>
+<area shape="rect" id="node9" href="$classWildLion.html" title="{WildLion\n||}" alt="" coords="573,689,645,767"/>
+<area shape="rect" id="node10" href="$classWildTiger.html" title="{WildTiger\n||}" alt="" coords="669,689,747,767"/>
+<area shape="rect" id="node2" href="$classAnimal.html" title="{Animal\n|# name\l# reproduction\l# skinType\l# description\l# airAnimal\l# landAnimal\l# waterAnimal\l# position\l|+ Animal()\l+ ~Animal()\l+ getName()\l+ getDescription()\l+ isAirAnimal()\l+ isLandAnimal()\l+ isWaterAnimal()\l+ getReproduction()\l+ getSkinType()\l+ getPosition()\l+ setPosition()\l+ interact()\l}" alt="" coords="319,160,457,501"/>
+<area shape="rect" id="node3" href="$classRenderable.html" title="{Renderable\n||+ render()\l+ getX()\l+ getY()\l}" alt="" coords="344,5,432,112"/>
+</map>
