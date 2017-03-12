@@ -12,6 +12,9 @@ Zoo::Zoo(int _length, int _width, int _maxCage, int _maxEntrance):length(_length
 }
 
 Zoo::~Zoo() {
+    for (int i = 0; i < width; i++) {
+        delete [] cells[i];
+    }
     delete [] cells;
     delete [] cages;
     delete [] entrances;
