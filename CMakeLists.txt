@@ -59,7 +59,20 @@ SET(SOURCE_FILES
         src/Animal/Pisces/Ray/Ray.cpp
         src/Animal/Pisces/Ray/Ray.h
         src/Animal/Pisces/Seahorse/Seahorse.cpp
-        src/Animal/Pisces/Seahorse/Seahorse.h src/Animal/Reptile/Chameleon/Chameleon.cpp src/Animal/Reptile/Chameleon/Chameleon.h src/Animal/Reptile/Cobra/Cobra.cpp src/Animal/Reptile/Cobra/Cobra.h src/Animal/Reptile/Iguana/Iguana.cpp src/Animal/Reptile/Iguana/Iguana.h src/Animal/Reptile/KomodoDragon/KomodoDragon.cpp src/Animal/Reptile/KomodoDragon/KomodoDragon.h src/Animal/Reptile/Python/Python.cpp src/Animal/Reptile/Python/Python.h src/Animal/Diet/Diet.cpp) # Add new source files here
+        src/Animal/Pisces/Seahorse/Seahorse.h
+        src/Animal/Reptile/Chameleon/Chameleon.cpp
+        src/Animal/Reptile/Chameleon/Chameleon.h
+        src/Animal/Reptile/Cobra/Cobra.cpp
+        src/Animal/Reptile/Cobra/Cobra.h
+        src/Animal/Reptile/Iguana/Iguana.cpp
+        src/Animal/Reptile/Iguana/Iguana.h
+        src/Animal/Reptile/KomodoDragon/KomodoDragon.cpp
+        src/Animal/Reptile/KomodoDragon/KomodoDragon.h
+        src/Animal/Reptile/Python/Python.cpp
+        src/Animal/Reptile/Python/Python.h
+        src/Animal/Diet/Diet.cpp
+        src/Cell/Cell.h
+        src/Cell/Cell.cpp src/Cell/Habitat/AirHabitat/AirHabitat.cpp src/Cell/Habitat/AirHabitat/AirHabitat.h src/Cell/Habitat/LandHabitat/LandHabitat.cpp src/Cell/Habitat/LandHabitat/LandHabitat.h src/Cell/Habitat/WaterHabitat/WaterHabitat.cpp src/Cell/Habitat/WaterHabitat/WaterHabitat.h src/Cell/Facility/Facility.cpp src/Cell/Facility/Facility.h src/Cell/Facility/Park/Park.cpp src/Cell/Facility/Park/Park.h src/Cell/Facility/Restaurant/Restaurant.cpp src/Cell/Facility/Restaurant/Restaurant.h src/Cell/Facility/Road/Road.cpp src/Cell/Facility/Road/Road.h src/Cell/Facility/Road/Entrance/Entrance.cpp src/Cell/Facility/Road/Entrance/Entrance.h src/Cell/Facility/Road/Exit/Exit.cpp src/Cell/Facility/Road/Exit/Exit.h) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
 
 # Load Google Test settings
