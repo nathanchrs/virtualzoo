@@ -14,7 +14,7 @@ public:
     /** @brief Constructor.
       * Menciptakan kebun binatang dengan ukuran tertentu dengan sejumlah kandang dan sejumlah jalan masuk.
       */
-    Zoo(int _length. int _width, int _maxCage, int _maxEntrance);
+    Zoo(int _length, int _width, int _maxCage, int _maxEntrance);
 
     /** @brief Destructor.
       */
@@ -37,6 +37,12 @@ public:
       */
     void addAnimalToCage(Animal *_animal, int cageID);
 
+    /**
+     * @brief Menambahkan sebuah entrance ke dalam array of entrance
+     * @param _entrance Entrance yang dimasukan.
+     */
+    void addEntrance(Entrance *_entrance);
+
     /** @brief Menampilkan kebun binatang di atas layar dengan batas yang ditentukan pengguna.
       * Menampilkan juga posisi hewan-hewan di atas layar.
       * Memanfaatkan method render.
@@ -58,10 +64,12 @@ public:
       */
     void calculateTotalFood();
 
+
+
 private:
     Cell ***cells;
-    Cage *cages;
-    Entrance *entrances;
+    Cage **cages;
+    Entrance **entrances;
     int numOfCage;
     int numOfEntrance;
     const int maxCage;
