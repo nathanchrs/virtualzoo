@@ -3,11 +3,12 @@
 
 #include "../Reptile.h"
 #include "../../Diet/Omnivore/Omnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Iguana
   * Kelas Iguana yang merepesentasikan iguana.
   */
-class Iguana : public Reptile, public Omnivore {
+class Iguana : public Reptile, public Omnivore, public TameAnimal {
 public:
     /** @brief Constructor.
       * Menciptakan iguana.

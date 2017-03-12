@@ -3,11 +3,12 @@
 
 #include "../Reptile.h"
 #include "../../Diet/Carnivore/Carnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Cobra
   * Kelas Cobra yang merepesentasikan ular kobra.
   */
-class Cobra : public Reptile, public Carnivore{
+class Cobra : public Reptile, public Carnivore, public TameAnimal{
 public:
     /** @brief Constructor.
       * Menciptakan ular kobra.

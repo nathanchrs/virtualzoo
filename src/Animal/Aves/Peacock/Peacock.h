@@ -3,11 +3,12 @@
 
 #include "../Aves.h"
 #include "../../Diet/Omnivore/Omnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Peacock
   * Kelas Peacock yang merepesentasikan burung merak.
   */
-class Peacock : public Aves, public Omnivore {
+class Peacock : public Aves, public Omnivore, public TameAnimal {
 public:
     /** @brief Constructor.
       * Menciptakan burung merak.

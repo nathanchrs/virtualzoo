@@ -5,6 +5,9 @@ Eagle::Eagle(int _weight) : Aves("Eagle"), Carnivore(_weight, 0.25) {
                   "dominant predators in the sky. Eagles are most commonly found in the Northern Hemisphere including Europe, "
                   "Asia and North America. Eagles are also found on the African continent. "
                   "This ovipar animal has land and air as its habitat";
+    airAnimal = true;
+    landAnimal = true;
+    waterAnimal = false;
 }
 
 string Eagle::interact() const {

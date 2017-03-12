@@ -3,11 +3,12 @@
 
 #include "../Aves.h"
 #include "../../Diet/Carnivore/Carnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Eagle
   * Kelas Eagle yang merepesentasikan elang.
   */
-class Eagle : public Aves, public Carnivore {
+class Eagle : public Aves, public Carnivore, public TameAnimal {
 public:
     /** @brief Constructor.
       * Menciptakan elang.

@@ -3,11 +3,12 @@
 
 #include "../Reptile.h"
 #include "../../Diet/Carnivore/Carnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Python
   * Kelas Python yang merepesentasikan ular piton.
   */
-class Python : public Reptile, public Carnivore {
+class Python : public Reptile, public Carnivore, public TameAnimal {
 public:
     /** @brief Constructor.
       * Menciptakan ular piton.

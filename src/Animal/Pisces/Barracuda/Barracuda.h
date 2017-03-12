@@ -3,11 +3,12 @@
 
 #include "../Pisces.h"
 #include "../../Diet/Carnivore/Carnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Barracuda
   * Kelas Barracuda yang merepesentasikan ikan barakuda.
   */
-class Barracuda : public Pisces, public Carnivore {
+class Barracuda : public Pisces, public Carnivore, public TameAnimal {
 public:
     /** @brief Constructor.
       * Menciptakan ikan barakuda.

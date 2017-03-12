@@ -3,11 +3,12 @@
 
 #include "../Aves.h"
 #include "../../Diet/Herbivore/Herbivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Parrot
   * Kelas Parrot yang merepesentasikan burung beo.
   */
-class Parrot : public Aves, public Herbivore {
+class Parrot : public Aves, public Herbivore, public TameAnimal {
     /** @brief Constructor.
       * Menciptakan burung beo.
       */

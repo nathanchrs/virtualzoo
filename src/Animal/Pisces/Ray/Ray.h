@@ -3,11 +3,12 @@
 
 #include "../Pisces.h"
 #include "../../Diet/Carnivore/Carnivore.h"
+#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Ray
   * Kelas Ray yang merepesentasikan ikan pari.
   */
-class Ray : public Pisces, public Carnivore{
+class Ray : public Pisces, public Carnivore, public TameAnimal{
 public:
     /** @brief Constructor.
       * Menciptakan ikan pari.
