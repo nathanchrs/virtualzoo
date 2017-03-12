@@ -42,9 +42,10 @@ public:
     void render();
 
 private:
-    Habitat **Habitats;
-    Animal **Animals;
+    Habitat **habitats;
+    Animal **animals;
     int numOfAnimals;
+    int numOfHabitats;
     const int size;
     const int capacity;
 };

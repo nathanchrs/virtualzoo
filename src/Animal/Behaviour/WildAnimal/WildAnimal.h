@@ -32,6 +32,7 @@ public:
 
 protected:
     string *preyList;
+    int preyIndex;
     const int numPrey;
 };
 
