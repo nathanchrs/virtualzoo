@@ -92,7 +92,7 @@ SET(SOURCE_FILES
         src/Cell/Facility/Road/Exit/Exit.cpp
         src/Cell/Facility/Road/Exit/Exit.h
         src/Cage/Cage.cpp
-        src/Cage/Cage.h src/Animal/Behaviour/Behaviour.cpp src/Animal/Behaviour/Behaviour.h src/Animal/Behaviour/TameAnimal/TameAnimal.cpp src/Animal/Behaviour/TameAnimal/TameAnimal.h src/Animal/Behaviour/WildAnimal/WildAnimal.cpp src/Animal/Behaviour/WildAnimal/WildAnimal.h src/Animal/Reptile/WildCobra/WildCobra.cpp src/Animal/Reptile/WildCobra/WildCobra.h src/Animal/Reptile/WildPython/WildPython.cpp src/Animal/Reptile/WildPython/WildPython.h src/Animal/Mammals/WildLion/WildLion.cpp src/Animal/Mammals/WildLion/WildLion.h src/Animal/Mammals/WildTiger/WildTiger.cpp src/Animal/Mammals/WildTiger/WildTiger.h) # Add new source files here
+        src/Cage/Cage.h src/Animal/Behaviour/Behaviour.cpp src/Animal/Behaviour/Behaviour.h src/Animal/Behaviour/TameAnimal/TameAnimal.cpp src/Animal/Behaviour/TameAnimal/TameAnimal.h src/Animal/Behaviour/WildAnimal/WildAnimal.cpp src/Animal/Behaviour/WildAnimal/WildAnimal.h src/Animal/Reptile/WildCobra/WildCobra.cpp src/Animal/Reptile/WildCobra/WildCobra.h src/Animal/Reptile/WildPython/WildPython.cpp src/Animal/Reptile/WildPython/WildPython.h src/Animal/Mammals/WildLion/WildLion.cpp src/Animal/Mammals/WildLion/WildLion.h src/Animal/Mammals/WildTiger/WildTiger.cpp src/Animal/Mammals/WildTiger/WildTiger.h src/Animal/Aves/WildEagle/WildEagle.h src/Animal/Aves/WildEagle/WildEagle.cpp src/Animal/Pisces/WildBarracuda/WildBarracuda.h src/Animal/Pisces/WildBarracuda/WildBarracuda.cpp) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
 
 # Load Google Test settings
