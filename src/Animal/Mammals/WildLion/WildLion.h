@@ -9,6 +9,7 @@
   * Kelas WildLion yang merepesentasikan singa yang buas.
   */
 class WildLion : public Mammals, public Carnivore, public WildAnimal{
+public:
     /** @brief Constructor.
       * Menciptakan singa yang buas beserta daftar mangsanya.
       */

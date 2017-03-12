@@ -10,5 +10,5 @@ Leopard::Leopard(int _weight) : Mammals("Leopard"), Carnivore(_weight, 0.05) {
 }
 
 string Leopard::interact() const {
-    return "The leopard is sleeping with its family.";
+    return "The leopard is sleeping with its family";
 }

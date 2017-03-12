@@ -10,5 +10,5 @@ Lion::Lion(int _weight) : Mammals("Lion"), Carnivore(_weight, 0.15) {
 }
 
 string Lion::interact() const {
-    return "The lion is yawning.";
+    return "The lion is yawning";
 }

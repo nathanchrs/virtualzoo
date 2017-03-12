@@ -10,5 +10,5 @@ Orangutan::Orangutan(int _weight) : Mammals("Orangutan"), Omnivore(_weight, 0.20
 }
 
 string Orangutan::interact() const {
-    return "The orangutan is hanging around the trees, picking every fruits and eating them.";
+    return "The orangutan is hanging around the trees, picking every fruits and eating them";
 }

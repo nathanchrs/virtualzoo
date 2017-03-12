@@ -9,6 +9,7 @@
   * Kelas WildPython yang merepesentasikan ular piton yang buas.
   */
 class WildPython : public Reptile, public Carnivore, public WildAnimal{
+public:
     /** @brief Constructor.
          * Menciptakan ular piton yang buas.
          */

@@ -125,7 +125,13 @@ include_directories(${GTEST_INCLUDE_DIRS})
 SET(TEST_FILES
         test/test.cpp
         test/Zoo_test.cpp
-        test/Eagle_test.cpp test/Owl_test.cpp) # Add new test files here
+        test/Eagle_test.cpp
+        test/Owl_test.cpp
+        test/Chameleon_test.cpp
+        test/Cobra_test.cpp
+        test/Iguana_test.cpp
+        test/KomodoDragon_test.cpp
+        test/Python_test.cpp test/WildCobra_test.cpp test/WildPython_test.cpp test/Gorilla_test.cpp test/Leopard_test.cpp test/Lion_test.cpp test/Orangutan_test.cpp test/Tiger_test.cpp test/WildLion_test.cpp test/WildTiger_test.cpp) # Add new test files here
 add_executable(virtualzoo_test ${TEST_FILES} ${SOURCE_FILES})
 target_link_libraries(virtualzoo_test ${PThreadLib} ${GTEST_BOTH_LIBRARIES})
 GTEST_ADD_TESTS(virtualzoo_test "" ${TEST_FILES} ${SOURCE_FILES})

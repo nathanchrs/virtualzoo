@@ -11,5 +11,5 @@ Chameleon::Chameleon(int _weight) : Reptile("Chameleon"), Carnivore(_weight, 0.0
 }
 
 string Chameleon::interact() const {
-    return "The chameleon is changing its color and its color become like leaf.";
+    return "The chameleon is changing its color and its color become like leaf";
 }

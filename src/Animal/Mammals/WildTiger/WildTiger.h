@@ -9,6 +9,7 @@
   * Kelas WildTiger yang merepesentasikan harimau yang buas.
   */
 class WildTiger : public Mammals, public Carnivore, public WildAnimal{
+public:
     /** @brief Constructor.
       * Menciptakan harimau yang buas beserta daftar mangsanya.
       */

@@ -9,5 +9,5 @@ Gorilla::Gorilla(int _weight) : Mammals("Gorilla"), Omnivore(_weight, 0.25) {
 }
 
 string Gorilla::interact() const {
-    return "The gorilla is playing with its toy.";
+    return "The gorilla is playing with its toy";
 }
