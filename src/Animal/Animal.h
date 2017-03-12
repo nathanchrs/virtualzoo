@@ -16,29 +16,30 @@ public:
 
     Animal(const string &name);
 
-    string getName() const;
+    virtual ~Animal();
 
-    void setName(const string &name);
+    string getName() const;
 
     string getDescription() const;
 
-    void setDescription(const string &description);
+    /** @brief Memeriksa apakah hewan adalah hewan udara atau tidak.
+      * @return True jika hewan adalah hewan udara dan False jika tidak.
+      */
+    bool isAirAnimal();
 
-    /**
-     * @brief Memeriksa apakah hewan buas atau tidak.
-     * @return True jika hewan adalah hewan buas dan False jika tidak.
-     */
-    bool isWild() const;
+    /** @brief Memeriksa apakah hewan adalah hewan darat atau tidak.
+      * @return True jika hewan adalah hewan darat dan False jika tidak.
+      */
+    bool isLandAnimal();
 
-    void setWild(bool wild);
+    /** @brief Memeriksa apakah hewan adalah hewan air atau tidak.
+      * @return True jika hewan adalah hewan air dan False jika tidak.
+      */
+    bool isWaterAnimal();
 
     Reproduction getReproduction() const;
 
-    void setReproduction(const Reproduction &reproduction);
-
     SkinType getSkinType() const;
-
-    void setSkinType(const SkinType &skinType);
 
     Point getPosition() const;
 
@@ -55,9 +56,10 @@ protected :
     Reproduction reproduction;
     SkinType skinType;
     string description;
-    bool wild;
+    bool airAnimal;
+    bool landAnimal;
+    bool waterAnimal;
     Point position;
 };
-
 
 #endif //ANIMALIA_H

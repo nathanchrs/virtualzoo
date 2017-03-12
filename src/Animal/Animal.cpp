@@ -2,28 +2,29 @@
 
 Animal::Animal(const string &name) : name(name) {}
 
-string Animal::getName() const {
-    return name;
+Animal :: ~Animal(){
+
 }
 
-void Animal::setName(const string &name) {
-    Animal::name = name;
+string Animal::getName() const {
+    return name;
 }
 
 string Animal::getDescription() const {
     return description;
 }
 
-void Animal::setDescription(const string &description) {
-    Animal::description = description;
+
+bool Animal::isAirAnimal() {
+    return airAnimal;
 }
 
-bool Animal::isWild() const {
-    return wild;
+bool Animal::isLandAnimal() {
+    return landAnimal;
 }
 
-void Animal::setWild(bool wild) {
-    Animal::wild = wild;
+bool Animal::isWaterAnimal() {
+    return waterAnimal;
 }
 
 Point Animal::getPosition() const {
@@ -38,15 +39,8 @@ Animal::Reproduction Animal::getReproduction() const {
     return reproduction;
 }
 
-void Animal::setReproduction(const Reproduction &reproduction) {
-    Animal::reproduction = reproduction;
-}
-
 Animal::SkinType Animal::getSkinType() const {
     return skinType;
 }
 
-void Animal::setSkinType(const SkinType &skinType) {
-    Animal::skinType = skinType;
-}
 

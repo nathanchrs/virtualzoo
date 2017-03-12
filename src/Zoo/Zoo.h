@@ -23,13 +23,8 @@ public:
       */
     ~Zoo();
 
-    /**
-      *
-      * @return
-      */
-    Zoo& operator=(const Zoo&);
 
-protected:
+private:
 
 };
 
