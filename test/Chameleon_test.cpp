@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../src/Animal/Reptile/Chameleon/Chameleon.h"
+#include "../src/Zoo/Animal/Reptile/Chameleon/Chameleon.h"
 
 class ChameleonTest : public ::testing::Test {
 protected:
@@ -11,7 +11,8 @@ protected:
 };
 
 TEST_F(ChameleonTest, ChameleonConstructorWithParameter) {
-    Chameleon Test(100);
+    Point P(2,2);
+    Chameleon Test(P,100,false);
     ASSERT_EQ(Test.getName(),"Chameleon");
     ASSERT_EQ(Test.getSkinType(),Animal::Scales);
     ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
@@ -19,11 +20,12 @@ TEST_F(ChameleonTest, ChameleonConstructorWithParameter) {
     ASSERT_TRUE(Test.IsCarnivore());
     ASSERT_TRUE(Test.calculateTotalMeat()>0);
     ASSERT_TRUE(Test.calculateTotalVegetable()==0);
-    ASSERT_TRUE(!Test.isWild());
+    ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(ChameleonTest, ChameleonInteraction) {
-    Chameleon Test(100);
+    Point P(2,2);
+    Chameleon Test(P,100,false);
     ASSERT_EQ(Test.interact(),"The chameleon is changing its color and its color become like leaf");
 }
 

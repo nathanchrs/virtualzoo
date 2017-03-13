@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../src/Animal/Aves/Owl/Owl.h"
+#include "../src/Zoo/Animal/Aves/Owl/Owl.h"
 
 class OwlTest : public ::testing::Test {
 protected:
@@ -11,7 +11,8 @@ protected:
 };
 
 TEST_F(OwlTest, OwlConstructorWithParameter) {
-    Owl Test(100);
+    Point P(2,2);
+    Owl Test(P,100,false);
     ASSERT_EQ(Test.getName(),"Owl");
     ASSERT_EQ(Test.getSkinType(),Animal::Feather);
     ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
@@ -19,10 +20,11 @@ TEST_F(OwlTest, OwlConstructorWithParameter) {
     ASSERT_TRUE(Test.IsCarnivore());
     ASSERT_TRUE(Test.calculateTotalMeat()>0);
     ASSERT_TRUE(Test.calculateTotalVegetable()==0);
-    ASSERT_TRUE(!Test.isWild());
+    ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(OwlTest, OwlInteraction) {
-    Owl Test(100);
+    Point P(2,2);
+    Owl Test(P,100,false);
     ASSERT_EQ(Test.interact(),"Owls rotate their heads and make 'kuk kuk' sound");
 }

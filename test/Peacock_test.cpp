@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../src/Animal/Aves/Peacock/Peacock.h"
+#include "../src/Zoo/Animal/Aves/Peacock/Peacock.h"
 
 class PeacockTest : public ::testing::Test {
 protected:
@@ -11,7 +11,8 @@ protected:
 };
 
 TEST_F(PeacockTest, PeacockConstructorWithParameter) {
-    Peacock Test(100);
+    Point P(2,2);
+    Peacock Test(P,100,false);
     ASSERT_EQ(Test.getName(),"Peacock");
     ASSERT_EQ(Test.getSkinType(),Animal::Feather);
     ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
@@ -19,10 +20,11 @@ TEST_F(PeacockTest, PeacockConstructorWithParameter) {
     ASSERT_TRUE(Test.IsHerbivore());
     ASSERT_TRUE(Test.calculateTotalMeat()>0);
     ASSERT_TRUE(Test.calculateTotalVegetable()>0);
-    ASSERT_TRUE(!Test.isWild());
+    ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(PeacockTest, PeacockInteraction) {
-    Peacock Test(100);
+    Point P(2,2);
+    Peacock Test(P,100,false);
     ASSERT_EQ(Test.interact(),"The peacock is spreading its tail");
 }

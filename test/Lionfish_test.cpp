@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../src/Animal/Pisces/Lionfish/Lionfish.h"
+#include "../src/Zoo/Animal/Pisces/Lionfish/Lionfish.h"
 
 class LionfishTest : public ::testing::Test {
 protected:
@@ -11,7 +11,8 @@ protected:
 };
 
 TEST_F(LionfishTest, LionfishConstructorWithParameter) {
-    Lionfish Test(100);
+    Point P(2,2);
+    Lionfish Test(P,100,false);
     ASSERT_EQ(Test.getName(),"Lionfish");
     ASSERT_EQ(Test.getSkinType(),Animal::Scales);
     ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
@@ -19,10 +20,11 @@ TEST_F(LionfishTest, LionfishConstructorWithParameter) {
     ASSERT_TRUE(Test.IsCarnivore());
     ASSERT_TRUE(Test.calculateTotalMeat()>0);
     ASSERT_TRUE(Test.calculateTotalVegetable()==0);
-    ASSERT_TRUE(!Test.isWild());
+    ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(LionfishTest, LionfishInteraction) {
-    Lionfish Test(100);
+    Point P(2,2);
+    Lionfish Test(P,100,false);
     ASSERT_EQ(Test.interact(),"Whoa! I thought it was plant. It is lionfish!");
 }

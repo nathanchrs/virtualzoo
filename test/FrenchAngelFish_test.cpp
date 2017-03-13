@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../src/Animal/Pisces/FrenchAngelFish/FrenchAngelFish.h"
+#include "../src/Zoo/Animal/Pisces/FrenchAngelFish/FrenchAngelFish.h"
 
 class FrenchAngelFishTest : public ::testing::Test {
 protected:
@@ -11,7 +11,8 @@ protected:
 };
 
 TEST_F(FrenchAngelFishTest, FrenchAngelFishConstructorWithParameter) {
-    FrenchAngelFish Test(100);
+    Point P(2,2);
+    FrenchAngelFish Test(P,100,false);
     ASSERT_EQ(Test.getName(),"FrenchAngelFish");
     ASSERT_EQ(Test.getSkinType(),Animal::Scales);
     ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
@@ -19,10 +20,11 @@ TEST_F(FrenchAngelFishTest, FrenchAngelFishConstructorWithParameter) {
     ASSERT_TRUE(Test.IsHerbivore());
     ASSERT_TRUE(Test.calculateTotalMeat()==0);
     ASSERT_TRUE(Test.calculateTotalVegetable()>0);
-    ASSERT_TRUE(!Test.isWild());
+    ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(FrenchAngelFishTest, FrenchAngelFishInteraction) {
-    FrenchAngelFish Test(100);
+    Point P(2,2);
+    FrenchAngelFish Test(P,100,false);
     ASSERT_EQ(Test.interact(),"Splash! It is swimming");
 }

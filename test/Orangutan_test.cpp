@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../src/Animal/Mammals/Orangutan/Orangutan.h"
+#include "../src/Zoo/Animal/Mammals/Orangutan/Orangutan.h"
 
 class OrangutanTest : public ::testing::Test {
 protected:
@@ -11,7 +11,8 @@ protected:
 };
 
 TEST_F(OrangutanTest, OrangutanConstructorWithParameter) {
-    Orangutan Test(100);
+    Point P(2,2);
+    Orangutan Test(P,100,false);
     ASSERT_EQ(Test.getName(),"Orangutan");
     ASSERT_EQ(Test.getSkinType(),Animal::Fur);
     ASSERT_EQ(Test.getReproduction(),Animal::Vivipar);
@@ -19,11 +20,11 @@ TEST_F(OrangutanTest, OrangutanConstructorWithParameter) {
     ASSERT_TRUE(Test.IsOmnivore());
     ASSERT_TRUE(Test.calculateTotalMeat()>0);
     ASSERT_TRUE(Test.calculateTotalVegetable()>0);
-    ASSERT_TRUE(!Test.isWild());
+    ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(OrangutanTest, OrangutanInteraction) {
-    Orangutan Test(100);
+    Point P(2,2);
+    Orangutan Test(P,100,false);
     ASSERT_EQ(Test.interact(),"The orangutan is hanging around the trees, picking every fruits and eating them");
 }
-

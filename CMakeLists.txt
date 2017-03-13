@@ -114,25 +114,19 @@ SET(TEST_FILES
         test/Iguana_test.cpp
         test/KomodoDragon_test.cpp
         test/Python_test.cpp
-        test/WildCobra_test.cpp
-        test/WildPython_test.cpp
         test/Gorilla_test.cpp
         test/Leopard_test.cpp
         test/Lion_test.cpp
         test/Orangutan_test.cpp
         test/Tiger_test.cpp
-        test/WildLion_test.cpp
-        test/WildTiger_test.cpp
         test/Parrot_test.cpp
         test/Peacock_test.cpp
         test/Pigeon_test.cpp
-        test/WildEagle_test.cpp
         test/Barracuda_test.cpp
         test/FrenchAngelFish_test.cpp
         test/Lionfish_test.cpp
         test/Ray_test.cpp
         test/Seahorse_test.cpp
-        test/WildBarracuda_test.cpp
         test/Array_test.cpp
     ) # Add new test files here
 

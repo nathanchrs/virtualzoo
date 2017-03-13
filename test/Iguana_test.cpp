@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../src/Animal/Reptile/Iguana/Iguana.h"
+#include "../src/Zoo/Animal/Reptile/Iguana/Iguana.h"
 
 class IguanaTest : public ::testing::Test {
 protected:
@@ -11,7 +11,8 @@ protected:
 };
 
 TEST_F(IguanaTest, IguanaConstructorWithParameter) {
-    Iguana Test(100);
+    Point P(2,2);
+    Iguana Test(P,100,false);
     ASSERT_EQ(Test.getName(),"Iguana");
     ASSERT_EQ(Test.getSkinType(),Animal::Scales);
     ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
@@ -19,11 +20,12 @@ TEST_F(IguanaTest, IguanaConstructorWithParameter) {
     ASSERT_TRUE(Test.IsOmnivore());
     ASSERT_TRUE(Test.calculateTotalMeat()>0);
     ASSERT_TRUE(Test.calculateTotalVegetable()>0);
-    ASSERT_TRUE(!Test.isWild());
+    ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(IguanaTest, IguanaInteraction) {
-    Iguana Test(100);
+    Point P(2,2);
+    Iguana Test(P,100,false);
     ASSERT_EQ(Test.interact(),"The iguana is climbing a tree");
 }
 

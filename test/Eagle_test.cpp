@@ -11,7 +11,8 @@ protected:
 };
 
 TEST_F(EagleTest, EagleConstructorWithParameter) {
-    Eagle Test(100);
+    Point P(2,2);
+    Eagle Test(P,100,false);
     ASSERT_EQ(Test.getName(),"Eagle");
     ASSERT_EQ(Test.getSkinType(),Animal::Feather);
     ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
@@ -19,10 +20,24 @@ TEST_F(EagleTest, EagleConstructorWithParameter) {
     ASSERT_TRUE(Test.IsCarnivore());
     ASSERT_TRUE(Test.calculateTotalMeat()>0);
     ASSERT_TRUE(Test.calculateTotalVegetable()==0);
-    ASSERT_TRUE(!Test.isWild());
+    ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(EagleTest, EagleInteraction) {
-    Eagle Test(100);
+    Point P(2,2);
+    Eagle Test(P,100,false);
     ASSERT_EQ(Test.interact(),"The eagle is eating its food that the zoo keeper gave");
+}
+
+TEST_F(EagleTest, WildEagleConstructorWithParameter) {
+    Point P(2,2);
+    Eagle Test(P,100,true);
+    ASSERT_EQ(Test.getName(),"Eagle");
+    ASSERT_EQ(Test.getSkinType(),Animal::Feather);
+    ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
+    ASSERT_TRUE(Test.isAirAnimal());
+    ASSERT_TRUE(Test.IsCarnivore());
+    ASSERT_TRUE(Test.calculateTotalMeat()>0);
+    ASSERT_TRUE(Test.calculateTotalVegetable()==0);
+    ASSERT_TRUE(Test.IsWild());
 }

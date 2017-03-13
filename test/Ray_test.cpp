@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../src/Animal/Pisces/Ray/Ray.h"
+#include "../src/Zoo/Animal/Pisces/Ray/Ray.h"
 
 class RayTest : public ::testing::Test {
 protected:
@@ -11,7 +11,8 @@ protected:
 };
 
 TEST_F(RayTest, RayConstructorWithParameter) {
-    Ray Test(100);
+    Point P(2,2);
+    Ray Test(P,100,false);
     ASSERT_EQ(Test.getName(),"Ray");
     ASSERT_EQ(Test.getSkinType(),Animal::Scales);
     ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
@@ -19,10 +20,11 @@ TEST_F(RayTest, RayConstructorWithParameter) {
     ASSERT_TRUE(Test.IsCarnivore());
     ASSERT_TRUE(Test.calculateTotalMeat()>0);
     ASSERT_TRUE(Test.calculateTotalVegetable()==0);
-    ASSERT_TRUE(!Test.isWild());
+    ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(RayTest, RayInteraction) {
-    Ray Test(100);
+    Point P(2,2);
+    Ray Test(P,100,false);
     ASSERT_EQ(Test.interact(),"The ray is swimming as floating through the water");
 }
