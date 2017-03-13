@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan singa.
       */
-    Lion(int _weight);
+    Lion(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan Lion.
       * @return Experience yang dirasakan ketika berinteraksi dengan singa.

@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan burung hantu.
       */
-    Owl(int _weight);
+    Owl(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan burung hantu.
       * @return Experience yang dirasakan ketika berinteraksi dengan burung hantu.

@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan bunglon.
       */
-    Chameleon(int _weight);
+    Chameleon(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan bunglon.
       * @return Experience yang dirasakan ketika berinteraksi dengan bunglon.

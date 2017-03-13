@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan macan tutul.
       */
-    Leopard(int _weight);
+    Leopard(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan macan tutul.
       * @return Experience yang dirasakan ketika berinteraksi dengan macan tutul.

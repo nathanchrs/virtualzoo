@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan ular kobra.
       */
-    Cobra(int _weight);
+    Cobra(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan ular kobra.
       * @return Experience yang dirasakan ketika berinteraksi dengan ular kobra.

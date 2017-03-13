@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan ikan barakuda.
       */
-    Barracuda(int _weight);
+    Barracuda(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan ikan barakuda.
       * @return Experience yang dirasakan ketika berinteraksi dengan ikan barakuda.

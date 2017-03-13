@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan orangutan.
       */
-    Orangutan(int weight);
+    Orangutan(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan orangutan.
       * @return Experience yang dirasakan ketika berinteraksi dengan orangutan.

@@ -1,6 +1,6 @@
 #include "Eagle.h"
 
-Eagle::Eagle(int _weight) : Aves("Eagle"), Carnivore(_weight, 0.25) {
+Eagle::Eagle(const Point& pos, int _weight, bool wild) : Aves("Eagle"), Carnivore(_weight, 0.25) {
     description = "The eagle is a (generally) large sized bird of prey meaning that the eagle is one of the most "
                   "dominant predators in the sky. Eagles are most commonly found in the Northern Hemisphere including Europe, "
                   "Asia and North America. Eagles are also found on the African continent. "
@@ -8,6 +8,10 @@ Eagle::Eagle(int _weight) : Aves("Eagle"), Carnivore(_weight, 0.25) {
     airAnimal = true;
     landAnimal = true;
     waterAnimal = false;
+    position = pos;
+    this -> wild  = wild;
+    //TODO AddPrey
+
 }
 
 string Eagle::interact() const {

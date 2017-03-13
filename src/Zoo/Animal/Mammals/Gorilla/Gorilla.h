@@ -14,12 +14,10 @@
 class Gorilla : public Mammals, public Omnivore {
 public:
 
-    Gorilla();
-
     /** @brief Constructor.
       * Menciptakan gorilla.
       */
-    Gorilla(int _weight);
+    Gorilla(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan gorilla.
       * @return Experience yang dirasakan ketika berinteraksi dengan gorilla.

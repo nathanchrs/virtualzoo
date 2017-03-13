@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan elang.
       */
-    Eagle(int _weight);
+    Eagle(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan elang.
       * @return Experience yang dirasakan ketika berinteraksi dengan elang.

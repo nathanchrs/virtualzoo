@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan harimau.
       */
-    Tiger(int _weight);
+    Tiger(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan harimau.
       * @return Experience yang dirasakan ketika berinteraksi dengan harimau.

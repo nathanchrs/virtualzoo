@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan ikan pari.
       */
-    Ray(int _weight);
+    Ray(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan ikan pari.
       * @return Experience yang dirasakan ketika berinteraksi dengan ikan pari.

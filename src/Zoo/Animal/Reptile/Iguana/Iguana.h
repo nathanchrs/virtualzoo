@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan iguana.
       */
-    Iguana(int _weight);
+    Iguana(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan iguana.
       * @return Experience yang dirasakan ketika berinteraksi dengan iguana.

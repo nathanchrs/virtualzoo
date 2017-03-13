@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan lionfish.
       */
-    Lionfish(int _weight);
+    Lionfish(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan lionfish.
       * @return Experience yang dirasakan ketika berinteraksi dengan lionfish.

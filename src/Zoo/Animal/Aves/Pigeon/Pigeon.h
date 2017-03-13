@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
      * Menciptakan burung merpati.
      */
-    Pigeon(int _weight);
+    Pigeon(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan burung merpati.
       * @return Experience yang dirasakan ketika berinteraksi dengan burung merpati.

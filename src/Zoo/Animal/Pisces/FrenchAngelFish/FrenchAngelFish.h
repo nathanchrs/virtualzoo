@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan french angelfish.
       */
-    FrenchAngelFish(int _weight);
+    FrenchAngelFish(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan french angelfish.
       * @return Experience yang dirasakan ketika berinteraksi dengan french angelfish.

@@ -1,6 +1,6 @@
 #include "Chameleon.h"
 
-Chameleon::Chameleon(int _weight) : Reptile("Chameleon"), Carnivore(_weight, 0.05) {
+Chameleon::Chameleon(const Point& pos, int _weight, bool wild) : Reptile("Chameleon"), Carnivore(_weight, 0.05) {
     description = "The chameleon are a distinctive and highly specialized clade of Old World lizards."
                   " Chameleons primarily live in the mainland of sub-Saharan Africa and on the island of Madagascar."
                   " These species come in a range of colors, and many species have the ability to change color."
@@ -8,6 +8,9 @@ Chameleon::Chameleon(int _weight) : Reptile("Chameleon"), Carnivore(_weight, 0.0
     airAnimal = false;
     landAnimal = true;
     waterAnimal = false;
+    position = pos;
+    this -> wild = wild;
+    //TODO ListPrey
 }
 
 string Chameleon::interact() const {

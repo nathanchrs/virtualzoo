@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan burung merak.
       */
-    Peacock(int _weight);
+    Peacock(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan burung merak.
       * @return Experience yang dirasakan ketika berinteraksi dengan burung merak.

@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan kuda laut.
       */
-    Seahorse(int _weight);
+    Seahorse(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan kuda laut.
       * @return Experience yang dirasakan ketika berinteraksi dengan kuda laut.

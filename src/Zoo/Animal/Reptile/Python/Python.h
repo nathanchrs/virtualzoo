@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan ular piton.
       */
-    Python(int _weight);
+    Python(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan ular piton.
       * @return Experience yang dirasakan ketika berinteraksi dengan ular piton.

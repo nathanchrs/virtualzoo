@@ -1,6 +1,6 @@
 #include "Pigeon.h"
 
-Pigeon::Pigeon(int _weight) : Aves("Pigeon"), Herbivore(_weight, 0.10) {
+Pigeon::Pigeon(const Point& pos, int _weight, bool wild) : Aves("Pigeon"), Herbivore(_weight, 0.10) {
     description = "Pigeons is stout-bodied birds with short necks, and short slender bills."
                   "Pigeon is a French word that derives from the Latin pipio, for a \"peeping\" chick."
                   "Pigeons and doves are distributed everywhere on Earth, except for the driest areas of the Sahara"
@@ -8,6 +8,9 @@ Pigeon::Pigeon(int _weight) : Aves("Pigeon"), Herbivore(_weight, 0.10) {
     airAnimal = true;
     landAnimal = true;
     waterAnimal = false;
+    position = pos;
+    this -> wild = wild;
+    //TODO ListPrey
 }
 
 string Pigeon::interact() const {

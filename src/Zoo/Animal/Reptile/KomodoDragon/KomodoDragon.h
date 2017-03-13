@@ -12,7 +12,7 @@ public:
     /** @brief Constructor.
       * Menciptakan komodo.
       */
-    KomodoDragon(int _weight);
+    KomodoDragon(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan komodo.
       * @return Experience yang dirasakan ketika berinteraksi dengan komodo.

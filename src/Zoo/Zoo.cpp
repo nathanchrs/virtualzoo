@@ -4,6 +4,25 @@
 #include "Cell/Park.h"
 #include "Cell/Restaurant.h"
 #include "Animal/Aves/Eagle/Eagle.h"
+#include "Animal/Pisces/FrenchAngelFish/FrenchAngelFish.h"
+#include "Animal/Pisces/Lionfish/Lionfish.h"
+#include "Animal/Mammals/Orangutan/Orangutan.h"
+#include "Animal/Reptile/Chameleon/Chameleon.h"
+#include "Animal/Reptile/KomodoDragon/KomodoDragon.h"
+#include "Animal/Aves/Owl/Owl.h"
+#include "Animal/Aves/Parrot/Parrot.h"
+#include "Animal/Aves/Peacock/Peacock.h"
+#include "Animal/Aves/Pigeon/Pigeon.h"
+#include "Animal/Pisces/Barracuda/Barracuda.h"
+#include "Animal/Pisces/Ray/Ray.h"
+#include "Animal/Pisces/Seahorse/Seahorse.h"
+#include "Animal/Mammals/Gorilla/Gorilla.h"
+#include "Animal/Mammals/Leopard/Leopard.h"
+#include "Animal/Mammals/Lion/Lion.h"
+#include "Animal/Mammals/Tiger/Tiger.h"
+#include "Animal/Reptile/Cobra/Cobra.h"
+#include "Animal/Reptile/Iguana/Iguana.h"
+#include "Animal/Reptile/Python/Python.h"
 
 Zoo::Zoo(int rows, int cols) : rows(rows), cols(cols), cells(rows * cols), zones() {
     for (int i = 0; i < rows * cols; i++) {
@@ -65,14 +84,71 @@ Zoo::Zoo(istream &is) {
         for (int j = 0; j < animalCount; j++) {
             string species;
             int r, c, weight;
-            is >> species >> r >> c >> weight;
+            bool wild;
+            is >> species >> r >> c >> weight >> wild;
             Point pos = Point(r, c);
             if (species == "Eagle") {
-                Eagle animal = Eagle(weight);
-                animal.setPosition(pos);
+                Eagle animal = Eagle(pos, weight, wild);
                 addAnimal(animal, zoneName);
-            } else if (species == "aaa") {
-                // TODO lanjutin
+            } else if (species == "Owl") {
+                Owl animal = Owl(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Parrot") {
+                Parrot animal = Parrot(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Peacock") {
+                Peacock animal = Peacock(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Pigeon") {
+                Pigeon animal = Pigeon(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Barracuda") {
+                Barracuda animal = Barracuda(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "FrenchAngelFish") {
+                FrenchAngelFish animal = FrenchAngelFish(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Lionfish") {
+                Lionfish animal = Lionfish(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Ray") {
+                Ray animal = Ray(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Seahorse") {
+                Seahorse animal = Seahorse(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Gorilla") {
+                Gorilla animal = Gorilla(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Leopard") {
+                Leopard animal = Leopard(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Lion") {
+                Lion animal = Lion(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Orangutan") {
+                Orangutan animal = Orangutan(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Tiger") {
+                Tiger animal = Tiger(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Chameleon") {
+                Chameleon animal = Chameleon(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Cobra") {
+                Cobra animal = Cobra(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Iguana") {
+                Iguana animal = Iguana(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "KomodoDragon") {
+                KomodoDragon animal = KomodoDragon(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else if (species == "Python") {
+                Python animal = Python(pos, weight, wild);
+                addAnimal(animal, zoneName);
+            } else {
+                throw InputException();
             }
         }
     }

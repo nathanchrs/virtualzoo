@@ -8,10 +8,12 @@
   * Kelas Parrot yang merepesentasikan burung beo.
   */
 class Parrot : public Aves, public Herbivore {
+public:
+
     /** @brief Constructor.
       * Menciptakan burung beo.
       */
-    Parrot(int _weight);
+    Parrot(const Point& pos, int _weight, bool wild);
 
     /** @brief Melakukan interaksi dengan burung beo.
       * @return Experience yang dirasakan ketika berinteraksi dengan burung beo.
