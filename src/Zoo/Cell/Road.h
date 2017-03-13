@@ -39,6 +39,10 @@ public:
         return '.';
     }
 
+    Cell* clone() const {
+        return new Road(*this);
+    };
+
 private:
     bool entrance;
     bool exit;

@@ -21,6 +21,10 @@ public:
     char render() const {
         return 'r';
     }
+
+    Cell* clone() const {
+        return new Restaurant(*this);
+    };
 };
 
 #endif //RESTAURANT_H

@@ -13,7 +13,7 @@ public:
       * Menciptakan sebuah Cell dengan status aksesibilitas tertentu.
       * @param accessible Status aksesibilitas dari Cell.
       */
-    Cell(bool accessible = false) : accessible(accessible);
+    Cell(bool accessible = false) : accessible(accessible) {}
 
     /** @brief Destructor.
       */
@@ -52,6 +52,8 @@ public:
       * @return Nilai Z dari Cell.
       */
     int getZ() const { return 1; };
+
+    virtual Cell* clone() const = 0;
 
 private:
     bool accessible;

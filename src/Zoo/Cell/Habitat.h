@@ -36,6 +36,10 @@ public:
         }
     }
 
+    Cell* clone() const {
+        return new Habitat(*this);
+    };
+
 private:
     HabitatType type;
 };

@@ -19,7 +19,6 @@ TEST_F(EagleTest, EagleConstructorWithParameter) {
     ASSERT_TRUE(Igel.IsCarnivore());
     ASSERT_TRUE(Igel.calculateTotalMeat()>0);
     ASSERT_TRUE(Igel.calculateTotalVegetable()==0);
-    ASSERT_TRUE(!Igel.isWild());
 }
 
 TEST_F(EagleTest, EagleInteraction) {

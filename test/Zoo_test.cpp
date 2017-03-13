@@ -7,7 +7,7 @@ protected:
 };
 
 TEST_F(ZooTest, ZooConstructor) {
-    Zoo zoo(20,20,15,15);
+    Zoo zoo(20,20);
     ASSERT_TRUE(&zoo != NULL);
 }
 

@@ -49,6 +49,10 @@ public:
         return animals.size() >= (0.3 * size());
     };
 
+    Zone* clone() const {
+        return new Cage(*this);
+    };
+
 private:
     Array<Animal*> animals;
 };

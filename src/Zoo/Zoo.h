@@ -15,7 +15,7 @@ public:
     /** @brief Constructor.
       * Menciptakan kebun binatang dengan ukuran tertentu.
       * @param rows Ukuran vertikal kebun binatang.
-      * @param cols Ukurun horizontal kebun binatang.
+      * @param cols Ukuran horizontal kebun binatang.
       */
     Zoo(int rows, int cols);
 
@@ -26,7 +26,7 @@ public:
     /** @brief Menambahkan sebuah zona ke dalam kebun binatang.
       * @param zoneName Nama zona yang ditambahkan ke dalam kebun binatang.
       */
-    void addZone(string zoneName, bool cage = false);
+    void addZone(const Zone &zone);
 
     /** @brief Menambahkan sebuah cell ke dalam kebun binatang.
       * @param cell Cell yang ditambahkan ke dalam kebun binatang.

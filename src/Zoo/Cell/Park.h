@@ -21,6 +21,10 @@ public:
     char render() const {
         return 'p';
     }
+
+    Cell* clone() const {
+        return new Park(*this);
+    };
 };
 
 #endif //PARK_H

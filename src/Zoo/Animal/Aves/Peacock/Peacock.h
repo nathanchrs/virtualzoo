@@ -7,7 +7,7 @@
 /** @class Peacock
   * Kelas Peacock yang merepesentasikan burung merak.
   */
-class Peacock : public Aves, public Omnivore, public TameAnimal {
+class Peacock : public Aves, public Omnivore {
 public:
     /** @brief Constructor.
       * Menciptakan burung merak.
