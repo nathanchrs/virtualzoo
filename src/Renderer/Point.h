@@ -44,7 +44,11 @@ public:
      * @param cols Batas jumlah kolom.
      * @return True jika point berada dalam batasan yang diberikan, false jika tidak.
      */
-    bool inArea(int rows, int cols) const { return r > 0 && c > 0 && r < rows && c < cols; }
+    bool inArea(int rows, int cols) const { return r >= 0 && c >= 0 && r < rows && c < cols; }
+
+    Point operator+(const Point &rhs) {
+        return Point(r + rhs.r, c + rhs.c);
+    }
 
 private:
     int r;

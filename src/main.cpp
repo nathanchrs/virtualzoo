@@ -1,13 +1,18 @@
 #include <iostream>
-#include "Renderer/ConsoleRenderer/FrameBuffer.h"
-
+#include <fstream>
+#include "Renderer/ConsoleRenderer/BasicConsoleRenderer.h"
+#include "Zoo/Animal/Aves/Eagle/Eagle.h"
 using namespace std;
 
 int main() {
 
-    FrameBuffer fb(10, 100, true);
-    fb.drawTextBox(Point(3,5), Point(5, 12), "Hello, world! in a box", FrameBuffer::WHITE, FrameBuffer::RED);
-    cout << fb;
+    ifstream fin;
+    fin.open("zoo.in");
+    Zoo zoo(fin);
+    fin.close();
+
+    BasicConsoleRenderer renderer;
+    renderer.render(zoo);
 
     return 0;
 }

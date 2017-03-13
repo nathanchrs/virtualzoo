@@ -12,7 +12,7 @@ public:
       * Menciptakan sebuah restoran dengan status aksesibilitas tertentu.
       * @param accessible Status aksesibilitas restoran.
       */
-    Restaurant(bool accessible = false) : Cell(accessible) {}
+    Restaurant(Point position, bool accessible = false) : Cell(position, accessible) {}
 
     /**
      * @brief Menampilkan restoran ke console teks.
@@ -21,6 +21,10 @@ public:
     char render() const {
         return 'r';
     }
+
+    Cell* clone() const {
+        return new Restaurant(*this);
+    };
 };
 
 #endif //RESTAURANT_H

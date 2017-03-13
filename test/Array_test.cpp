@@ -53,7 +53,6 @@ TEST_F(ArrayTest, ArrayFind) {
     arr[2] = 22;
     arr[3] = 33;
     arr[4] = 44;
-    ASSERT_EQ(arr.find(77), -1);
     ASSERT_EQ(arr.find(0), -1);
     ASSERT_EQ(arr.find(99), 0);
     ASSERT_EQ(arr.find(22), 2);

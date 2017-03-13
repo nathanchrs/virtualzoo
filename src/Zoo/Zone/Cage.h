@@ -34,6 +34,10 @@ public:
         }
     };
 
+    const Array<Animal*> &getAnimals() const {
+        return animals;
+    }
+
     /**
      * @brief Mengembalikan jumlah hewan yang berada dalam kandang.
      * @return Jumlah hewan dalam kandang.
@@ -47,6 +51,10 @@ public:
       */
     bool isFull() const {
         return animals.size() >= (0.3 * size());
+    };
+
+    Zone* clone() const {
+        return new Cage(*this);
     };
 
 private:

@@ -13,7 +13,7 @@ public:
       * Menciptakan sebuah Cell dengan status aksesibilitas tertentu.
       * @param accessible Status aksesibilitas dari Cell.
       */
-    Cell(bool accessible = false) : accessible(accessible);
+    Cell(Point position, bool accessible = false) : position(position), accessible(accessible) {}
 
     /** @brief Destructor.
       */
@@ -48,10 +48,7 @@ public:
         Cell::position = position;
     };
 
-    /** @brief Mengembalikan nilai Z (posisi depan/belakang) dari Cell.
-      * @return Nilai Z dari Cell.
-      */
-    int getZ() const { return 1; };
+    virtual Cell* clone() const = 0;
 
 private:
     bool accessible;

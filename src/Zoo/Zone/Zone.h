@@ -25,6 +25,10 @@ public:
 
     int size() const { return cells.size(); }
 
+    virtual Zone* clone() const {
+        return new Zone(*this);
+    };
+
 private:
     string name;
     Array<Cell*> cells;

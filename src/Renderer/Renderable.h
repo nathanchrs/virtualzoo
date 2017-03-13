@@ -17,11 +17,6 @@ public:
      * @brief Mengembalikan posisi untuk pencetakan objek.
      */
     virtual Point getPosition() const = 0;
-
-    /**
-     * @brief Mengembalikan kedalaman objek; objek dengan nilai z yang lebih tinggi akan berada di depan.
-     */
-    virtual int getZ() const = 0;
 };
 
 #endif //RENDERABLE_H

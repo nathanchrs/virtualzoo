@@ -132,7 +132,7 @@ SET(TEST_FILES
         test/Lionfish_test.cpp
         test/Ray_test.cpp
         test/Seahorse_test.cpp
-        test/WildBarracuda_test.cpp) # Add new test files here
+        test/WildBarracuda_test.cpp
         test/Array_test.cpp
     ) # Add new test files here
 

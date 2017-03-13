@@ -2,6 +2,7 @@
 #define VIRTUALZOO_ARRAY_H
 
 #include <stdexcept>
+#include <functional>
 
 template <typename T>
 class Array {
@@ -122,5 +123,6 @@ int Array<T>::find(T elmt) const {
     }
     return -1;
 }
+
 
 #endif //VIRTUALZOO_ARRAY_H
