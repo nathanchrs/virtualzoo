@@ -4,6 +4,7 @@
 #include "../../Renderer/Point.h"
 #include "../../Renderer/Renderable.h"
 #include "../Cell/Habitat.h"
+#include "../../Array/Array.h"
 
 using namespace std;
 
@@ -39,6 +40,22 @@ public:
 
     bool isValidHabitat(Habitat::HabitatType habitatType) const;
 
+    /** @brief Memeriksa apakah hewan buas atau tidak.
+      * @return True jika hewan adalah hewan buas dan False jika tidak.
+      */
+    bool IsWild() const;
+
+    /** @brief Menambahkan nama mangsa pada daftar mangsa.
+      * @param preyName Nama mangsa.
+      */
+    void AddPrey(const string &prey_name);
+
+    /** @brief Memeriksa apakah preyName terdapat pada preyList.
+      * @param preyName Nama mangsa.
+      * @return True jika preyName terdapat pada preyList dan false jika tidak.
+      */
+    bool isPrey(const string &prey_name) const;
+
     Reproduction getReproduction() const;
 
     SkinType getSkinType() const;
@@ -67,6 +84,8 @@ protected :
     bool airAnimal;
     bool landAnimal;
     bool waterAnimal;
+    bool wild;
+    Array<string> prey_list;
     Point position;
 };
 
