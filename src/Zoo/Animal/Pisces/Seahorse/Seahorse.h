@@ -3,12 +3,11 @@
 
 #include "../Pisces.h"
 #include "../../Diet/Carnivore/Carnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Seahorse
   * Kelas Seahorse yang merepesentasikan kuda laut.
   */
-class Seahorse : public Pisces, public Carnivore, public TameAnimal{
+class Seahorse : public Pisces, public Carnivore {
 public:
     /** @brief Constructor.
       * Menciptakan kuda laut.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan kuda laut.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Seahorse(*this);
+    };
 };
 
 #endif //SEAHORSE_H

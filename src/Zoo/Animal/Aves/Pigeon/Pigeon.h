@@ -3,12 +3,11 @@
 
 #include "../Aves.h"
 #include "../../Diet/Herbivore/Herbivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Pigeon
   * Kelas Pigeon yang merepesentasikan burung merpati.
   */
-class Pigeon : public Aves, public Herbivore, public TameAnimal {
+class Pigeon : public Aves, public Herbivore {
 public:
     /** @brief Constructor.
      * Menciptakan burung merpati.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan burung merpati.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Pigeon(*this);
+    };
 };
 
 #endif //PIGEON_H

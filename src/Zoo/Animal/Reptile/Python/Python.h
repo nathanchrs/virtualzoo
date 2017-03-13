@@ -3,12 +3,11 @@
 
 #include "../Reptile.h"
 #include "../../Diet/Carnivore/Carnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Python
   * Kelas Python yang merepesentasikan ular piton.
   */
-class Python : public Reptile, public Carnivore, public TameAnimal {
+class Python : public Reptile, public Carnivore {
 public:
     /** @brief Constructor.
       * Menciptakan ular piton.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan ular piton.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Python(*this);
+    };
 };
 
 

@@ -3,12 +3,11 @@
 
 #include "../Aves.h"
 #include "../../Diet/Carnivore/Carnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Owl
   * Kelas Owl yang merepesentasikan burung hantu.
   */
-class Owl : public Aves, public Carnivore, public TameAnimal{
+class Owl : public Aves, public Carnivore {
 public:
     /** @brief Constructor.
       * Menciptakan burung hantu.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan burung hantu.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Owl(*this);
+    };
 };
 
 

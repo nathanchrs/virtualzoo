@@ -3,12 +3,11 @@
 
 #include "../Pisces.h"
 #include "../../Diet/Carnivore/Carnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Lionfish
   * Kelas Lionfish yang merepesentasikan lionfish.
   */
-class Lionfish : public Pisces, public Carnivore, public TameAnimal {
+class Lionfish : public Pisces, public Carnivore {
 public:
     /** @brief Constructor.
       * Menciptakan lionfish.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan lionfish.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Lionfish(*this);
+    };
 };
 
 

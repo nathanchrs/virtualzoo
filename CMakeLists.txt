@@ -83,34 +83,14 @@ SET(SOURCE_FILES
         src/Zoo/Zone/Zone.h
         src/Zoo/Zone/Cage.h
 
-        src/Zoo/Cell/Habitat.h
         src/Zoo/Cell/Cell.h
+        src/Zoo/Cell/Habitat.h
         src/Zoo/Cell/Park.h
         src/Zoo/Cell/Restaurant.h
         src/Zoo/Cell/Road.h
 
         src/Zoo/Zoo.cpp
         src/Zoo/Zoo.h
-
-        src/Zoo/Animal/Behaviour/Behaviour.cpp
-        src/Zoo/Animal/Behaviour/Behaviour.h
-        src/Zoo/Animal/Behaviour/TameAnimal/TameAnimal.cpp
-        src/Zoo/Animal/Behaviour/TameAnimal/TameAnimal.h
-        src/Zoo/Animal/Behaviour/WildAnimal/WildAnimal.cpp
-        src/Zoo/Animal/Behaviour/WildAnimal/WildAnimal.h
-
-        src/Zoo/Animal/Reptile/WildCobra/WildCobra.cpp
-        src/Zoo/Animal/Reptile/WildCobra/WildCobra.h
-        src/Zoo/Animal/Reptile/WildPython/WildPython.cpp
-        src/Zoo/Animal/Reptile/WildPython/WildPython.h
-        src/Zoo/Animal/Mammals/WildLion/WildLion.cpp
-        src/Zoo/Animal/Mammals/WildLion/WildLion.h
-        src/Zoo/Animal/Mammals/WildTiger/WildTiger.cpp
-        src/Zoo/Animal/Mammals/WildTiger/WildTiger.h
-        src/Zoo/Animal/Aves/WildEagle/WildEagle.h
-        src/Zoo/Animal/Aves/WildEagle/WildEagle.cpp
-        src/Zoo/Animal/Pisces/WildBarracuda/WildBarracuda.h
-        src/Zoo/Animal/Pisces/WildBarracuda/WildBarracuda.cpp
 
     ) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
@@ -128,7 +108,8 @@ SET(TEST_FILES
         test/test.cpp
         test/Zoo_test.cpp
         test/Eagle_test.cpp
-        test/Array_test.cpp) # Add new test files here
+        test/Array_test.cpp
+    ) # Add new test files here
 add_executable(virtualzoo_test ${TEST_FILES} ${SOURCE_FILES})
 target_link_libraries(virtualzoo_test ${PThreadLib} ${GTEST_BOTH_LIBRARIES})
 GTEST_ADD_TESTS(virtualzoo_test "" ${TEST_FILES} ${SOURCE_FILES})

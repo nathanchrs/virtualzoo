@@ -55,6 +55,8 @@ public:
       */
     virtual string interact() const = 0;
 
+    virtual Animal* clone() const = 0;
+
 protected :
     string name;
     Reproduction reproduction;

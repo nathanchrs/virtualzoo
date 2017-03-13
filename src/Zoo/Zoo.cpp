@@ -1,23 +1,26 @@
 #include "Zoo.h"
 
-Zoo::Zoo(int _length, int _width, int _maxCage, int _maxEntrance):length(_length), width(_width), maxCage(_maxCage), maxEntrance(_maxEntrance) {
-    cells = new Cell** [length];
-    for (int i = 0; i < length; i++) {
-        cells[i] = new Cell *[width];
-    }
-    cages = new Cage*;
-    entrances = new Entrance*[maxEntrance];
-    numOfCage = 0;
-    numOfEntrance = 0;
-}
+Zoo::Zoo(int rows, int cols) : rows(rows), cols(cols), cells(rows * cols), zones() {}
 
 Zoo::~Zoo() {
-    for (int i = 0; i < width; i++) {
-        delete [] cells[i];
+    for (int i = 0; i < cells.size(); i++) {
+        delete cells[i];
     }
-    delete [] cells;
-    delete [] cages;
-    delete [] entrances;
+    for (int i = 0; i < zones.size(); i++) {
+        delete zones[i];
+    }
+}
+
+void Zoo::addZone(const Zone &zone) {
+    zones.pushBack(zone.clone());
+}
+
+void Zoo::addCell(const Cell &cell, string zoneName) {
+
+}
+
+void Zoo::addAnimal(const Animal &animal, string cageName) {
+
 }
 
 void Zoo::addCell(Cell *_cell, const Point &_position) {

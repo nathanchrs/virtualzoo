@@ -3,7 +3,6 @@
 
 #include "../Aves.h"
 #include "../../Diet/Omnivore/Omnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Peacock
   * Kelas Peacock yang merepesentasikan burung merak.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan burung merak.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Peacock(*this);
+    };
 };
 
 

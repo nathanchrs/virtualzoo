@@ -3,12 +3,11 @@
 
 #include "../Mammals.h"
 #include "../../Diet/Carnivore/Carnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Leopard
   * Kelas Leopard yang merepesentasikan macan tutul.
   */
-class Leopard : public Mammals, public Carnivore, public TameAnimal{
+class Leopard : public Mammals, public Carnivore {
 public:
     /** @brief Constructor.
       * Menciptakan macan tutul.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan macan tutul.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Leopard(*this);
+    };
 };
 
 #endif //LEOPARD_H

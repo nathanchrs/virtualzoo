@@ -3,12 +3,11 @@
 
 #include "../Reptile.h"
 #include "../../Diet/Carnivore/Carnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Chameleon
   * Kelas Chameleon yang merepesentasikan bunglon.
   */
-class Chameleon : public Reptile, public Carnivore, public TameAnimal{
+class Chameleon : public Reptile, public Carnivore {
 public:
     /** @brief Constructor.
       * Menciptakan bunglon.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan bunglon.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Chameleon(*this);
+    };
 };
 
 

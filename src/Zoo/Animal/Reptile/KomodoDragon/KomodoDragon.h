@@ -3,12 +3,11 @@
 
 #include "../Reptile.h"
 #include "../../Diet/Carnivore/Carnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class KomodoDragon
   * Kelas KomodoDragon yang merepesentasikan komodo.
   */
-class KomodoDragon : public Reptile, public Carnivore, public TameAnimal {
+class KomodoDragon : public Reptile, public Carnivore {
 public:
     /** @brief Constructor.
       * Menciptakan komodo.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan komodo.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new KomodoDragon(*this);
+    };
 };
 
 #endif //KOMODODRAGON_H

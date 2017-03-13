@@ -3,12 +3,11 @@
 
 #include "../Reptile.h"
 #include "../../Diet/Omnivore/Omnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Iguana
   * Kelas Iguana yang merepesentasikan iguana.
   */
-class Iguana : public Reptile, public Omnivore, public TameAnimal {
+class Iguana : public Reptile, public Omnivore {
 public:
     /** @brief Constructor.
       * Menciptakan iguana.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan iguana.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Iguana(*this);
+    };
 };
 
 

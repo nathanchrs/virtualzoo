@@ -7,12 +7,11 @@
 
 #include "../Mammals.h"
 #include "../../Diet/Omnivore/Omnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Gorilla
   * Kelas Gorilla yang merepesentasikan gorilla.
   */
-class Gorilla : public Mammals, public Omnivore, public TameAnimal {
+class Gorilla : public Mammals, public Omnivore {
 public:
 
     Gorilla();
@@ -26,6 +25,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan gorilla.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Gorilla(*this);
+    };
 };
 
 

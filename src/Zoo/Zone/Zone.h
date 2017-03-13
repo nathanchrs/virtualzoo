@@ -2,9 +2,8 @@
 #define VIRTUALZOO_ZONE_H
 
 #include <string>
-#include "../Zone/Cell/Cell.h"
 #include "../../Array/Array.h"
-#include "Cell/Cell.h"
+#include "../Cell/Cell.h"
 using namespace std;
 
 class Zone {

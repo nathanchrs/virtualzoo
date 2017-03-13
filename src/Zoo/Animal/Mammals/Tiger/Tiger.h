@@ -3,12 +3,11 @@
 
 #include "../Mammals.h"
 #include "../../Diet/Carnivore/Carnivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Tiger
   * Kelas Tiger yang merepesentasikan harimau.
   */
-class Tiger : public Mammals, public Carnivore, public TameAnimal {
+class Tiger : public Mammals, public Carnivore {
 public:
     /** @brief Constructor.
       * Menciptakan harimau.
@@ -19,6 +18,10 @@ public:
       * @return Experience yang dirasakan ketika berinteraksi dengan harimau.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Tiger(*this);
+    };
 };
 
 #endif //TIGER_H

@@ -3,12 +3,11 @@
 
 #include "../Aves.h"
 #include "../../Diet/Herbivore/Herbivore.h"
-#include "../../Behaviour/TameAnimal/TameAnimal.h"
 
 /** @class Parrot
   * Kelas Parrot yang merepesentasikan burung beo.
   */
-class Parrot : public Aves, public Herbivore, public TameAnimal {
+class Parrot : public Aves, public Herbivore {
     /** @brief Constructor.
       * Menciptakan burung beo.
       */
@@ -18,6 +17,10 @@ class Parrot : public Aves, public Herbivore, public TameAnimal {
       * @return Experience yang dirasakan ketika berinteraksi dengan burung beo.
       */
     string interact() const;
+
+    Animal* clone() const {
+        return new Parrot(*this);
+    };
 };
 
 #endif //PARROT_H
