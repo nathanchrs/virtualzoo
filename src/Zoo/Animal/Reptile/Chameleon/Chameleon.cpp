@@ -10,7 +10,6 @@ Chameleon::Chameleon(const Point& pos, int _weight, bool wild) : Reptile("Chamel
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
 }
 
 string Chameleon::interact() const {

@@ -9,7 +9,6 @@ Seahorse::Seahorse(const Point& pos, int _weight, bool wild) : Pisces("Seahorse"
     waterAnimal = true;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
 }
 
 string Seahorse::interact() const {

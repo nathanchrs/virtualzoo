@@ -9,7 +9,6 @@ FrenchAngelFish::FrenchAngelFish(const Point& pos, int _weight, bool wild) : Pis
     waterAnimal = true;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
 }
 
 string FrenchAngelFish::interact() const {

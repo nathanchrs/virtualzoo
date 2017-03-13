@@ -8,7 +8,6 @@ Ray::Ray(const Point& pos, int _weight, bool wild) : Pisces("Ray"), Carnivore(_w
     waterAnimal = true;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
 }
 
 string Ray::interact() const {

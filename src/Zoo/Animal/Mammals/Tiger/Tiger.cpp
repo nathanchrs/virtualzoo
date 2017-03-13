@@ -10,7 +10,20 @@ Tiger::Tiger(const Point& pos, int _weight, bool wild) : Mammals("Tiger"), Carni
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
+    AddPrey("Eagle");
+    AddPrey("Owl");
+    AddPrey("Parrot");
+    AddPrey("Peacock");
+    AddPrey("Pigeon");
+    AddPrey("Gorilla");
+    AddPrey("Leopard");
+    AddPrey("Lion");
+    AddPrey("Orangutan");
+    AddPrey("Chameleon");
+    AddPrey("Cobra");
+    AddPrey("Iguana");
+    AddPrey("KomodoDragon");
+    AddPrey("Python");
 }
 
 string Tiger::interact() const {

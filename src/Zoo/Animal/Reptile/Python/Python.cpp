@@ -9,7 +9,19 @@ Python::Python(const Point& pos, int _weight, bool wild) : Reptile("Python"), Ca
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
+    AddPrey("Owl");
+    AddPrey("Parrot");
+    AddPrey("Peacock");
+    AddPrey("Pigeon");
+    AddPrey("Gorilla");
+    AddPrey("Leopard");
+    AddPrey("Lion");
+    AddPrey("Orangutan");
+    AddPrey("Tiger");
+    AddPrey("Cobra");
+    AddPrey("Chameleon");
+    AddPrey("Iguana");
+    AddPrey("KomodoDragon");
 }
 
 string Python::interact() const {

@@ -8,7 +8,6 @@ Lionfish::Lionfish(const Point& pos, int _weight, bool wild) : Pisces("Lionfish"
     waterAnimal = true;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
 }
 
 string Lionfish::interact() const {

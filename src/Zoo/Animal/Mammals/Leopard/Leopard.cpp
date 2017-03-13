@@ -9,7 +9,20 @@ Leopard::Leopard(const Point& pos, int _weight, bool wild) : Mammals("Leopard"),
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
+    AddPrey("Eagle");
+    AddPrey("Owl");
+    AddPrey("Parrot");
+    AddPrey("Peacock");
+    AddPrey("Pigeon");
+    AddPrey("Gorilla");
+    AddPrey("Lion");
+    AddPrey("Orangutan");
+    AddPrey("Tiger");
+    AddPrey("Chameleon");
+    AddPrey("Cobra");
+    AddPrey("Iguana");
+    AddPrey("KomodoDragon");
+    AddPrey("Python");
 }
 
 string Leopard::interact() const {

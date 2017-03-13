@@ -16,7 +16,7 @@ TEST_F(GorillaTest, GorillaConstructorWithParameter) {
     ASSERT_EQ(Test.getSkinType(),Animal::Fur);
     ASSERT_EQ(Test.getReproduction(),Animal::Vivipar);
     ASSERT_TRUE(Test.isLandAnimal());
-    ASSERT_TRUE(Test.IsOmnivore());
+    ASSERT_TRUE(Test.IsHerbivore());
     ASSERT_TRUE(Test.calculateTotalMeat()>0);
     ASSERT_TRUE(Test.calculateTotalVegetable()>0);
     ASSERT_TRUE(!Test.isWild());

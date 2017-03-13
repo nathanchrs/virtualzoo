@@ -9,7 +9,6 @@ Owl::Owl(const Point& pos, int _weight, bool wild) : Aves("Owl"), Carnivore(_wei
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
 }
 
 string Owl::interact() const {

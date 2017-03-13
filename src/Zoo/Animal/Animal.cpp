@@ -50,4 +50,17 @@ bool Animal::isValidHabitat(Habitat::HabitatType habitatType) const {
     }
 }
 
+bool Animal::IsWild() const {
+    return wild;
+}
 
+void Animal::AddPrey(const string &prey_name) {
+    prey_list.pushBack(prey_name);
+}
+
+bool Animal::isPrey(const string &prey_name) const {
+    if (prey_list.find(prey_name) >= 0) {
+        return true;
+    }
+    return false;
+}

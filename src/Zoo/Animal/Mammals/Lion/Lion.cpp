@@ -9,7 +9,20 @@ Lion::Lion(const Point& pos, int _weight, bool wild) : Mammals("Lion"), Carnivor
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
+    AddPrey("Eagle");
+    AddPrey("Owl");
+    AddPrey("Parrot");
+    AddPrey("Peacock");
+    AddPrey("Pigeon");
+    AddPrey("Gorilla");
+    AddPrey("Leopard");
+    AddPrey("Orangutan");
+    AddPrey("Tiger");
+    AddPrey("Chameleon");
+    AddPrey("Cobra");
+    AddPrey("Iguana");
+    AddPrey("KomodoDragon");
+    AddPrey("Python");
 }
 
 string Lion::interact() const {

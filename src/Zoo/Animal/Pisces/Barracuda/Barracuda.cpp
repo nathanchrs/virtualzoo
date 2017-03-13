@@ -8,7 +8,10 @@ Barracuda::Barracuda(const Point& pos, int _weight, bool wild) : Pisces("Barracu
     waterAnimal = true;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
+    AddPrey("FrenchAngelFish");
+    AddPrey("Lionfish");
+    AddPrey("Ray");
+    AddPrey("Seahorse");
 }
 
 string Barracuda::interact() const {

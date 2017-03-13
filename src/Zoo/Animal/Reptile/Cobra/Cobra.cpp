@@ -10,7 +10,19 @@ Cobra::Cobra(const Point& pos, int _weight, bool wild) : Reptile("Cobra"), Carni
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
+    AddPrey("Owl");
+    AddPrey("Parrot");
+    AddPrey("Peacock");
+    AddPrey("Pigeon");
+    AddPrey("Gorilla");
+    AddPrey("Leopard");
+    AddPrey("Lion");
+    AddPrey("Orangutan");
+    AddPrey("Tiger");
+    AddPrey("Chameleon");
+    AddPrey("Iguana");
+    AddPrey("KomodoDragon");
+    AddPrey("Python");
 }
 
 string Cobra::interact() const {

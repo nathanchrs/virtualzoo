@@ -10,8 +10,14 @@ Eagle::Eagle(const Point& pos, int _weight, bool wild) : Aves("Eagle"), Carnivor
     waterAnimal = false;
     position = pos;
     this -> wild  = wild;
-    //TODO AddPrey
-
+    AddPrey("Owl");
+    AddPrey("Parrot");
+    AddPrey("Peacock");
+    AddPrey("Pigeon");
+    AddPrey("Chameleon");
+    AddPrey("Cobra");
+    AddPrey("Iguana");
+    AddPrey("Python");
 }
 
 string Eagle::interact() const {

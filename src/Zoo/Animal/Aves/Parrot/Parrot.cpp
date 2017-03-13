@@ -9,7 +9,6 @@ Parrot::Parrot(const Point& pos, int _weight, bool wild) : Aves("Parrot"), Herbi
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
 }
 
 string Parrot::interact() const {

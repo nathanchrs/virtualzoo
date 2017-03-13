@@ -9,7 +9,6 @@ Orangutan::Orangutan(const Point& pos, int _weight, bool wild) : Mammals("Orangu
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
 }
 
 string Orangutan::interact() const {

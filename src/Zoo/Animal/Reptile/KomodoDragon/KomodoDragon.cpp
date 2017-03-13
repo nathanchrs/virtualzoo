@@ -10,7 +10,20 @@ KomodoDragon::KomodoDragon(const Point& pos, int _weight, bool wild) : Reptile("
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO Listprey
+    AddPrey("Eagle");
+    AddPrey("Owl");
+    AddPrey("Parrot");
+    AddPrey("Peacock");
+    AddPrey("Pigeon");
+    AddPrey("Gorilla");
+    AddPrey("Leopard");
+    AddPrey("Lion");
+    AddPrey("Orangutan");
+    AddPrey("Tiger");
+    AddPrey("Chameleon");
+    AddPrey("Cobra");
+    AddPrey("Iguana");
+    AddPrey("Python");
 }
 
 string KomodoDragon::interact() const {

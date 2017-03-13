@@ -9,7 +9,6 @@ Iguana::Iguana(const Point& pos, int _weight, bool wild) : Reptile("Iguana"), Om
     waterAnimal = false;
     position = pos;
     this -> wild = wild;
-    //TODO ListPrey
 }
 
 string Iguana::interact() const {
