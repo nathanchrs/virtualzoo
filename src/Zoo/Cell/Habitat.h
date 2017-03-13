@@ -15,7 +15,7 @@ public:
       * Menciptakan sebuah Habitat dengan jenis tertentu.
       * @param type Jenis dari habitat.
       */
-    Habitat(HabitatType type) : type(type) {}
+    Habitat(Point position, HabitatType type) : Cell(position), type(type) {}
 
     HabitatType getType() const {
         return type;

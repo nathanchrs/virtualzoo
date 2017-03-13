@@ -13,7 +13,7 @@ public:
       * Menciptakan sebuah Cell dengan status aksesibilitas tertentu.
       * @param accessible Status aksesibilitas dari Cell.
       */
-    Cell(bool accessible = false) : accessible(accessible) {}
+    Cell(Point position, bool accessible = false) : position(position), accessible(accessible) {}
 
     /** @brief Destructor.
       */

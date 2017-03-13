@@ -74,6 +74,8 @@ public:
 
     friend ostream &operator<<(ostream &os, const FrameBuffer &fb);
 
+    void clearScreen();
+
 private:
 
     static const char BLANK;

@@ -1,13 +1,19 @@
-#include <iostream>
-#include "Renderer/ConsoleRenderer/FrameBuffer.h"
 
-using namespace std;
+#include "Renderer/ConsoleRenderer/BasicConsoleRenderer.h"
+#include "Zoo/Cell/Habitat.h"
 
 int main() {
 
-    FrameBuffer fb(10, 100, true);
-    fb.drawTextBox(Point(3,5), Point(5, 12), "Hello, world! in a box", FrameBuffer::WHITE, FrameBuffer::RED);
-    cout << fb;
+    Zoo zoo(20, 20);
+
+    zoo.addZone(Cage("Kandang ayam"));
+    zoo.addCell(Habitat(Point(1, 2), Habitat::LandHabitat), "Kandang ayam");
+    zoo.addCell(Habitat(Point(1, 3), Habitat::LandHabitat), "Kandang ayam");
+    zoo.addCell(Habitat(Point(2, 2), Habitat::LandHabitat), "Kandang ayam");
+
+
+    BasicConsoleRenderer renderer;
+    renderer.render(zoo);
 
     return 0;
 }

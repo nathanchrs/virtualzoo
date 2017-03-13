@@ -1,11 +1,16 @@
 #ifndef ZOO_H
 #define ZOO_H
 
+#include <exception>
 #include <string>
 #include "Cell/Cell.h"
 #include "Zone/Cage.h"
-
 using namespace std;
+
+/**
+ * Exception yang akan di-throw jika mencoba menambahkan zone dengan nama yang sudah ada.
+ */
+class ZoneAlreadyExistsException : public exception {};
 
 /** @class Zoo
   * Kelas Zoo yang merepresentasikan sebuah kebun binatang.
@@ -40,6 +45,14 @@ public:
       */
     void addAnimal(const Animal &animal, string cageName);
 
+    const Array<Cell*> &getCells() const;
+
+    const Array<Zone*> &getZones() const;
+
+    int getRows() const;
+
+    int getCols() const;
+
     /** @brief Menampilkan kebun binatang di atas layar dengan batas yang ditentukan pengguna.
       * Menampilkan juga posisi hewan-hewan di atas layar.
       * Memanfaatkan method render.
@@ -67,7 +80,18 @@ public:
      */
     int calculateTotalVegetable() const;
 
+    Zone* findZone(string zoneName) const;
+
 private:
+
+    int idx(int r, int c) const {
+        return r * cols + c;
+    }
+
+    int idx(const Point &p) const {
+        return p.getR() * cols + p.getC();
+    }
+
     Array<Cell*> cells;
     Array<Zone*> zones;
     int rows;

@@ -12,7 +12,7 @@ public:
       * Menciptakan sebuah taman dengan status aksesibilitas tertentu.
       * @param accessible Status aksesibilitas taman.
       */
-    Park(bool accessible = false) : Cell(accessible) {}
+    Park(Point position, bool accessible = false) : Cell(position, accessible) {}
 
     /**
      * @brief Menampilkan taman ke console teks.

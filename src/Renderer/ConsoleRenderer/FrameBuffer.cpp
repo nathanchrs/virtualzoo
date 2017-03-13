@@ -4,14 +4,14 @@
     // Windows-specific implementation
 	#include <windows.h>
 
-	void clearScreen(){
+	void FrameBuffer::clearScreen(){
 		system("cls");
 	}
 #elif __linux__
     // Linux-specific implementation
     #include <cstdlib>
 
-    void clearScreen() {
+    void FrameBuffer::clearScreen() {
         system("clear");
     }
 #endif
@@ -125,8 +125,6 @@ void FrameBuffer::drawRectangle(const Point &topLeft, const Point &bottomRight, 
 }
 
 ostream &operator<<(ostream &os, const FrameBuffer &fb) {
-    clearScreen(); // WARNING! Side effect
-
     string outputBuffer = "";
     for (int r = 0; r < fb.rows; r++) {
         for (int c = 0; c < fb.cols; c++) {
