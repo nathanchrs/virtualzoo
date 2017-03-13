@@ -1,11 +1,15 @@
 #include <iostream>
+#include <fstream>
 #include "Renderer/ConsoleRenderer/BasicConsoleRenderer.h"
 #include "Zoo/Animal/Aves/Eagle/Eagle.h"
 using namespace std;
 
 int main() {
 
-    Zoo zoo(cin);
+    ifstream fin;
+    fin.open("zoo.in");
+    Zoo zoo(fin);
+    fin.close();
 
     BasicConsoleRenderer renderer;
     renderer.render(zoo);

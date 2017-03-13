@@ -11,7 +11,7 @@ void BasicConsoleRenderer::render(const Zoo &zoo) {
 
     for (int r = 0; r < zoo.getRows(); r++) {
         for (int c = 0; c < zoo.getCols(); c++) {
-            fb.drawPoint(Point(r, c) + gridOffset, cells[r * zoo.getRows() + c]->render(),
+            fb.drawPoint(Point(r, c) + gridOffset, cells[r * zoo.getCols() + c]->render(),
             FrameBuffer::WHITE, FrameBuffer::BLACK);
         }
     }

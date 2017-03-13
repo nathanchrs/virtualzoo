@@ -13,14 +13,24 @@ Zoo::Zoo(int rows, int cols) : rows(rows), cols(cols), cells(rows * cols), zones
 
 Zoo::Zoo(istream &is) {
     is >> rows >> cols;
-    Zoo(rows, cols);
+    cells = Array<Cell*>(rows * cols);
+    for (int i = 0; i < rows * cols; i++) {
+        cells[i] = new Road(Point(i / cols, i % cols));
+    }
 
     int zoneCount;
     is >> zoneCount;
     for (int i = 0; i < zoneCount; i++) {
+        string zoneType;
         string zoneName;
-        is >> zoneName;
-        addZone(Zone(zoneName));
+        is >> zoneType >> zoneName;
+        if (zoneType == "Cage") {
+            addZone(Cage(zoneName));
+        } else if (zoneType == "Zone") {
+            addZone(Zone(zoneName));
+        } else {
+            throw InputException();
+        }
 
         int cellCount;
         is >> cellCount;
@@ -31,7 +41,7 @@ Zoo::Zoo(istream &is) {
             Point pos = Point(r, c);
             if (cellType == "AirHabitat") {
                 addCell(Habitat(pos, Habitat::AirHabitat), zoneName);
-            } else if (cellType == "AirHabitat") {
+            } else if (cellType == "LandHabitat") {
                 addCell(Habitat(pos, Habitat::LandHabitat), zoneName);
             } else if (cellType == "WaterHabitat") {
                 addCell(Habitat(pos, Habitat::WaterHabitat), zoneName);

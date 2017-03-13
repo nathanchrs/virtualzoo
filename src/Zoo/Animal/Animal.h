@@ -44,7 +44,7 @@ public:
     SkinType getSkinType() const;
 
     virtual char render() const {
-        return 'a';
+        return 'x';
     }
 
     Point getPosition() const;
