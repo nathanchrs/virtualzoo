@@ -2,9 +2,9 @@
 #define ZOO_H
 
 #include <string>
-#include "./Cell/Cell.h"
-#include "./Cage/Cage.h"
-#include "./Cell/Facility/Road/Entrance/Entrance.h"
+#include "Zone/Cell/Cell.h"
+#include "Zone/Cage.h"
+#include "Zone/Cell/Facility/Road/Entrance/Entrance.h"
 
 /** @class Zoo
   * Kelas Zoo yang merepresentasikan sebuah kebun binatang.

@@ -6,6 +6,8 @@ enable_testing()
 
 # Source files
 SET(SOURCE_FILES
+        src/Array/Array.h
+
         src/Renderer/ConsoleRenderer/BasicConsoleRenderer.h
         src/Renderer/ConsoleRenderer/BasicConsoleRenderer.cpp
         src/Renderer/ConsoleRenderer/FrameBuffer.h
@@ -78,30 +80,14 @@ SET(SOURCE_FILES
         src/Zoo/Animal/Animal.cpp
         src/Zoo/Animal/Animal.h
 
-        src/Zoo/Cage/Cage.cpp
-        src/Zoo/Cage/Cage.h
-        src/Zoo/Cell/Facility/Park/Park.cpp
-        src/Zoo/Cell/Facility/Park/Park.h
-        src/Zoo/Cell/Facility/Restaurant/Restaurant.cpp
-        src/Zoo/Cell/Facility/Restaurant/Restaurant.h
-        src/Zoo/Cell/Facility/Road/Road.cpp
-        src/Zoo/Cell/Facility/Road/Road.h
-        src/Zoo/Cell/Facility/Road/Entrance/Entrance.cpp
-        src/Zoo/Cell/Facility/Road/Entrance/Entrance.h
-        src/Zoo/Cell/Facility/Road/Exit/Exit.cpp
-        src/Zoo/Cell/Facility/Road/Exit/Exit.h
-        src/Zoo/Cell/Facility/Facility.cpp
-        src/Zoo/Cell/Facility/Facility.h
-        src/Zoo/Cell/Habitat/AirHabitat/AirHabitat.cpp
-        src/Zoo/Cell/Habitat/AirHabitat/AirHabitat.h
-        src/Zoo/Cell/Habitat/LandHabitat/LandHabitat.cpp
-        src/Zoo/Cell/Habitat/LandHabitat/LandHabitat.h
-        src/Zoo/Cell/Habitat/WaterHabitat/WaterHabitat.cpp
-        src/Zoo/Cell/Habitat/WaterHabitat/WaterHabitat.h
-        src/Zoo/Cell/Habitat/Habitat.cpp
-        src/Zoo/Cell/Habitat/Habitat.h
+        src/Zoo/Zone/Zone.h
+        src/Zoo/Zone/Cage.h
+
+        src/Zoo/Cell/Habitat.h
         src/Zoo/Cell/Cell.h
-        src/Zoo/Cell/Cell.cpp
+        src/Zoo/Cell/Park.h
+        src/Zoo/Cell/Restaurant.h
+        src/Zoo/Cell/Road.h
 
         src/Zoo/Zoo.cpp
         src/Zoo/Zoo.h
@@ -125,6 +111,7 @@ SET(SOURCE_FILES
         src/Zoo/Animal/Aves/WildEagle/WildEagle.cpp
         src/Zoo/Animal/Pisces/WildBarracuda/WildBarracuda.h
         src/Zoo/Animal/Pisces/WildBarracuda/WildBarracuda.cpp
+
     ) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
 
@@ -141,7 +128,7 @@ SET(TEST_FILES
         test/test.cpp
         test/Zoo_test.cpp
         test/Eagle_test.cpp
-    ) # Add new test files here
+        test/Array_test.cpp) # Add new test files here
 add_executable(virtualzoo_test ${TEST_FILES} ${SOURCE_FILES})
 target_link_libraries(virtualzoo_test ${PThreadLib} ${GTEST_BOTH_LIBRARIES})
 GTEST_ADD_TESTS(virtualzoo_test "" ${TEST_FILES} ${SOURCE_FILES})
