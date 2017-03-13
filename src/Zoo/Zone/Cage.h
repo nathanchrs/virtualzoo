@@ -34,6 +34,10 @@ public:
         }
     };
 
+    const Array<Animal*> &getAnimals() const {
+        return animals;
+    }
+
     /**
      * @brief Mengembalikan jumlah hewan yang berada dalam kandang.
      * @return Jumlah hewan dalam kandang.

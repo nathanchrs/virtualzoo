@@ -46,6 +46,10 @@ public:
      */
     bool inArea(int rows, int cols) const { return r > 0 && c > 0 && r < rows && c < cols; }
 
+    Point operator+(const Point &rhs) {
+        return Point(r + rhs.r, c + rhs.c);
+    }
+
 private:
     int r;
     int c;

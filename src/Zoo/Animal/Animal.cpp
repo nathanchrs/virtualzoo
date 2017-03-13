@@ -39,4 +39,15 @@ Animal::SkinType Animal::getSkinType() const {
     return skinType;
 }
 
+bool Animal::isValidHabitat(Habitat::HabitatType habitatType) const {
+    switch (habitatType) {
+        case Habitat::AirHabitat:
+            return airAnimal;
+        case Habitat::LandHabitat:
+            return landAnimal;
+        case Habitat::WaterHabitat:
+            return waterAnimal;
+    }
+}
+
 

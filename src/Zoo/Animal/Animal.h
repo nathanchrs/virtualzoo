@@ -3,6 +3,8 @@
 #include <string>
 #include "../../Renderer/Point.h"
 #include "../../Renderer/Renderable.h"
+#include "../Cell/Habitat.h"
+
 using namespace std;
 
 /** @class Animal
@@ -35,6 +37,8 @@ public:
       */
     bool isWaterAnimal();
 
+    bool isValidHabitat(Habitat::HabitatType habitatType) const;
+
     Reproduction getReproduction() const;
 
     SkinType getSkinType() const;
@@ -46,8 +50,6 @@ public:
     Point getPosition() const;
 
     void setPosition(const Point &position);
-
-    int getZ() const { return 2; };
 
     /** @brief Melakukan interaksi dengan seekor hewan.
       * Merupakan pure virtual function.

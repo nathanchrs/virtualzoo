@@ -1,6 +1,7 @@
 #ifndef ZOO_H
 #define ZOO_H
 
+#include <istream>
 #include <exception>
 #include <string>
 #include "Cell/Cell.h"
@@ -11,6 +12,16 @@ using namespace std;
  * Exception yang akan di-throw jika mencoba menambahkan zone dengan nama yang sudah ada.
  */
 class ZoneAlreadyExistsException : public exception {};
+
+/**
+ * Exception yang akan di-throw jika mencoba memasukkan hewan ke habitat yang tidak sesuai.
+ */
+class WrongHabitatException : public exception {};
+
+/**
+ * Exception yang akan di-throw jika format input tidak sesuai.
+ */
+class InputException : public exception {};
 
 /** @class Zoo
   * Kelas Zoo yang merepresentasikan sebuah kebun binatang.
@@ -23,6 +34,13 @@ public:
       * @param cols Ukuran horizontal kebun binatang.
       */
     Zoo(int rows, int cols);
+
+    /**
+     * @brief Constructor
+     * Menciptakan kebun binatang berdasarkan data dari sumber input eksternal.
+     * @param is Input stream sumber input.
+     */
+    Zoo(istream &is);
 
     /** @brief Destructor.
       */

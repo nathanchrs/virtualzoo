@@ -48,11 +48,6 @@ public:
         Cell::position = position;
     };
 
-    /** @brief Mengembalikan nilai Z (posisi depan/belakang) dari Cell.
-      * @return Nilai Z dari Cell.
-      */
-    int getZ() const { return 1; };
-
     virtual Cell* clone() const = 0;
 
 private:
