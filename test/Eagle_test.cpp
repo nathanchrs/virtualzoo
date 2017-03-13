@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../src/Animal/Aves/Eagle/Eagle.h"
+#include "../src/Zoo/Animal/Aves/Eagle/Eagle.h"
 
 class EagleTest : public ::testing::Test {
 protected:

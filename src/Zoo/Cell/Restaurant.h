@@ -1,0 +1,26 @@
+#ifndef RESTAURANT_H
+#define RESTAURANT_H
+
+#include "Cell.h"
+
+/** @class Restaurant
+  * Kelas Restaurant yang merepesentasikan fasilitas yang berupa restoran.
+  */
+class Restaurant : public Cell {
+public:
+    /** @brief Constructor.
+      * Menciptakan sebuah restoran dengan status aksesibilitas tertentu.
+      * @param accessible Status aksesibilitas restoran.
+      */
+    Restaurant(bool accessible = false) : Cell(accessible) {}
+
+    /**
+     * @brief Menampilkan restoran ke console teks.
+     * @return Representasi teks restoran.
+     */
+    char render() const {
+        return 'r';
+    }
+};
+
+#endif //RESTAURANT_H

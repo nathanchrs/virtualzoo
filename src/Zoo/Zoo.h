@@ -2,9 +2,10 @@
 #define ZOO_H
 
 #include <string>
-#include "../Cell/Cell.h"
-#include "../Cage/Cage.h"
-#include "../Cell/Facility/Road/Entrance/Entrance.h"
+#include "Cell/Cell.h"
+#include "Zone/Cage.h"
+
+using namespace std;
 
 /** @class Zoo
   * Kelas Zoo yang merepresentasikan sebuah kebun binatang.
@@ -12,36 +13,32 @@
 class Zoo {
 public:
     /** @brief Constructor.
-      * Menciptakan kebun binatang dengan ukuran tertentu dengan sejumlah kandang dan sejumlah jalan masuk.
+      * Menciptakan kebun binatang dengan ukuran tertentu.
+      * @param rows Ukuran vertikal kebun binatang.
+      * @param cols Ukurun horizontal kebun binatang.
       */
-    Zoo(int _length, int _width, int _maxCage, int _maxEntrance);
+    Zoo(int rows, int cols);
 
     /** @brief Destructor.
       */
     ~Zoo();
 
+    /** @brief Menambahkan sebuah zona ke dalam kebun binatang.
+      * @param zoneName Nama zona yang ditambahkan ke dalam kebun binatang.
+      */
+    void addZone(string zoneName, bool cage = false);
+
     /** @brief Menambahkan sebuah cell ke dalam kebun binatang.
-      * @param _cell Cell yang ditambahkan ke dalam kebun binatang.
-      * @param _position Posisi dari cell yang ditambahkan.
+      * @param cell Cell yang ditambahkan ke dalam kebun binatang.
+      * @param zoneName Cell akan ditambahkan sebagai bagian dari zona dengan nama ini.
       */
-    void addCell(Cell *_cell, const Point &_position);
+    void addCell(const Cell &cell, string zoneName);
 
-    /** @brief Menambahkan sebuah kandang ke dalam kebun binatang.
-      * @param _cage Kandang yang ditambahkan ke dalam kebun binatang.
+    /** @brief Menambahkan sebuah cell ke dalam kebun binatang.
+      * @param animal Animal yang ditambahkan ke dalam kebun binatang.
+      * @param cageName Animal akan ditambahkan sebagai bagian dari zona/cage dengan nama ini.
       */
-    void addCage(Cage *_cage);
-
-    /** @brief Menambahkan seekor hewan ke dalam kandang yang ditentukan.
-      * @param _animal Hewan yang dimasukkan.
-      * @param cageID ID dari kandang tempat hewan dimasukkan.
-      */
-    void addAnimalToCage(Animal *_animal, int cageID);
-
-    /**
-     * @brief Menambahkan sebuah entrance ke dalam array of entrance
-     * @param _entrance Entrance yang dimasukan.
-     */
-    void addEntrance(Entrance *_entrance);
+    void addAnimal(const Animal &animal, string cageName);
 
     /** @brief Menampilkan kebun binatang di atas layar dengan batas yang ditentukan pengguna.
       * Menampilkan juga posisi hewan-hewan di atas layar.
@@ -49,7 +46,7 @@ public:
       * @param topLeft Koordinat atas kiri.
       * @param topRight Koordinat bawah-kanan.
       */
-    void displayZoo(const Point &topLeft, const Point &topRight);
+    //void displayZoo(const Point &topLeft, const Point &topRight);
 
     /** @brief Melakukan tour keliling kebun binatang.
       * Memilih salah satu jalan masuk (Entrance) secara acak dan menampilkan serangkaian experience yang dialami pengunjung.
@@ -58,24 +55,23 @@ public:
       * Jika ada lebih dari satu Cell bertipe Road yang dapat dipilih, pemilihan dilakukan secara acak.
       * Penulusuran akan berhenti saat sudah tidak ada lagi Road yang dapat dipilih, atau telah mencapai jalan keluar (Exit).
       */
-    void tourZoo();
+    //void tourZoo();
 
     /** @brief Menghitung dan menampilkan banyaknya makanan (daging dan sayuran) yang dikonsumsi oleh semua hewan di kebun binatang setiap harinya.
-      */
-    void calculateTotalFood();
+     *  @return Berat total daging yang dibutuhkan.
+     */
+    int calculateTotalMeat() const;
 
-
+    /** @brief Menghitung dan menampilkan banyaknya makanan (daging dan sayuran) yang dikonsumsi oleh semua hewan di kebun binatang setiap harinya.
+     *  @return Berat total sayuran yang dibutuhkan.
+     */
+    int calculateTotalVegetable() const;
 
 private:
-    Cell ***cells;
-    Cage **cages;
-    Entrance **entrances;
-    int numOfCage;
-    int numOfEntrance;
-    const int maxCage;
-    const int maxEntrance;
-    const int width;
-    const int length;
+    Array<Cell*> cells;
+    Array<Zone*> zones;
+    int rows;
+    int cols;
 };
 
 #endif //ZOO_H
