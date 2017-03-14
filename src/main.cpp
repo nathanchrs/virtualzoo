@@ -12,7 +12,7 @@ int main() {
     fin.close();
 
     BasicConsoleRenderer renderer;
-    renderer.render(zoo);
+  renderer.Render(zoo);
 
     return 0;
 }

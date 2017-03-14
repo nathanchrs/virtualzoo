@@ -1,11 +1,18 @@
-#ifndef VIRTUALZOO_RENDERER_H_H
-#define VIRTUALZOO_RENDERER_H_H
+#ifndef RENDERER_H
+#define RENDERER_H
 
 #include "../Zoo/Zoo.h"
 
+/** @class Renderer
+	* Kelas abstrak Renderer yang berfungsi untuk menggambar objek.
+	*/
 class Renderer {
 public:
-    virtual void render(const Zoo &zoo) = 0;
+  /** @brief Menggambar sebuah kebun binatang di atas console teks.
+    * Merupakan pure virtual function.
+    * @param zoo Kebun binatang yang akan digambarkan di atas console teks.
+    */
+  virtual void Render(const Zoo &zoo) = 0;
 };
 
-#endif //VIRTUALZOO_RENDERER_H_H
+#endif //RENDERER_H

@@ -1,19 +1,19 @@
 #include "FrameBuffer.h"
 
 #ifdef _WIN32
-    // Windows-specific implementation
+  // Windows-specific implementation
 	#include <windows.h>
 
 	void FrameBuffer::clearScreen(){
 		system("cls");
 	}
 #elif __linux__
-    // Linux-specific implementation
-    #include <cstdlib>
+  // Linux-specific implementation
+  #include <cstdlib>
 
-    void FrameBuffer::clearScreen() {
-        system("clear");
-    }
+  void FrameBuffer::ClearScreen() {
+    system("clear");
+  }
 #endif
 
 const char FrameBuffer::BLANK = ' ';
@@ -22,141 +22,136 @@ const string FrameBuffer::CS_TERMINATOR = "m";
 const string FrameBuffer::RESET = "0";
 
 const string FrameBuffer::FG_COLOR_CONSTANTS[] = {
-        "", // unused (transparent)
-        "30", "31", "32", "33", "34", "35", "36", "37",
-        "1;30", "1;31", "1;32", "1;33", "1;34", "1;35", "1;36", "1;37"
+  "", // unused (transparent)
+  "30", "31", "32", "33", "34", "35", "36", "37",
+  "1;30", "1;31", "1;32", "1;33", "1;34", "1;35", "1;36", "1;37"
 };
 
 const string FrameBuffer::BG_COLOR_CONSTANTS[] = {
-        "", // unused (transparent)
-        "40", "41", "42", "43", "44", "45", "46", "47",
-        "40", "41", "42", "43", "44", "45", "46", "47" // background colors only support the faint 8 colors
+  "", // unused (transparent)
+  "40", "41", "42", "43", "44", "45", "46", "47",
+  "40", "41", "42", "43", "44", "45", "46", "47" // background colors only support the faint 8 colors
 };
 
 FrameBuffer::FrameBuffer(int rows, int cols, bool colored) : rows(rows), cols(cols), colored(colored) {
-    contents = new char[rows * cols];
-    fgColors = new Color[rows * cols];
-    bgColors = new Color[rows * cols];
-    inputPrompt = "";
-    clear();
+  contents = new char[rows * cols];
+  fg_colors = new Color[rows * cols];
+  bg_colors = new Color[rows * cols];
+  input_prompt = "";
+  Clear();
 }
 
 FrameBuffer::~FrameBuffer() {
-    delete[] contents;
-    delete[] fgColors;
-    delete[] bgColors;
+  delete[] contents;
+  delete[] fg_colors;
+  delete[] bg_colors;
 }
 
-void FrameBuffer::clear() {
-    for (int i = 0; i < rows * cols; i++) {
-        contents[i] = BLANK;
-        fgColors[i] = TRANSPARENT;
-        bgColors[i] = TRANSPARENT;
-    }
+void FrameBuffer::Clear() {
+  for (int i = 0; i < rows * cols; i++) {
+    contents[i] = BLANK;
+    fg_colors[i] = TRANSPARENT;
+    bg_colors[i] = TRANSPARENT;
+  }
 }
 
-void FrameBuffer::drawPoint(const Point &p, char content, FrameBuffer::Color fgColor, FrameBuffer::Color bgColor) {
-    if (p.inArea(rows, cols)) {
-        contents[idx(p)] = content;
-        if (fgColor != TRANSPARENT) fgColors[idx(p)] = fgColor;
-        if (bgColor != TRANSPARENT) bgColors[idx(p)] = bgColor;
-    }
+void FrameBuffer::DrawPoint(const Point &p, char content, FrameBuffer::Color fg_color, FrameBuffer::Color bg_color) {
+  if (p.inArea(rows, cols)) {
+    contents[idx(p)] = content;
+    if (fg_color != TRANSPARENT) fg_colors[idx(p)] = fg_color;
+    if (bg_color != TRANSPARENT) bg_colors[idx(p)] = bg_color;
+  }
 }
 
-void FrameBuffer::drawHorizontalLine(const Point &p1, const Point &p2, char content, FrameBuffer::Color fgColor,
-                                     FrameBuffer::Color bgColor) {
-    int i1 = p1.getC() < p2.getC() ? p1.getC() : p2.getC();
-    int i2 = p1.getC() < p2.getC() ? p2.getC() : p1.getC();
-    for (int i = i1; i <= i2; i++) drawPoint(Point(p1.getR(), i), content, fgColor, bgColor);
+void FrameBuffer::DrawHorizontalLine(const Point &p1, const Point &p2, char content, FrameBuffer::Color fg_color,
+                                     FrameBuffer::Color bg_color) {
+  int i1 = p1.GetC() < p2.GetC() ? p1.GetC() : p2.GetC();
+  int i2 = p1.GetC() < p2.GetC() ? p2.GetC() : p1.GetC();
+  for (int i = i1; i <= i2; i++) DrawPoint(Point(p1.GetR(), i), content, fg_color, bg_color);
 }
 
-void FrameBuffer::drawVerticalLine(const Point &p1, const Point &p2, char content, FrameBuffer::Color fgColor,
-                                   FrameBuffer::Color bgColor) {
-    int i1 = p1.getR() < p2.getR() ? p1.getR() : p2.getR();
-    int i2 = p1.getR() < p2.getR() ? p2.getR() : p1.getR();
-    for (int i = i1; i <= i2; i++) drawPoint(Point(i, p1.getC()), content, fgColor, bgColor);
+void FrameBuffer::DrawVerticalLine(const Point &p1, const Point &p2, char content, FrameBuffer::Color fg_color,
+                                   FrameBuffer::Color bg_color) {
+  int i1 = p1.GetR() < p2.GetR() ? p1.GetR() : p2.GetR();
+  int i2 = p1.GetR() < p2.GetR() ? p2.GetR() : p1.GetR();
+  for (int i = i1; i <= i2; i++) DrawPoint(Point(i, p1.GetC()), content, fg_color, bg_color);
 }
 
-void FrameBuffer::drawTextBox(const Point &topLeft, const Point &bottomRight, string str, FrameBuffer::Color fgColor,
-                              FrameBuffer::Color bgColor) {
-    if (str.size() > 0) {
-        int it = 0;
-        bool done = false;
-        for (int r = topLeft.getR(); r <= bottomRight.getR() && !done; r++) {
-            for (int c = topLeft.getC(); c <= bottomRight.getC() && !done; c++) {
-                if (str[it] == '\n') {
-                    it++;
-                    if (it >= str.size()) done = true;
-                    break;
-                }
-                Point p = Point(r, c);
-                if (p.inArea(rows, cols)) {
-                    contents[idx(p)] = str[it];
-                    if (fgColor != TRANSPARENT) fgColors[idx(p)] = fgColor;
-                    if (bgColor != TRANSPARENT) bgColors[idx(p)] = bgColor;
-                }
-                it++;
-                if (it >= str.size()) done = true;
-            }
+void FrameBuffer::DrawTextBox(const Point &top_left, const Point &bottom_right, string str, FrameBuffer::Color fg_color,
+                              FrameBuffer::Color bg_color) {
+  if (str.size() > 0) {
+    int it = 0;
+    bool done = false;
+    for (int r = top_left.GetR(); r <= bottom_right.GetR() && !done; r++) {
+      for (int c = top_left.GetC(); c <= bottom_right.GetC() && !done; c++) {
+        if (str[it] == '\n') {
+          it++;
+          if (it >= str.size()) done = true;
+          break;
         }
+        Point p = Point(r, c);
+        if (p.inArea(rows, cols)) {
+          contents[idx(p)] = str[it];
+          if (fg_color != TRANSPARENT) fg_colors[idx(p)] = fg_color;
+          if (bg_color != TRANSPARENT) bg_colors[idx(p)] = bg_color;
+        }
+        it++;
+        if (it >= str.size()) done = true;
+      }
     }
+  }
 }
 
-void FrameBuffer::drawRectangle(const Point &topLeft, const Point &bottomRight, char borderCharacter,
-                                FrameBuffer::Color textColor, FrameBuffer::Color bgColor,
-                                FrameBuffer::Color borderColor) {
-    for (int r = topLeft.getR(); r <= bottomRight.getR(); r++) {
-        for (int c = topLeft.getC(); c <= bottomRight.getC(); c++) {
-            Point p = Point(r, c);
-            if (p.inArea(rows, cols)) {
-                if (r == topLeft.getR() || r == bottomRight.getR() || c == topLeft.getC() || c == bottomRight.getC()) {
-                    contents[idx(p)] = borderCharacter;
-                    if (textColor != TRANSPARENT) fgColors[idx(p)] = textColor;
-                    if (borderColor != TRANSPARENT) bgColors[idx(p)] = borderColor;
-                } else {
-                    if (bgColor != TRANSPARENT) {
-                        contents[idx(p)] = BLANK;
-                        bgColors[idx(p)] = bgColor;
-                    }
-                }
-            }
+void FrameBuffer::DrawRectangle(const Point &top_left, const Point &bottom_right, char border_character,
+                                FrameBuffer::Color text_color, FrameBuffer::Color bg_color,
+                                FrameBuffer::Color border_color) {
+  for (int r = top_left.GetR(); r <= bottom_right.GetR(); r++) {
+    for (int c = top_left.GetC(); c <= bottom_right.GetC(); c++) {
+      Point p = Point(r, c);
+      if (p.inArea(rows, cols)) {
+        if (r == top_left.GetR() || r == bottom_right.GetR() || c == top_left.GetC() || c == bottom_right.GetC()) {
+          contents[idx(p)] = border_character;
+          if (text_color != TRANSPARENT) fg_colors[idx(p)] = text_color;
+          if (border_color != TRANSPARENT) bg_colors[idx(p)] = border_color;
         }
+        else {
+          if (bg_color != TRANSPARENT) {
+            contents[idx(p)] = BLANK;
+            bg_colors[idx(p)] = bg_color;
+          }
+        }
+      }
     }
+  }
 }
 
 ostream &operator<<(ostream &os, const FrameBuffer &fb) {
-    string outputBuffer = "";
-    for (int r = 0; r < fb.rows; r++) {
-        for (int c = 0; c < fb.cols; c++) {
-            Point p = Point(r, c);
-
-            // Output color-specifying control characters
-            if (fb.colored) {
-                outputBuffer += (FrameBuffer::CS_INITIATOR + FrameBuffer::RESET);
-                if (fb.fgColors[fb.idx(p)] != FrameBuffer::TRANSPARENT) {
-                    outputBuffer += (FrameBuffer::FG_COLOR_CONSTANTS[fb.fgColors[fb.idx(p)]] + ";");
-                }
-                if (fb.bgColors[fb.idx(p)] != FrameBuffer::TRANSPARENT) {
-                    outputBuffer += FrameBuffer::BG_COLOR_CONSTANTS[fb.bgColors[fb.idx(p)]];
-                }
-                outputBuffer += FrameBuffer::CS_TERMINATOR;
-            }
-
-            // Output actual character to be printed
-            outputBuffer += fb.contents[fb.idx(p)];
-
-            // Output reset control characters
-            if (fb.colored) {
-                outputBuffer += (FrameBuffer::CS_INITIATOR + FrameBuffer::RESET + ";" + FrameBuffer::CS_TERMINATOR);
-            }
+  string outputBuffer = "";
+  for (int r = 0; r < fb.rows; r++) {
+    for (int c = 0; c < fb.cols; c++) {
+      Point p = Point(r, c);
+      // Output color-specifying control characters
+      if (fb.colored) {
+        outputBuffer += (FrameBuffer::CS_INITIATOR + FrameBuffer::RESET);
+        if (fb.fg_colors[fb.idx(p)] != FrameBuffer::TRANSPARENT) {
+          outputBuffer += (FrameBuffer::FG_COLOR_CONSTANTS[fb.fg_colors[fb.idx(p)]] + ";");
         }
-
-        // Output newline
-        outputBuffer += '\n';
+        if (fb.bg_colors[fb.idx(p)] != FrameBuffer::TRANSPARENT) {
+          outputBuffer += FrameBuffer::BG_COLOR_CONSTANTS[fb.bg_colors[fb.idx(p)]];
+        }
+        outputBuffer += FrameBuffer::CS_TERMINATOR;
+      }
+      // Output actual character to be printed
+      outputBuffer += fb.contents[fb.idx(p)];
+      // Output reset control characters
+      if (fb.colored) {
+        outputBuffer += (FrameBuffer::CS_INITIATOR + FrameBuffer::RESET + ";" + FrameBuffer::CS_TERMINATOR);
+      }
     }
-
-    outputBuffer += fb.inputPrompt; // Add input prompt text at the bottom of the screen
-    os << outputBuffer; // Actually print the output buffer's contents to the output stream
-    return os;
+    // Output newline
+    outputBuffer += '\n';
+  }
+  outputBuffer += fb.input_prompt; // Add input prompt text at the bottom of the screen
+  os << outputBuffer; // Actually print the output buffer's contents to the output stream
+  return os;
 }
-

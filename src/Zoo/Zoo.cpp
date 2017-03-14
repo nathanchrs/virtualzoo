@@ -155,17 +155,17 @@ Zoo::Zoo(istream &is) {
 }
 
 Zoo::~Zoo() {
-    for (int i = 0; i < cells.size(); i++) {
+    for (int i = 0; i < cells.Size(); i++) {
         delete cells[i];
     }
-    for (int i = 0; i < zones.size(); i++) {
+    for (int i = 0; i < zones.Size(); i++) {
         delete zones[i];
     }
 }
 
 void Zoo::addZone(const Zone &zone) {
     if (findZone(zone.getName()) == nullptr) {
-        zones.pushBack(zone.clone());
+        zones.PushBack(zone.clone());
     } else {
         throw ZoneAlreadyExistsException();
     }
@@ -211,7 +211,7 @@ void Zoo::addAnimal(const Animal &animal, string cageName) {
 }
 
 Zone* Zoo::findZone(string zoneName) const {
-    for (int i = 0; i < zones.size(); i++) {
+    for (int i = 0; i < zones.Size(); i++) {
         if (zones[i]->getName() == zoneName) {
             return zones[i];
         }

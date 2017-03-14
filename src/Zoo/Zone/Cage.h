@@ -28,7 +28,7 @@ public:
       */
     void addAnimal(Animal *animal) {
         if (!isFull()) {
-            animals.pushBack(animal);
+            animals.PushBack(animal);
         } else {
             throw CageExceedsCapacityException();
         }
@@ -43,14 +43,14 @@ public:
      * @return Jumlah hewan dalam kandang.
      */
     int animalCount() const {
-        return animals.size();
+        return animals.Size();
     }
 
     /** @brief Memeriksa apakah jumlah hewan di dalam kandang sudah mencapai kapasitas (30% ukuran kandang) atau belum.
       * @return True jika jumlah hewan sudah mencapai kapasitas kandang dan false jika belum.
       */
     bool isFull() const {
-        return animals.size() >= (0.3 * size());
+        return animals.Size() >= (0.3 * size());
     };
 
     Zone* clone() const {

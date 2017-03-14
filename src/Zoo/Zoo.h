@@ -107,7 +107,7 @@ private:
     }
 
     int idx(const Point &p) const {
-        return p.getR() * cols + p.getC();
+        return p.GetR() * cols + p.GetC();
     }
 
     Array<Cell*> cells;

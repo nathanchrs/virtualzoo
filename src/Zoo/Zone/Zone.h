@@ -13,7 +13,7 @@ public:
 
     virtual ~Zone() {};
 
-    virtual void addCell(Cell *cell) { cells.pushBack(cell); };
+    virtual void addCell(Cell *cell) { cells.PushBack(cell); };
 
     string getName() const {
         return name;
@@ -23,7 +23,7 @@ public:
         Zone::name = name;
     }
 
-    int size() const { return cells.size(); }
+    int size() const { return cells.Size(); }
 
     virtual Zone* clone() const {
         return new Zone(*this);
