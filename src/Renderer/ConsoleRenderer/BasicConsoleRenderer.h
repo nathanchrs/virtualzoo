@@ -1,15 +1,26 @@
-#ifndef VIRTUALZOO_BASICCONSOLERENDERER_H
-#define VIRTUALZOO_BASICCONSOLERENDERER_H
+#ifndef BASICCONSOLERENDERER_H
+#define BASICCONSOLERENDERER_H
 
 #include "../../Zoo/Zoo.h"
 #include "../Renderer.h"
 
+/** @class BasicConsoleRenderer
+  * Berfungsi untuk menggambar objek di atas console teks.
+  */
 class BasicConsoleRenderer : public Renderer {
 public:
 
-    void render(const Zoo &zoo, bool useColor = false);
+  /** @brief Menggambar sebuah kebun binatang di atas console teks.
+   *  @param zoo Kebun binatang yang akan digambarkan di atas console teks.
+   *  @param use_color Jika true, output tampilan berwarna
+   */
+  void Render(const Zoo &zoo, bool use_color = false);
 
-    void displayMenu(bool useColor = false);
+  /**
+   * @brief Menampilkan menu utama.
+   * @param use_color Jika true, output tampilan berwarna
+   */
+  void DisplayMenu(bool use_color = false);
 };
 
-#endif //VIRTUALZOO_BASICCONSOLERENDERER_H
+#endif //BASICCONSOLERENDERER_H

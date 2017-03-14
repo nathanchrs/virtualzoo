@@ -1,5 +1,6 @@
 #ifndef ANIMAL_H
 #define ANIMAL_H
+
 #include <string>
 #include "../../Renderer/Point.h"
 #include "../../Renderer/Renderable.h"
@@ -14,79 +15,81 @@ using namespace std;
 class Animal : public Renderable {
 public:
 
-    enum Reproduction { Ovipar, Vivipar, Ovovivipar };
-    enum SkinType { Feather, Fur, Scales };
+  enum Reproduction { Ovipar, Vivipar, Ovovivipar };
+  enum SkinType { Feather, Fur, Scales };
 
-    Animal(const string &name);
+  string GetName() const;
 
-    string getName() const;
+  string GetDescription() const;
 
-    string getDescription() const;
+  bool IsValidHabitat(Habitat::HabitatType habitatType) const;
 
-    /** @brief Memeriksa apakah hewan adalah hewan udara atau tidak.
-      * @return True jika hewan adalah hewan udara dan False jika tidak.
-      */
-    bool isAirAnimal();
+  /** @brief Memeriksa apakah hewan buas atau tidak.
+    * @return True jika hewan adalah hewan buas dan False jika tidak.
+    */
+  bool IsWild() const;
 
-    /** @brief Memeriksa apakah hewan adalah hewan darat atau tidak.
-      * @return True jika hewan adalah hewan darat dan False jika tidak.
-      */
-    bool isLandAnimal();
+  /** @brief Menambahkan nama mangsa pada daftar mangsa.
+    * @param preyName Nama mangsa.
+    */
+  void AddPrey(const string &prey_name);
 
-    /** @brief Memeriksa apakah hewan adalah hewan air atau tidak.
-      * @return True jika hewan adalah hewan air dan False jika tidak.
-      */
-    bool isWaterAnimal();
+  /** @brief Memeriksa apakah preyName terdapat pada preyList.
+    * @param preyName Nama mangsa.
+    * @return True jika preyName terdapat pada preyList dan false jika tidak.
+    */
+  bool IsPrey(const string &prey_name) const;
 
-    bool isValidHabitat(Habitat::HabitatType habitatType) const;
+  Reproduction GetReproduction() const;
 
-    /** @brief Memeriksa apakah hewan buas atau tidak.
-      * @return True jika hewan adalah hewan buas dan False jika tidak.
-      */
-    bool IsWild() const;
+  SkinType GetSkinType() const;
 
-    /** @brief Menambahkan nama mangsa pada daftar mangsa.
-      * @param preyName Nama mangsa.
-      */
-    void AddPrey(const string &prey_name);
+  virtual char Render() const {
+    return 'x';
+  }
 
-    /** @brief Memeriksa apakah preyName terdapat pada preyList.
-      * @param preyName Nama mangsa.
-      * @return True jika preyName terdapat pada preyList dan false jika tidak.
-      */
-    bool isPrey(const string &prey_name) const;
+  Point GetPosition() const;
 
-    Reproduction getReproduction() const;
+  void SetPosition(const Point &position);
 
-    SkinType getSkinType() const;
+  /** @brief Melakukan interaksi dengan seekor hewan.
+    * Merupakan pure virtual function.
+    * @return string yang menggambarkan experience yang dapat didengar,
+    * dirasakan, atau dilihat seorang pengunjung.
+    */
+  virtual string Interact() const = 0;
 
-    virtual char render() const {
-        return 'x';
-    }
+  virtual Animal *Clone() const = 0;
 
-    Point getPosition() const;
+  virtual bool IsCarnivore() const = 0;
 
-    void setPosition(const Point &position);
+  virtual bool IsHerbivore() const = 0;
 
-    /** @brief Melakukan interaksi dengan seekor hewan.
-      * Merupakan pure virtual function.
-      * @return string yang menggambarkan experience yang dapat didengar, dirasakan, atau dilihat seorang pengunjung.
-      */
-    virtual string interact() const = 0;
+  virtual bool IsOmnivore() const = 0;
 
-    virtual Animal* clone() const = 0;
+  /** @brief Menghitung banyaknya daging yang dikonsumsi setiap hari relatif
+   * terhadap berat badannnya.
+   * @return Banyaknya daging yang dikonsumsi setiap hari.
+   */
+  virtual double CalculateTotalMeat() const = 0;
+
+  /** @brief Menghitung banyaknya sayuran yang dikonsumsi setiap hari relatif
+   * terhadap berat badannnya.
+   * @return Banyaknya sayuran yang dikonsumsi setiap hari.
+   */
+  virtual double CalculateTotalVegetable() const = 0;
 
 protected :
-    string name;
-    Reproduction reproduction;
-    SkinType skinType;
-    string description;
-    bool airAnimal;
-    bool landAnimal;
-    bool waterAnimal;
-    bool wild;
-    Array<string> prey_list;
-    Point position;
+  string name;
+  Reproduction reproduction;
+  SkinType skin_type;
+  string description;
+  bool air_animal;
+  bool land_animal;
+  bool water_animal;
+  bool wild;
+  Array<string> prey_list;
+  Point position;
 };
 
 #endif //ANIMALIA_H

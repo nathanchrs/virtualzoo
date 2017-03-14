@@ -1,11 +1,11 @@
 #include "Omnivore.h"
 
-Omnivore::Omnivore(int _weight, double _ratio) : Diet(_weight, _ratio) {}
+Omnivore::Omnivore(int weight, double ratio) : Diet(weight, ratio) {}
 
-double Omnivore::calculateTotalMeat() const {
-    return weight*ratio/2.0;
+double Omnivore::CalculateTotalMeat() const {
+  return weight * ratio / 2.0;
 }
 
-double Omnivore::calculateTotalVegetable() const {
-    return weight*ratio/2.0;
+double Omnivore::CalculateTotalVegetable() const {
+  return weight * ratio / 2.0;
 }

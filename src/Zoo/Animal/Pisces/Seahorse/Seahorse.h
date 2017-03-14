@@ -9,19 +9,22 @@
   */
 class Seahorse : public Pisces, public Carnivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan kuda laut.
-      */
-    Seahorse(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan kuda laut.
+    */
+  Seahorse(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan kuda laut.
-      * @return Experience yang dirasakan ketika berinteraksi dengan kuda laut.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan kuda laut.
+    * @return Experience yang dirasakan ketika berinteraksi dengan kuda laut.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Seahorse(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Seahorse(*this);
+  };
 };
 
 #endif //SEAHORSE_H

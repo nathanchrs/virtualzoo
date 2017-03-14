@@ -10,19 +10,22 @@
 class Parrot : public Aves, public Herbivore {
 public:
 
-    /** @brief Constructor.
-      * Menciptakan burung beo.
-      */
-    Parrot(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan burung beo.
+    */
+  Parrot(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan burung beo.
-      * @return Experience yang dirasakan ketika berinteraksi dengan burung beo.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan burung beo.
+    * @return Experience yang dirasakan ketika berinteraksi dengan burung beo.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Parrot(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Parrot(*this);
+  };
 };
 
 #endif //PARROT_H

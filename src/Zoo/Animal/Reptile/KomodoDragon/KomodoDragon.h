@@ -9,19 +9,22 @@
   */
 class KomodoDragon : public Reptile, public Carnivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan komodo.
-      */
-    KomodoDragon(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan komodo.
+    */
+  KomodoDragon(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan komodo.
-      * @return Experience yang dirasakan ketika berinteraksi dengan komodo.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan komodo.
+    * @return Experience yang dirasakan ketika berinteraksi dengan komodo.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new KomodoDragon(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new KomodoDragon(*this);
+  };
 };
 
 #endif //KOMODODRAGON_H

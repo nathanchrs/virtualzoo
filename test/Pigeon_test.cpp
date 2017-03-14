@@ -9,13 +9,13 @@ protected:
 TEST_F(PigeonTest, PigeonConstructorWithParameter) {
     Point P(2,2);
     Pigeon Test(P,100,false);
-    ASSERT_EQ(Test.getName(),"Pigeon");
-    ASSERT_EQ(Test.getSkinType(),Animal::Feather);
-    ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
-    ASSERT_TRUE(Test.isAirAnimal());
+    ASSERT_EQ(Test.GetName(),"Pigeon");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Feather);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Ovipar);
+    ASSERT_TRUE(Test.IsAirAnimal());
     ASSERT_TRUE(Test.IsHerbivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()==0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()>0);
+    ASSERT_TRUE(Test.CalculateTotalMeat()==0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()>0);
     ASSERT_TRUE(!Test.IsWild());
 }
 

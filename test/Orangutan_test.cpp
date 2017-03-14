@@ -9,13 +9,13 @@ protected:
 TEST_F(OrangutanTest, OrangutanConstructorWithParameter) {
     Point P(2,2);
     Orangutan Test(P,100,false);
-    ASSERT_EQ(Test.getName(),"Orangutan");
-    ASSERT_EQ(Test.getSkinType(),Animal::Fur);
-    ASSERT_EQ(Test.getReproduction(),Animal::Vivipar);
-    ASSERT_TRUE(Test.isLandAnimal());
+    ASSERT_EQ(Test.GetName(),"Orangutan");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Fur);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Vivipar);
+    ASSERT_TRUE(Test.IsLandAnimal());
     ASSERT_TRUE(Test.IsOmnivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()>0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()>0);
+    ASSERT_TRUE(Test.CalculateTotalMeat()>0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()>0);
     ASSERT_TRUE(!Test.IsWild());
 }
 

@@ -155,25 +155,25 @@ Zoo::Zoo(istream &is) {
 }
 
 Zoo::~Zoo() {
-    for (int i = 0; i < cells.size(); i++) {
+    for (int i = 0; i < cells.Size(); i++) {
         delete cells[i];
     }
-    for (int i = 0; i < zones.size(); i++) {
+    for (int i = 0; i < zones.Size(); i++) {
         delete zones[i];
     }
 }
 
 void Zoo::addZone(const Zone &zone) {
     if (findZone(zone.getName()) == nullptr) {
-        zones.pushBack(zone.clone());
+        zones.PushBack(zone.clone());
     } else {
         throw ZoneAlreadyExistsException();
     }
 }
 
 void Zoo::addCell(const Cell &cell, string zoneName) {
-    Point pos = cell.getPosition();
-    if (pos.inArea(rows, cols)) {
+    Point pos = cell.GetPosition();
+    if (pos.InArea(rows, cols)) {
         delete cells[idx(pos)];
         cells[idx(pos)] = cell.clone();
 
@@ -191,14 +191,14 @@ void Zoo::addCell(const Cell &cell, string zoneName) {
 void Zoo::addAnimal(const Animal &animal, string cageName) {
     Cage *cage = dynamic_cast<Cage*> (findZone(cageName));
     if (cage != nullptr) {
-        Point pos = animal.getPosition();
-        if (pos.inArea(rows, cols)) {
+        Point pos = animal.GetPosition();
+        if (pos.InArea(rows, cols)) {
             Habitat *habitat = dynamic_cast<Habitat*> (cells[idx(pos)]);
             if (habitat == nullptr) {
                 throw WrongHabitatException();
             }
-            if (animal.isValidHabitat(habitat->getType())) {
-                cage->addAnimal(animal.clone());
+            if (animal.IsValidHabitat(habitat->getType())) {
+                cage->addAnimal(animal.Clone());
             } else {
                 throw WrongHabitatException();
             }
@@ -211,7 +211,7 @@ void Zoo::addAnimal(const Animal &animal, string cageName) {
 }
 
 Zone* Zoo::findZone(string zoneName) const {
-    for (int i = 0; i < zones.size(); i++) {
+    for (int i = 0; i < zones.Size(); i++) {
         if (zones[i]->getName() == zoneName) {
             return zones[i];
         }

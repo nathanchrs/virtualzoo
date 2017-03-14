@@ -37,7 +37,7 @@ public:
      * @brief Mengembalikan posisi cell.
      * @return Posisi cell.
      */
-    Point getPosition() const {
+    Point GetPosition() const {
         return position;
     }
 

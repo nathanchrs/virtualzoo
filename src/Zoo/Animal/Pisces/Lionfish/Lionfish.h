@@ -9,19 +9,22 @@
   */
 class Lionfish : public Pisces, public Carnivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan lionfish.
-      */
-    Lionfish(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan lionfish.
+    */
+  Lionfish(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan lionfish.
-      * @return Experience yang dirasakan ketika berinteraksi dengan lionfish.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan lionfish.
+    * @return Experience yang dirasakan ketika berinteraksi dengan lionfish.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Lionfish(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Lionfish(*this);
+  };
 };
 
 

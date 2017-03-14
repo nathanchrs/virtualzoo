@@ -9,13 +9,13 @@ protected:
 TEST_F(FrenchAngelFishTest, FrenchAngelFishConstructorWithParameter) {
     Point P(2,2);
     FrenchAngelFish Test(P,100,false);
-    ASSERT_EQ(Test.getName(),"FrenchAngelFish");
-    ASSERT_EQ(Test.getSkinType(),Animal::Scales);
-    ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
-    ASSERT_TRUE(Test.isWaterAnimal());
+    ASSERT_EQ(Test.GetName(),"FrenchAngelFish");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Scales);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Ovipar);
+    ASSERT_TRUE(Test.IsWaterAnimal());
     ASSERT_TRUE(Test.IsHerbivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()==0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()>0);
+    ASSERT_TRUE(Test.CalculateTotalMeat()==0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()>0);
     ASSERT_TRUE(!Test.IsWild());
 }
 

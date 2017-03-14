@@ -7,19 +7,21 @@ class Herbivore : public Diet {
 public:
     /** @brief Constructor.
       * Menciptakan hewan herbivora dengan berat tertentu.
-      * @param _weight Berat dari hewan.
+      * @param weight Berat dari hewan.
       */
-    Herbivore(int _weight, double _ratio);
+    Herbivore(int weight, double ratio);
 
-    /** @brief Menghitung banyaknya daging yang dikonsumsi setiap hari relatif terhadap berat badannnya.
-      * @return Banyaknya daging yang dikonsumsi setiap hari.
-      */
-    double calculateTotalMeat() const;
+    /** @brief Menghitung banyaknya daging yang dikonsumsi setiap hari relatif
+     * terhadap berat badannnya.
+     * @return Banyaknya daging yang dikonsumsi setiap hari.
+     */
+    double CalculateTotalMeat() const;
 
-    /** @brief Menghitung banyaknya sayuran yang dikonsumsi setiap hari relatif terhadap berat badannnya.
-      * @return Banyaknya sayuran yang dikonsumsi setiap hari.
-      */
-    double calculateTotalVegetable() const;
+    /** @brief Menghitung banyaknya sayuran yang dikonsumsi setiap hari relatif
+     * terhadap berat badannnya.
+     * @return Banyaknya sayuran yang dikonsumsi setiap hari.
+     */
+    double CalculateTotalVegetable() const;
 };
 
 #endif //HERBIVORE_H

@@ -9,19 +9,22 @@
   */
 class Leopard : public Mammals, public Carnivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan macan tutul.
-      */
-    Leopard(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan macan tutul.
+    */
+  Leopard(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan macan tutul.
-      * @return Experience yang dirasakan ketika berinteraksi dengan macan tutul.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan macan tutul.
+    * @return Experience yang dirasakan ketika berinteraksi dengan macan tutul.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Leopard(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Leopard(*this);
+  };
 };
 
 #endif //LEOPARD_H

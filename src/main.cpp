@@ -22,7 +22,12 @@ int main(int argc, char **argv) {
     Zoo zoo(fin);
     fin.close();
 
+<<<<<<< HEAD
     Controller::displayMenu(zoo, useColor);
+=======
+    BasicConsoleRenderer renderer;
+  renderer.Render(zoo);
+>>>>>>> b61e04a9cf04f2ae0aabff891ca6877ddcc16990
 
     return 0;
 }

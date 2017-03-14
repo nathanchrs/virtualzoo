@@ -12,14 +12,14 @@ public:
     /** @brief Constructor.
      * Menciptakan burung merpati.
      */
-    Pigeon(const Point& pos, int _weight, bool wild);
+    Pigeon(const Point& pos, int weight, bool wild);
 
     /** @brief Melakukan interaksi dengan burung merpati.
       * @return Experience yang dirasakan ketika berinteraksi dengan burung merpati.
       */
-    string interact() const;
+    string Interact() const;
 
-    Animal* clone() const {
+    Animal* Clone() const {
         return new Pigeon(*this);
     };
 };

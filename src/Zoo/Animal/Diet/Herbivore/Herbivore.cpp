@@ -1,11 +1,11 @@
 #include "Herbivore.h"
 
-Herbivore::Herbivore(int _weight, double _ratio) : Diet(_weight, _ratio) {}
+Herbivore::Herbivore(int weight, double ratio) : Diet(weight, ratio) {}
 
-double Herbivore::calculateTotalMeat() const {
-    return 0;
+double Herbivore::CalculateTotalMeat() const {
+  return 0;
 }
 
-double Herbivore::calculateTotalVegetable() const {
-    return weight*ratio;
+double Herbivore::CalculateTotalVegetable() const {
+  return weight * ratio;
 }
