@@ -115,11 +115,11 @@ public:
   Zone *FindZone(string zoneName) const;
 
   /**
-   * @brief Mencari salah satu hewan yang posisinya ada di position.
-   * @param position Posisi hewan yang ingin dicari.
-   * @return Pointer ke hewan tersebut.
+   * @brief Mencari zona mana yang mengandung posisi cell_position
+   * @param cell_position Posisi zona yang ingin dicari.
+   * @return Pointer ke zona tersebut, jika tidak ada bernilai nullptr.
    */
-  Animal *FindAnimal(Point position) const;
+  Zone* FindZone(Point cell_position) const;
 
   /**
    * @brief Menghasilkan string berisi interaksi apa saja yang terkandung dalam

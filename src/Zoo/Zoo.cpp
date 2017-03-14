@@ -252,7 +252,7 @@ double Zoo::CalculateTotalMeat() const {
 double Zoo::CalculateTotalVegetable() const {
   double vegetable = 0.0;
   for (int i = 0; i < zones.Size(); i++) {
-    Cage *cage = dynamic_cast<Cage *> (zones[i]);
+    Cage *cage = dynamic_cast<Cage*> (zones[i]);
     if (cage != nullptr) {
       Array<Animal*> animals = cage->GetAnimals();
       for (int j = 0; j < animals.Size(); j++) {
@@ -263,15 +263,12 @@ double Zoo::CalculateTotalVegetable() const {
   return vegetable;
 }
 
-Animal *Zoo::FindAnimal(Point position) const {
+Zone* Zoo::FindZone(Point cell_position) const {
   for (int i = 0; i < zones.Size(); i++) {
-    Cage *cage = dynamic_cast<Cage *> (zones[i]);
-    if (cage != nullptr) {
-      Array<Animal*> animals = cage->GetAnimals();
-      for (int j = 0; j < animals.Size(); j++) {
-        if (animals[j]->GetPosition() == position) {
-          return animals[j];
-        }
+    Array<Cell*> cells = zones[i]->GetCells();
+    for (int j = 0; j < cells.Size(); j++) {
+      if (cells[j]->GetPosition() == cell_position) {
+        return zones[i];
       }
     }
   }
@@ -281,9 +278,12 @@ Animal *Zoo::FindAnimal(Point position) const {
 string Zoo::ListInteractions(Point cell_position) const {
   string interactions = "";
   if (cell_position.InArea(rows, cols)) {
-    Animal *animal = FindAnimal(cell_position);
-    if (animal != nullptr) {
-      interactions += animal->Interact() + "\n";
+    Cage *cage = dynamic_cast<Cage*> (FindZone(cell_position));
+    if (cage != nullptr) {
+      Array<Animal*> animals = cage->GetAnimals();
+      for (int j = 0; j < animals.Size(); j++) {
+        interactions += animals[j]->Interact() + "\n";
+      }
     }
   }
   return interactions;
