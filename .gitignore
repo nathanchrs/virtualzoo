@@ -38,6 +38,7 @@ desktop.ini
 # Build output
 bin/*
 !bin/.gitkeep
+!bin/zoo.in
 cmake-build-debug
 
 # Doxygen output
