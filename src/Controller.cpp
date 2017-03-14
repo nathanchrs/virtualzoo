@@ -46,6 +46,10 @@ void Controller::TourZoo() {
 }
 
 void Controller::DisplayFoodStatistics() {
+  cout << "Total meat needed: " << zoo->CalculateTotalMeat() << endl;
+  cout << "Total vegetable needed: " << zoo->CalculateTotalVegetable() << endl;
+  cout << "Input [back] to return to menu: ";
+
   string input;
   do {
     cin >> input;
