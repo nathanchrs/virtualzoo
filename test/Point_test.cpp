@@ -31,4 +31,9 @@ TEST_F(PointTest, PointTestMethod) {
   P = P2 + P2;
   ASSERT_EQ(P.GetC(), 6);
   ASSERT_EQ(P.GetR(), 6);
+  P = P2 - P2;
+  ASSERT_EQ(P.GetR(), 0);
+  ASSERT_EQ(P.GetC(), 0);
+  ASSERT_FALSE(P == P2);
+  ASSERT_TRUE(P != P2);
 }
