@@ -9,19 +9,22 @@
   */
 class Chameleon : public Reptile, public Carnivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan bunglon.
-      */
-    Chameleon(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan bunglon.
+    */
+  Chameleon(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan bunglon.
-      * @return Experience yang dirasakan ketika berinteraksi dengan bunglon.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan bunglon.
+    * @return Experience yang dirasakan ketika berinteraksi dengan bunglon.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Chameleon(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Chameleon(*this);
+  };
 };
 
 

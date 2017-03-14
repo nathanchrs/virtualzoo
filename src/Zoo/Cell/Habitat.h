@@ -4,44 +4,56 @@
 #include "Cell.h"
 
 /** @class Habitat
-  * Kelas abstrak Habitat yang merepresentasikan petak tanah yang merupakan habitat.
+  * Kelas abstrak Habitat yang merepresentasikan petak habitat.
   */
 class Habitat : public Cell {
 public:
 
-    enum HabitatType { AirHabitat, LandHabitat, WaterHabitat };
+  /**
+   * @enum HabitatType
+   * Jenis-jenis habitat yang ada.
+   */
+  enum HabitatType { AirHabitat, LandHabitat, WaterHabitat };
 
-    /** @brief Constructor.
-      * Menciptakan sebuah Habitat dengan jenis tertentu.
-      * @param type Jenis dari habitat.
-      */
-    Habitat(Point position, HabitatType type) : Cell(position), type(type) {}
+  /** @brief Constructor.
+    * Menciptakan sebuah Habitat dengan jenis tertentu.
+    * @param position Posisi sel habitat.
+    * @param type Jenis dari habitat.
+    */
+  Habitat(Point position, HabitatType type) : Cell(position), type(type) {}
 
-    HabitatType getType() const {
-        return type;
+  /**
+   * @brief Mengembalikan jenis habitat.
+   * @return Jenis habitat.
+   */
+  HabitatType GetType() const {
+    return type;
+  }
+
+  /**
+   * @brief Mengembalikan representasi teks habitat.
+   * @return Sebuah char yang merupakan representasi teks habitat.
+   */
+  char Render() const {
+    switch (type) {
+      case AirHabitat:
+        return 'a';
+      case LandHabitat:
+        return 'l';
+      case WaterHabitat:
+        return 'w';
     }
+  }
 
-    void setType(HabitatType type) {
-        Habitat::type = type;
-    }
-
-    char render() const {
-        switch (type) {
-            case AirHabitat: // TODO habitat dalam cage itu huruf besar rendernya
-                return 'a';
-            case LandHabitat:
-                return 'l';
-            case WaterHabitat:
-                return 'w';
-        }
-    }
-
-    Cell* clone() const {
-        return new Habitat(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+   * @return Pointer ke objek yang baru dibuat.
+   */
+  Cell *Clone() const {
+    return new Habitat(*this);
+  };
 
 private:
-    HabitatType type;
+  HabitatType type;
 };
 
 #endif //HABITAT_H

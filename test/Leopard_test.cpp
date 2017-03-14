@@ -1,7 +1,3 @@
-//
-// Created by aegis on 12/03/17.
-//
-
 #include "gtest/gtest.h"
 #include "../src/Zoo/Animal/Mammals/Leopard/Leopard.h"
 
@@ -13,13 +9,11 @@ protected:
 TEST_F(LeopardTest, LeopardConstructorWithParameter) {
     Point P(2,2);
     Leopard Test(P,100,false);
-    ASSERT_EQ(Test.getName(),"Leopard");
-    ASSERT_EQ(Test.getSkinType(),Animal::Fur);
-    ASSERT_EQ(Test.getReproduction(),Animal::Vivipar);
-    ASSERT_TRUE(Test.isLandAnimal());
-    ASSERT_TRUE(Test.IsCarnivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()>0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()==0);
+    ASSERT_EQ(Test.GetName(),"Leopard");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Fur);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Vivipar);
+    ASSERT_TRUE(Test.CalculateTotalMeat()>0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()==0);
     ASSERT_TRUE(!Test.IsWild());
 }
 
@@ -32,12 +26,12 @@ TEST_F(LeopardTest, LeopardInteraction) {
 TEST_F(LeopardTest, WildLeopardConstructorWithParameter) {
     Point P(2,2);
     Leopard Test(P,100,true);
-    ASSERT_EQ(Test.getName(),"Leopard");
-    ASSERT_EQ(Test.getSkinType(),Animal::Fur);
-    ASSERT_EQ(Test.getReproduction(),Animal::Vivipar);
-    ASSERT_TRUE(Test.isLandAnimal());
+    ASSERT_EQ(Test.GetName(),"Leopard");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Fur);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Vivipar);
+    ASSERT_TRUE(Test.IsLandAnimal());
     ASSERT_TRUE(Test.IsCarnivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()>0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()==0);
+    ASSERT_TRUE(Test.CalculateTotalMeat()>0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()==0);
     ASSERT_TRUE(Test.IsWild());
 }

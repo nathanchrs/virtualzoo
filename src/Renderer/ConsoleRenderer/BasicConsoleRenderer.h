@@ -5,14 +5,22 @@
 #include "../Renderer.h"
 
 /** @class BasicConsoleRenderer
-  * Kelas BasicConsoleRenderer yang berfungsi untuk menggambar objek di atas console teks.
+  * Berfungsi untuk menggambar objek di atas console teks.
   */
 class BasicConsoleRenderer : public Renderer {
 public:
+
   /** @brief Menggambar sebuah kebun binatang di atas console teks.
-    * @param zoo Kebun binatang yang akan digambarkan di atas console teks.
-    */
-  void Render(const Zoo &zoo);
+   *  @param zoo Kebun binatang yang akan digambarkan di atas console teks.
+   *  @param use_color Jika true, output tampilan berwarna
+   */
+  void Render(const Zoo &zoo, bool use_color = false);
+
+  /**
+   * @brief Menampilkan menu utama.
+   * @param use_color Jika true, output tampilan berwarna
+   */
+  void DisplayMenu(bool use_color = false);
 };
 
 #endif //BASICCONSOLERENDERER_H

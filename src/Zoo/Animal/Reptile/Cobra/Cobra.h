@@ -9,19 +9,22 @@
   */
 class Cobra : public Reptile, public Carnivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan ular kobra.
-      */
-    Cobra(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan ular kobra.
+    */
+  Cobra(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan ular kobra.
-      * @return Experience yang dirasakan ketika berinteraksi dengan ular kobra.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan ular kobra.
+    * @return Experience yang dirasakan ketika berinteraksi dengan ular kobra.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Cobra(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Cobra(*this);
+  };
 };
 
 

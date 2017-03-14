@@ -1,7 +1,3 @@
-//
-// Created by alvin on 12/03/17.
-//
-
 #include "gtest/gtest.h"
 #include "../src/Zoo/Animal/Aves/Owl/Owl.h"
 
@@ -13,13 +9,11 @@ protected:
 TEST_F(OwlTest, OwlConstructorWithParameter) {
     Point P(2,2);
     Owl Test(P,100,false);
-    ASSERT_EQ(Test.getName(),"Owl");
-    ASSERT_EQ(Test.getSkinType(),Animal::Feather);
-    ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
-    ASSERT_TRUE(Test.isAirAnimal());
-    ASSERT_TRUE(Test.IsCarnivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()>0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()==0);
+    ASSERT_EQ(Test.GetName(),"Owl");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Feather);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Ovipar);
+    ASSERT_TRUE(Test.CalculateTotalMeat()>0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()==0);
     ASSERT_TRUE(!Test.IsWild());
 }
 

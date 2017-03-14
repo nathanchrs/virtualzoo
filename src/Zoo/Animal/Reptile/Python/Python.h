@@ -9,19 +9,22 @@
   */
 class Python : public Reptile, public Carnivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan ular piton.
-      */
-    Python(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan ular piton.
+    */
+  Python(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan ular piton.
-      * @return Experience yang dirasakan ketika berinteraksi dengan ular piton.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan ular piton.
+    * @return Experience yang dirasakan ketika berinteraksi dengan ular piton.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Python(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Python(*this);
+  };
 };
 
 

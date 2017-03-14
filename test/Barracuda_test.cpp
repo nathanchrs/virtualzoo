@@ -1,7 +1,3 @@
-//
-// Created by alvin on 13/03/17.
-//
-
 #include "gtest/gtest.h"
 #include "../src/Zoo/Animal/Pisces/Barracuda/Barracuda.h"
 
@@ -13,13 +9,11 @@ protected:
 TEST_F(BarracudaTest, BarracudaConstructorWithParameter) {
     Point P(2,2);
     Barracuda Test(P,100,false);
-    ASSERT_EQ(Test.getName(),"Barracuda");
-    ASSERT_EQ(Test.getSkinType(),Animal::Scales);
-    ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
-    ASSERT_TRUE(Test.isWaterAnimal());
-    ASSERT_TRUE(Test.IsCarnivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()>0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()==0);
+    ASSERT_EQ(Test.GetName(),"Barracuda");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Scales);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Ovipar);
+    ASSERT_TRUE(Test.CalculateTotalMeat()>0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()==0);
     ASSERT_TRUE(!Test.IsWild());
 }
 
@@ -32,12 +26,12 @@ TEST_F(BarracudaTest, BarracudaInteraction) {
 TEST_F(BarracudaTest, WildBarracudaConstructorWithParameter) {
     Point P(2,2);
     Barracuda Test(P,100,true);
-    ASSERT_EQ(Test.getName(),"Barracuda");
-    ASSERT_EQ(Test.getSkinType(),Animal::Scales);
-    ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
-    ASSERT_TRUE(Test.isWaterAnimal());
+    ASSERT_EQ(Test.GetName(),"Barracuda");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Scales);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Ovipar);
+    ASSERT_TRUE(Test.IsWaterAnimal());
     ASSERT_TRUE(Test.IsCarnivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()>0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()==0);
+    ASSERT_TRUE(Test.CalculateTotalMeat()>0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()==0);
     ASSERT_TRUE(Test.IsWild());
 }

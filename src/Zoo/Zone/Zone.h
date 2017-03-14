@@ -4,35 +4,70 @@
 #include <string>
 #include "../../Array/Array.h"
 #include "../Cell/Cell.h"
+
 using namespace std;
 
 class Zone {
 public:
 
-    Zone(const string &name) : name(name) {}
+  /**
+   * @brief Constructor.
+   * Menciptakan kelas zona yang menyimpan daftar petak-petak dalam zoo.
+   * @param name Nama zona.
+   */
+  Zone(const string &name) : name(name) {}
 
-    virtual ~Zone() {};
+  /**
+   * @brief Destructor.
+   */
+  virtual ~Zone() {};
 
-    virtual void addCell(Cell *cell) { cells.PushBack(cell); };
+  /**
+   * @brief Mendaftarkan petak ke zona ini.
+   * @param cell Pointer ke Cell yang akan ditambah.
+   */
+  virtual void AddCell(Cell *cell) { cells.PushBack(cell); };
 
-    string getName() const {
-        return name;
-    }
+  /**
+   * @brief Mengembalikan nama zona.
+   * @return Nama zona.
+   */
+  string GetName() const {
+    return name;
+  }
 
-    void setName(const string &name) {
-        Zone::name = name;
-    }
+  /**
+   * @brief Mengeset nama zona
+   * @param name Nama zona baru.
+   */
+  void SetName(const string &name) {
+    Zone::name = name;
+  }
 
-    int size() const { return cells.Size(); }
+  /**
+   * @brief Mengembalikan daftar petak-petak yang terdaftar di zona ini.
+   * @return Reference ke array yang mengandung daftar pointer ke Cell.
+   */
+  const Array<Cell*> &GetCells() const {
+    return cells;
+  }
 
-    virtual Zone* clone() const {
-        return new Zone(*this);
-    };
+  /**
+   * @brief Mengembalikan jumlah petak yang terdaftar dalam zona ini.
+   * @return Jumlah petak yang terdaftar dalam zona ini.
+   */
+  int Size() const { return cells.Size(); }
+
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+   * @return Pointer ke objek yang baru dibuat.
+   */
+  virtual Zone *Clone() const {
+    return new Zone(*this);
+  };
 
 private:
-    string name;
-    Array<Cell*> cells;
+  string name;
+  Array<Cell*> cells;
 };
-
 
 #endif //VIRTUALZOO_ZONE_H

@@ -15,26 +15,13 @@ public:
     */
   enum Color {
     TRANSPARENT,
-    BLACK,
-    MAROON,
-    GREEN,
-    BROWN,
-    DARK_BLUE,
-    PURPLE,
-    TEAL,
-    WHITE,
-    GRAY,
-    RED,
-    LIME,
-    YELLOW,
-    BLUE,
-    PINK,
-    CYAN,
-    LIGHT_GRAY
+    BLACK, MAROON, GREEN, BROWN, DARK_BLUE, PURPLE, TEAL, WHITE,
+    GRAY, RED, LIME, YELLOW, BLUE, PINK, CYAN, LIGHT_GRAY
   };
 
   /** @brief Constructor.
-    * @details Menciptakan FrameBuffer dengan ukuran rows x cols dengan status warna colored.
+    * @details Menciptakan FrameBuffer dengan ukuran rows x cols
+    * dengan status warna colored.
     * @param rows Nilai ukuran baris.
     * @param cols Nilai ukuran kolom.
     * @param colored Status warna FrameBuffer.
@@ -42,7 +29,7 @@ public:
   FrameBuffer(int rows, int cols, bool colored);
 
   /** @brief Destructor.
-    * @details Mengembalikan memori yang dialokasi oleh ctor agar tidak terjadi memory leak.
+    * @details Mengembalikan memori yang dialokasi oleh constructor.
     */
   ~FrameBuffer();
 
@@ -88,7 +75,7 @@ public:
     FrameBuffer::input_prompt = input_prompt;
   }
 
-  /** @brief Membersihkan (menghapus) isi dari FrameBuffer.
+  /** @brief Mengosongkan isi layar dari FrameBuffer.
     */
   void Clear();
 
@@ -96,12 +83,12 @@ public:
     * dengan warna tulisan dan latar yang ditentukan.
     * @param p Posisi tempat karacter akan digambar.
     * @param content Karakter yang akan digambar.
-    * @param fg_color Warna tulisan (foreground) dari karakter yang akan digambar.
+    * @param fg_color Warna karakter (foreground) yang akan digambar.
     * @param bg_color Warna latar (background) dari karakter yang akan digambar.
     */
   void DrawPoint(const Point &p, char content, Color fg_color, Color bg_color);
 
-  /** @brief Menggambar sebuah garis horizontal pada posisi yang ditentukan di FrameBuffer
+  /** @brief Menggambar sebuah garis horizontal pada posisi yang ditentukan.
     * dengan warna tulisan dan latar yang ditentukan.
     * @param p1 Posisi awal garis yang akan digambar.
     * @param p2 Posisi akhir garis yang akan digambar.
@@ -109,9 +96,10 @@ public:
     * @param fg_color Warna tulisan (foreground) dari garis yang akan digambar.
     * @param bg_color Warna latar (background) dari garis yang akan digambar.
     */
-  void DrawHorizontalLine(const Point &p1, const Point &p2, char content, Color fg_color, Color bg_color);
+  void DrawHorizontalLine(const Point &p1, const Point &p2, char content,
+                          Color fg_color, Color bg_color);
 
-  /** @brief Menggambar sebuah garis vertikal pada posisi yang ditentukan di FrameBuffer
+  /** @brief Menggambar sebuah garis vertikal pada posisi yang ditentukan.
     * dengan warna tulisan dan latar yang ditentukan.
     * @param p1 Posisi awal garis yang akan digambar.
     * @param p2 Posisi akhir garis yang akan digambar.
@@ -119,29 +107,35 @@ public:
     * @param fg_color Warna tulisan (foreground) dari garis yang akan digambar.
     * @param bg_color Warna latar (background) dari garis yang akan digambar.
     */
-  void DrawVerticalLine(const Point &p1, const Point &p2, char content, Color fg_color, Color bg_color);
+  void DrawVerticalLine(const Point &p1, const Point &p2, char content,
+                        Color fg_color, Color bg_color);
 
   /** @brief Menggambar sebuah text box di FrameBuffer
-    * pada posisi kiri atas dan kanan bawah yang ditentukan dengan warna tulisan dan latar yang ditentukan.
+    * pada posisi kiri atas dan kanan bawah yang ditentukan dengan warna tulisan
+    * dan latar yang ditentukan.
     * @param top_left Posisi kiri atas dari text box yang akan digambar.
     * @param bottom_right Posisi kanan bawah dari text box yang akan digambar.
     * @param str Isi dari text box yang akan digambar.
-    * @param fg_color Warna tulisan (foreground) dari text box yang akan digambar.
+    * @param fg_color Warna tulisan/foreground dari text box yang akan digambar.
     * @param bg_color Warna latar (background) dari text box yang akan digambar.
     */
-  void DrawTextBox(const Point &top_left, const Point &bottom_right, string str, Color fg_color, Color bg_color);
+  void DrawTextBox(const Point &top_left, const Point &bottom_right, string str,
+                   Color fg_color, Color bg_color);
 
   /** @brief Menggambar sebuah persegi panjang di FrameBuffer
-    * pada posisi kiri atas dan kanan bawah yang ditentukan dengan warna tulisan dan latar yang ditentukan.
+    * pada posisi kiri atas dan kanan bawah yang ditentukan dengan warna tulisan
+    * dan latar yang ditentukan.
     * @param top_left Posisi kiri atas dari text box yang akan digambar.
     * @param bottom_right Posisi kanan bawah dari text box yang akan digambar.
-    * @param border_character Karakter yang merepresentasikan garis pembatas persegi panjang yang akan digambar.
-    * @param text_color Warna dari text yang berada di persegi panjang yang akan digambar.
-    * @param bg_color Warna latar (background) dari persegi panjang yang akan digambar.
-    * @param border_color Warna garis pembatas persegi panjang yang akan digambar.
+    * @param border_character Karakter yang merepresentasikan garis pembatas
+    * persegi panjang yang akan digambar.
+    * @param text_color Warna dari text di persegi panjang yang akan digambar.
+    * @param bg_color Warna latar dari persegi panjang yang akan digambar.
+    * @param border_color Warna garis pembatas persegi panjang yang digambar.
     */
-  void DrawRectangle(const Point &top_left, const Point &bottom_right, char border_character, Color text_color,
-                     Color bg_color, Color border_color);
+  void DrawRectangle(const Point &top_left, const Point &bottom_right,
+                     char border_character, Color text_color, Color bg_color,
+                     Color border_color);
 
   /** @brief Mencetak FrameBuffer ke layar dengan menggunakan output stream.
     * @details Merupakan friend function.
@@ -169,7 +163,8 @@ private:
   /** @brief Konstanta-konstanta yang berisi kode warna latar (background).
     */
   static const string BG_COLOR_CONSTANTS[];
-  /** @brief Mengembalikan indeks di FrameBuffer pada baris dan kolom yang ditentukan.
+
+  /** @brief Mengembalikan indeks FrameBuffer pada baris dan kolom yang ditentukan.
     * @param r Nilai baris.
     * @param c Nilai kolom.
     * @return Nilai indeks di FrameBuffer.
@@ -177,7 +172,7 @@ private:
   int idx(int r, int c) const {
     return r * cols + c;
   }
-  /** @brief Mengembalikan indeks di FrameBuffer pada posisi (titik) yang ditentukan.
+  /** @brief Mengembalikan indeks di FrameBuffer pada posisi yang ditentukan.
     * @param p Nilai titik.
     * @return Nilai indeks di FrameBuffer.
     */

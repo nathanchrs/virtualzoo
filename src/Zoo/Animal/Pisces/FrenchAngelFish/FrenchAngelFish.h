@@ -9,20 +9,22 @@
   */
 class FrenchAngelFish : public Pisces, public Herbivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan french angelfish.
-      */
-    FrenchAngelFish(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan french angelfish.
+    */
+  FrenchAngelFish(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan french angelfish.
-      * @return Experience yang dirasakan ketika berinteraksi dengan french angelfish.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan french angelfish.
+    * @return Experience yang dirasakan ketika berinteraksi dengan french angelfish.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new FrenchAngelFish(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new FrenchAngelFish(*this);
+  };
 };
-
 
 #endif //FRENCHANGELFISH_H

@@ -35,7 +35,6 @@ SET(SOURCE_FILES
         src/Zoo/Animal/Diet/Herbivore/Herbivore.h
         src/Zoo/Animal/Diet/Omnivore/Omnivore.cpp
         src/Zoo/Animal/Diet/Omnivore/Omnivore.h
-        src/Zoo/Animal/Diet/Diet.cpp
         src/Zoo/Animal/Diet/Diet.h
 
         src/Zoo/Animal/Mammals/Gorilla/Gorilla.cpp
@@ -92,7 +91,7 @@ SET(SOURCE_FILES
         src/Zoo/Zoo.cpp
         src/Zoo/Zoo.h
 
-    ) # Add new source files here
+        src/Controller.cpp src/Controller.h) # Add new source files here
 add_executable(virtualzoo src/main.cpp ${SOURCE_FILES})
 
 # Load Google Test settings

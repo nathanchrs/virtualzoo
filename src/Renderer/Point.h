@@ -38,12 +38,15 @@ public:
 		*/
   void SetC(int c) { Point::c = c; }
 
-  /**@brief Memeriksa apakah point berada dalam persegi panjang (0, 0) hingga (rows-1, cols-1) inklusif.
+  /**@brief Memeriksa apakah point berada dalam persegi panjang (0, 0)
+   * hingga (rows-1, cols-1) inklusif.
 	 * @param rows Batas jumlah baris.
 	 * @param cols Batas jumlah kolom.
-	 * @return True jika point berada dalam batasan yang diberikan, false jika tidak.
+	 * @return True jika point berada dalam batasan, false jika tidak.
 	 */
-  bool inArea(int rows, int cols) const { return r >= 0 && c >= 0 && r < rows && c < cols; }
+  bool InArea(int rows, int cols) const {
+    return r >= 0 && c >= 0 && r < rows && c < cols;
+  }
 
   /** @brief Operator+.
     * @details Menambahkan (mentranslasi) current point dengan point rhs.

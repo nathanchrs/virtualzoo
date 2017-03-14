@@ -9,19 +9,22 @@
   */
 class Lion : public Mammals, public Carnivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan singa.
-      */
-    Lion(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan singa.
+    */
+  Lion(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan Lion.
-      * @return Experience yang dirasakan ketika berinteraksi dengan singa.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan Lion.
+    * @return Experience yang dirasakan ketika berinteraksi dengan singa.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Lion(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Lion(*this);
+  };
 };
 
 

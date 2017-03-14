@@ -1,7 +1,3 @@
-//
-// Created by alvin on 12/03/17.
-//
-
 #include "gtest/gtest.h"
 #include "../src/Zoo/Animal/Aves/Eagle/Eagle.h"
 
@@ -13,31 +9,29 @@ protected:
 TEST_F(EagleTest, EagleConstructorWithParameter) {
     Point P(2,2);
     Eagle Test(P,100,false);
-    ASSERT_EQ(Test.getName(),"Eagle");
-    ASSERT_EQ(Test.getSkinType(),Animal::Feather);
-    ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
-    ASSERT_TRUE(Test.isAirAnimal());
-    ASSERT_TRUE(Test.IsCarnivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()>0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()==0);
+    ASSERT_EQ(Test.GetName(),"Eagle");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Feather);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Ovipar);
+    ASSERT_TRUE(Test.CalculateTotalMeat()>0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()==0);
     ASSERT_TRUE(!Test.IsWild());
 }
 
 TEST_F(EagleTest, EagleInteraction) {
     Point P(2,2);
     Eagle Test(P,100,false);
-    ASSERT_EQ(Test.interact(),"The eagle is eating its food that the zoo keeper gave");
+    ASSERT_EQ(Test.Interact(),"The eagle is eating its food that the zoo keeper gave");
 }
 
 TEST_F(EagleTest, WildEagleConstructorWithParameter) {
     Point P(2,2);
     Eagle Test(P,100,true);
-    ASSERT_EQ(Test.getName(),"Eagle");
-    ASSERT_EQ(Test.getSkinType(),Animal::Feather);
-    ASSERT_EQ(Test.getReproduction(),Animal::Ovipar);
-    ASSERT_TRUE(Test.isAirAnimal());
+    ASSERT_EQ(Test.GetName(),"Eagle");
+    ASSERT_EQ(Test.GetSkinType(),Animal::Feather);
+    ASSERT_EQ(Test.GetReproduction(),Animal::Ovipar);
+    ASSERT_TRUE(Test.IsAirAnimal());
     ASSERT_TRUE(Test.IsCarnivore());
-    ASSERT_TRUE(Test.calculateTotalMeat()>0);
-    ASSERT_TRUE(Test.calculateTotalVegetable()==0);
+    ASSERT_TRUE(Test.CalculateTotalMeat()>0);
+    ASSERT_TRUE(Test.CalculateTotalVegetable()==0);
     ASSERT_TRUE(Test.IsWild());
 }

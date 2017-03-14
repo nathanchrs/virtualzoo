@@ -9,19 +9,22 @@
   */
 class Orangutan : public Mammals, public Omnivore {
 public:
-    /** @brief Constructor.
-      * Menciptakan orangutan.
-      */
-    Orangutan(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan orangutan.
+    */
+  Orangutan(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan orangutan.
-      * @return Experience yang dirasakan ketika berinteraksi dengan orangutan.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan orangutan.
+    * @return Experience yang dirasakan ketika berinteraksi dengan orangutan.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Orangutan(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Orangutan(*this);
+  };
 };
 
 #endif //ORANGUTAN_H

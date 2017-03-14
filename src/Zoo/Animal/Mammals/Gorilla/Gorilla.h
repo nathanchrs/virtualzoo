@@ -1,7 +1,3 @@
-//
-// Created by nim_13515004 on 11/03/17.
-//
-
 #ifndef GORILA_H
 #define GORILA_H
 
@@ -14,19 +10,22 @@
 class Gorilla : public Mammals, public Herbivore {
 public:
 
-    /** @brief Constructor.
-      * Menciptakan gorilla.
-      */
-    Gorilla(const Point& pos, int _weight, bool wild);
+  /** @brief Constructor.
+    * Menciptakan gorilla.
+    */
+  Gorilla(const Point &pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan gorilla.
-      * @return Experience yang dirasakan ketika berinteraksi dengan gorilla.
-      */
-    string interact() const;
+  /** @brief Melakukan interaksi dengan gorilla.
+    * @return Experience yang dirasakan ketika berinteraksi dengan gorilla.
+    */
+  string Interact() const;
 
-    Animal* clone() const {
-        return new Gorilla(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+    * @return Pointer ke objek yang baru dibuat.
+    */
+  Animal *Clone() const {
+    return new Gorilla(*this);
+  };
 };
 
 
