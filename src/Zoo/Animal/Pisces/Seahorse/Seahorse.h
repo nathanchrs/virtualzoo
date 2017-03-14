@@ -10,7 +10,11 @@
 class Seahorse : public Pisces, public Carnivore {
 public:
   /** @brief Constructor.
-    * Menciptakan kuda laut.
+    * @details Menciptakan seekor kuda laut dengan posisi, berat,
+    * dan kelakuan (buas atau jinak) yang ditentukan.
+    * @param pos Posisi kuda laut.
+    * @param weight berat kuda laut.
+    * @param wild Kelakuan kuda laut.
     */
   Seahorse(const Point &pos, int weight, bool wild);
 
@@ -19,8 +23,8 @@ public:
     */
   string Interact() const;
 
-  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-    * @return Pointer ke objek yang baru dibuat.
+  /** @brief Mengembalikan pointer ke objek kuda laut baru yang dibuat secara dinamis.
+    * @return Pointer ke objek kuda laut yang baru dibuat.
     */
   Animal *Clone() const {
     return new Seahorse(*this);

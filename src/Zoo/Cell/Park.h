@@ -10,22 +10,23 @@ class Park : public Cell {
 public:
 
   /** @brief Constructor.
-    * Menciptakan sebuah taman dengan status aksesibilitas tertentu.
+    * @details Menciptakan sebuah taman dengan status aksesibilitas
+    * tertentu pada posisi tertentu.
+    * @param position Posisi dari taman.
     * @param accessible Status aksesibilitas taman.
     */
   Park(Point position, bool accessible = false) : Cell(position, accessible) {}
 
-  /**
-   * @brief Menampilkan taman ke console teks.
-   * @return Representasi teks taman.
-   */
+  /** @brief Menampilkan taman ke console teks.
+    * @return Representasi teks taman.
+    */
   char Render() const {
     return 'p';
   }
 
   /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-  * @return Pointer ke objek yang baru dibuat.
-  */
+    * @return Pointer ke objek yang baru dibuat.
+    */
   Cell *Clone() const {
     return new Park(*this);
   };

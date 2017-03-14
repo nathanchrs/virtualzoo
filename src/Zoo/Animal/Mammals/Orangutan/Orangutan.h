@@ -9,8 +9,13 @@
   */
 class Orangutan : public Mammals, public Omnivore {
 public:
+
   /** @brief Constructor.
-    * Menciptakan orangutan.
+    * @details Menciptakan seekor orangutan dengan posisi, berat,
+    * dan kelakuan (buas atau jinak) yang ditentukan.
+    * @param pos Posisi orangutan.
+    * @param weight berat orangutan.
+    * @param wild Kelakuan orangutan.
     */
   Orangutan(const Point &pos, int weight, bool wild);
 
@@ -19,8 +24,8 @@ public:
     */
   string Interact() const;
 
-  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-    * @return Pointer ke objek yang baru dibuat.
+  /** @brief Mengembalikan pointer ke objek orangutan baru yang dibuat secara dinamis.
+    * @return Pointer ke objek orangutan yang baru dibuat.
     */
   Animal *Clone() const {
     return new Orangutan(*this);

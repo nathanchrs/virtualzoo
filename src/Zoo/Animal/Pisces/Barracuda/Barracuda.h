@@ -10,7 +10,11 @@
 class Barracuda : public Pisces, public Carnivore {
 public:
   /** @brief Constructor.
-    * Menciptakan ikan barakuda.
+    * @details Menciptakan seekor barakuda dengan posisi, berat,
+    * dan kelakuan (buas atau jinak) yang ditentukan.
+    * @param pos Posisi barakuda.
+    * @param weight berat barakuda.
+    * @param wild Kelakuan barakuda.
     */
   Barracuda(const Point &pos, int weight, bool wild);
 
@@ -19,8 +23,8 @@ public:
     */
   string Interact() const;
 
-  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-    * @return Pointer ke objek yang baru dibuat.
+  /** @brief Mengembalikan pointer ke objek barukuda baru yang dibuat secara dinamis.
+    * @return Pointer ke objek barukuda yang baru dibuat.
     */
   Animal *Clone() const {
     return new Barracuda(*this);

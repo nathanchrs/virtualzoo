@@ -8,11 +8,11 @@
   */
 class Pisces : public virtual Animal {
 public:
-    /** @brief Constructor.
-      * Menciptakan Pisces yang memiliki skinType "Scales" dan reproduction "Ovipar".
-      * @param name Nama hewan
-      */
-    Pisces(const string &name);
+  /** @brief Constructor.
+    * Menciptakan Pisces yang memiliki skinType "Scales" dan reproduction "Ovipar".
+    * @param name Nama hewan.
+    */
+  Pisces(const string &name);
 };
 
 #endif //PISCES_H

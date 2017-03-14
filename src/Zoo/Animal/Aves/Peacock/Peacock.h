@@ -10,7 +10,11 @@
 class Peacock : public Aves, public Omnivore {
 public:
   /** @brief Constructor.
-    * Menciptakan burung merak.
+    * @details Menciptakan seekor elang dengan posisi, berat,
+    * dan kelakuan (buas atau jinak) yang ditentukan.
+    * @param pos Posisi elang.
+    * @param weight berat elang.
+    * @param wild Kelakuan elang.
     */
   Peacock(const Point &pos, int weight, bool wild);
 
@@ -19,8 +23,8 @@ public:
     */
   string Interact() const;
 
-  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-    * @return Pointer ke objek yang baru dibuat.
+  /** @brief Mengembalikan pointer ke objek burung merak baru yang dibuat secara dinamis.
+    * @return Pointer ke objek burung merak yang baru dibuat.
     */
   Animal *Clone() const {
     return new Peacock(*this);

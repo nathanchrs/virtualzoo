@@ -10,7 +10,11 @@
 class Python : public Reptile, public Carnivore {
 public:
   /** @brief Constructor.
-    * Menciptakan ular piton.
+    * @details Menciptakan seekor ular piton dengan posisi, berat,
+    * dan kelakuan (buas atau jinak) yang ditentukan.
+    * @param pos Posisi ular piton.
+    * @param weight berat ular piton.
+    * @param wild Kelakuan ular piton.
     */
   Python(const Point &pos, int weight, bool wild);
 
@@ -19,8 +23,8 @@ public:
     */
   string Interact() const;
 
-  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-    * @return Pointer ke objek yang baru dibuat.
+  /** @brief Mengembalikan pointer ke objek ular piton baru yang dibuat secara dinamis.
+    * @return Pointer ke objek ular piton yang baru dibuat.
     */
   Animal *Clone() const {
     return new Python(*this);

@@ -3,6 +3,9 @@
 
 #include "../Diet.h"
 
+/** @class Carnivore
+  * Kelas abstrak Carnivore yang merepesentasikan hewan karnivora.
+  */
 class Carnivore : public Diet {
 public:
   /** @brief Constructor.

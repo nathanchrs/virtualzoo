@@ -10,7 +10,7 @@
 class Cell : public Renderable {
 public:
   /** @brief Constructor.
-    * Menciptakan sebuah Cell dengan posisi dan status aksesibilitas tertentu.
+    * @details Menciptakan sebuah Cell dengan posisi dan status aksesibilitas tertentu.
     * @param position Posisi dari Cell.
     * @param accessible Status aksesibilitas dari Cell.
     */
@@ -29,17 +29,16 @@ public:
     return accessible;
   };
 
-  /**
-   * @brief Mengembalikan posisi cell.
-   * @return Posisi cell.
-   */
+  /** @brief Mengembalikan posisi cell.
+    * @return Posisi cell.
+    */
   Point GetPosition() const {
     return position;
   }
 
   /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-   * @return Pointer ke objek yang baru dibuat.
-   */
+    * @return Pointer ke objek yang baru dibuat.
+    */
   virtual Cell *Clone() const = 0;
 
 private:

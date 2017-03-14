@@ -19,10 +19,9 @@ public:
   void Render(const Zoo &zoo, Point top_left, Point bottom_right,
               bool use_color = false);
 
-  /**
-   * @brief Menampilkan menu utama.
-   * @param use_color Jika true, output tampilan berwarna
-   */
+  /** @brief Menampilkan menu utama.
+    * @param use_color Jika true, output tampilan berwarna
+    */
   void DisplayMenu(bool use_color = false);
 };
 
