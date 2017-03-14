@@ -1,10 +1,12 @@
 #ifndef DIET_H
 #define DIET_H
 
+#include "../Animal.h"
+
 /** @class Diet
   * Kelas abstrak Diet yang merepesentasikan jenis makanan hewan.
   */
-class Diet {
+class Diet : public virtual Animal {
 public:
 
     Diet(int _weight, double _ratio);
@@ -23,18 +25,6 @@ public:
       * @return True jika hewan adalah hewan omnivora dan False jika tidak.
       */
     bool IsOmnivore() const;
-
-    /** @brief Menghitung banyaknya daging yang dikonsumsi setiap hari relatif terhadap berat badannnya.
-      * Kelas virtual
-      * @return Banyaknya daging yang dikonsumsi setiap hari.
-      */
-    virtual int calculateTotalMeat() const = 0;
-
-    /** @brief Menghitung banyaknya sayuran yang dikonsumsi setiap hari relatif terhadap berat badannnya.
-      * Kelas virtual
-      * @return Banyaknya sayuran yang dikonsumsi setiap hari.
-      */
-    virtual int calculateTotalVegetable() const = 0;
 
 protected:
     int weight;

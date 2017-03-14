@@ -6,7 +6,7 @@
 /** @class Reptile
   * Kelas abstrak Reptile yang merepesentasikan kelas hewan Reptil.
   */
-class Reptile : public Animal {
+class Reptile : public virtual Animal{
 public:
     /** @brief Constructor.
       * Menciptakan Reptil yang memiliki skinType "Scales" dan reproduction "Ovipar".

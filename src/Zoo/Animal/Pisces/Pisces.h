@@ -6,7 +6,7 @@
 /** @class Mammals
   * Kelas abstrak Pisces yang merepesentasikan kelas hewan Pisces.
   */
-class Pisces : public Animal {
+class Pisces : public virtual Animal {
 public:
     /** @brief Constructor.
       * Menciptakan Pisces yang memiliki skinType "Scales" dan reproduction "Ovipar".

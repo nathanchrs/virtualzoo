@@ -17,8 +17,6 @@ public:
     enum Reproduction { Ovipar, Vivipar, Ovovivipar };
     enum SkinType { Feather, Fur, Scales };
 
-    Animal(const string &name);
-
     string getName() const;
 
     string getDescription() const;
@@ -76,6 +74,20 @@ public:
 
     virtual Animal* clone() const = 0;
 
+    virtual bool IsCarnivore() const = 0;
+    virtual bool IsHerbivore() const = 0;
+    virtual bool IsOmnivore() const = 0;
+    /** @brief Menghitung banyaknya daging yang dikonsumsi setiap hari relatif terhadap berat badannnya.
+      * Kelas virtual
+      * @return Banyaknya daging yang dikonsumsi setiap hari.
+      */
+    virtual int calculateTotalMeat() const = 0;
+
+    /** @brief Menghitung banyaknya sayuran yang dikonsumsi setiap hari relatif terhadap berat badannnya.
+      * Kelas virtual
+      * @return Banyaknya sayuran yang dikonsumsi setiap hari.
+      */
+    virtual int calculateTotalVegetable() const = 0;
 protected :
     string name;
     Reproduction reproduction;

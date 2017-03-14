@@ -1,7 +1,5 @@
 #include "Animal.h"
 
-Animal::Animal(const string &name) : name(name) {}
-
 string Animal::getName() const {
     return name;
 }
@@ -55,11 +53,11 @@ bool Animal::IsWild() const {
 }
 
 void Animal::AddPrey(const string &prey_name) {
-    prey_list.pushBack(prey_name);
+    prey_list.PushBack(prey_name);
 }
 
 bool Animal::isPrey(const string &prey_name) const {
-    if (prey_list.find(prey_name) >= 0) {
+    if (prey_list.Find(prey_name) >= 0) {
         return true;
     }
     return false;

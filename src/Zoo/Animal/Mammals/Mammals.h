@@ -6,7 +6,7 @@
 /** @class Mammals
   * Kelas abstrak Mammals yang merepesentasikan kelas hewan Mamalia.
   */
-class Mammals : public Animal{
+class Mammals : public virtual Animal{
 public:
     /** @brief Constructor.
      * Menciptakan Mamalia yang memiliki skinType "Fur" dan reproduction "Vivipar".

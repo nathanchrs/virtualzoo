@@ -6,7 +6,7 @@
 /** @class Aves
   * Kelas abstrak Aves yang merepesentasikan kelas hewan Aves.
   */
-class Aves : public Animal {
+class Aves : public virtual Animal {
 public:
     /**
      * @brief Constructor.
