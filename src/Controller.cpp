@@ -31,7 +31,10 @@ void Controller::DisplayMenu() {
 
 void Controller::DisplayZoo() {
   BasicConsoleRenderer renderer;
-  renderer.Render(*zoo);
+  cout << "Input map limit (r1, c1, r2, c2 | from 0 to row/column count - 1): ";
+  int r1, c1, r2, c2;
+  cin >> r1 >> c1 >> r2 >> c2;
+  renderer.Render(*zoo, Point(r1, c1), Point(r2, c2), use_color);
   string input;
   do {
     cin >> input;

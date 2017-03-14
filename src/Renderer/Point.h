@@ -57,6 +57,16 @@ public:
 				return Point(r + rhs.r, c + rhs.c);
   }
 
+  /** @brief Operator-.
+    * @details Mengurangi/mentranslasi dengan negatif dari current point dengan
+    * point rhs.
+    * @param rhs Point yang dikurangkan.
+    * @return Point hasil pengurangan dengan rhs.
+    */
+  Point operator-(const Point &rhs) {
+    return Point(r - rhs.r, c - rhs.c);
+  }
+
 private:
   /** @brief Nilai baris (ordinat).
     */

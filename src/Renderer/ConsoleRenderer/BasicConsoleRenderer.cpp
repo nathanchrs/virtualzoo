@@ -1,14 +1,19 @@
 #include "BasicConsoleRenderer.h"
 #include "FrameBuffer.h"
 #include <iostream>
+
 using namespace std;
 
-void BasicConsoleRenderer::Render(const Zoo &zoo, bool use_color) {
+void
+BasicConsoleRenderer::Render(const Zoo &zoo, Point top_left, Point bottom_right,
+                             bool use_color) {
   const Point grid_offset = Point(3, 3);
-  Array<Cell*> cells = zoo.GetCells();
-  Array<Zone*> zones = zoo.GetZones();
-  FrameBuffer fb(zoo.GetRows()+5, zoo.GetCols() + grid_offset.GetC()*2 + 24,
-                 use_color);
+  const int rows = bottom_right.GetR() - top_left.GetR() + 1;
+  const int cols = bottom_right.GetC() - top_left.GetC() + 1;
+
+  Array<Cell *> cells = zoo.GetCells();
+  Array<Zone *> zones = zoo.GetZones();
+  FrameBuffer fb(rows + 5, cols + grid_offset.GetC() * 2 + 24, use_color);
   fb.Clear();
 
   // Draw title
@@ -16,7 +21,7 @@ void BasicConsoleRenderer::Render(const Zoo &zoo, bool use_color) {
                  FrameBuffer::BLACK, FrameBuffer::WHITE);
 
   // Draw legend
-  Point legend_offset = Point(0, zoo.GetCols() + 3) + grid_offset;
+  Point legend_offset = Point(0, cols + 3) + grid_offset;
   fb.DrawRectangle(legend_offset, Point(8, 20) + legend_offset, '*',
                    FrameBuffer::WHITE, FrameBuffer::BLACK,
                    FrameBuffer::BLACK);
@@ -40,31 +45,46 @@ void BasicConsoleRenderer::Render(const Zoo &zoo, bool use_color) {
                  "x Animal", FrameBuffer::GRAY, FrameBuffer::TRANSPARENT);
 
   // Draw all cells
-  for (int r = 0; r < zoo.GetRows(); r++) {
-    for (int c = 0; c < zoo.GetCols(); c++) {
-      fb.DrawPoint(Point(r, c)+grid_offset, cells[r* zoo.GetCols() + c]->Render(),
+  for (int r = 0; r < rows; r++) {
+    for (int c = 0; c < cols; c++) {
+      Point draw_cell = Point(r, c) + top_left;
+      fb.DrawPoint(Point(r, c) + grid_offset,
+                   cells[draw_cell.GetR() * zoo.GetCols() +
+                         draw_cell.GetC()]->Render(),
                    FrameBuffer::WHITE, FrameBuffer::TRANSPARENT);
     }
   }
 
   for (int i = 0; i < zones.Size(); i++) {
-    Cage *cage = dynamic_cast<Cage*> (zones[i]);
+    Cage *cage = dynamic_cast<Cage *> (zones[i]);
     if (cage != nullptr) {
       // Redraw cells that are inside a cage
-      Array<Cell*> cageCells = zones[i]->GetCells();
-      for (int j = 0; j < cageCells.Size(); j++) {
-        Point cageCellsPos = cageCells[j]->GetPosition();
-        fb.DrawPoint(cageCellsPos + grid_offset,
-                     (char) toupper(cageCells[j]->Render()), FrameBuffer::WHITE,
-                     FrameBuffer::BLACK);
+      Array<Cell *> cage_cells = zones[i]->GetCells();
+      for (int j = 0; j < cage_cells.Size(); j++) {
+        Point cage_cells_pos = cage_cells[j]->GetPosition();
+        if (cage_cells_pos.GetR() >= top_left.GetR()
+            && cage_cells_pos.GetC() >= top_left.GetC()
+            && cage_cells_pos.GetR() <= bottom_right.GetR()
+            && cage_cells_pos.GetC() <= bottom_right.GetC()) {
+          fb.DrawPoint(cage_cells_pos - top_left + grid_offset,
+                       (char) toupper(cage_cells[j]->Render()),
+                       FrameBuffer::WHITE,
+                       FrameBuffer::BLACK);
+        }
       }
 
       // Draw animals
-      Array<Animal*> animals = cage->GetAnimals();
+      Array<Animal *> animals = cage->GetAnimals();
       for (int j = 0; j < animals.Size(); j++) {
-        fb.DrawPoint(animals[j]->GetPosition() + grid_offset,
-                     animals[j]->Render(), FrameBuffer::YELLOW,
-                     FrameBuffer::BLACK);
+        Point animal_pos = animals[j]->GetPosition();
+        if (animal_pos.GetR() >= top_left.GetR()
+            && animal_pos.GetC() >= top_left.GetC()
+            && animal_pos.GetR() <= bottom_right.GetR()
+            && animal_pos.GetC() <= bottom_right.GetC()) {
+          fb.DrawPoint(animal_pos - top_left + grid_offset,
+                       animals[j]->Render(), FrameBuffer::YELLOW,
+                       FrameBuffer::BLACK);
+        }
       }
     }
   }
@@ -80,17 +100,17 @@ void BasicConsoleRenderer::DisplayMenu(bool use_color) {
 
   const string title_text =
       "__      __ _        _                  _   ______             \n"
-      "\\ \\    / /(_)      | |                | | |___  /             \n"
-      " \\ \\  / /  _  _ __ | |_  _   _   __ _ | |    / /  ___    ___  \n"
-      "  \\ \\/ /  | || '__|| __|| | | | / _` || |   / /  / _ \\  / _ \\ \n"
-      "   \\  /   | || |   | |_ | |_| || (_| || |  / /__| (_) || (_) |\n"
-      "    \\/    |_||_|    \\__| \\__,_| \\__,_||_| /_____|\\___/  \\___/ \n";
+          "\\ \\    / /(_)      | |                | | |___  /             \n"
+          " \\ \\  / /  _  _ __ | |_  _   _   __ _ | |    / /  ___    ___  \n"
+          "  \\ \\/ /  | || '__|| __|| | | | / _` || |   / /  / _ \\  / _ \\ \n"
+          "   \\  /   | || |   | |_ | |_| || (_| || |  / /__| (_) || (_) |\n"
+          "    \\/    |_||_|    \\__| \\__,_| \\__,_||_| /_____|\\___/  \\___/ \n";
 
   const string menu_text =
       "    1. Display zoo\n"
-      "    2. Tour zoo\n"
-      "    3. Display food statistics\n"
-      "    4. Exit\n";
+          "    2. Tour zoo\n"
+          "    3. Display food statistics\n"
+          "    4. Exit\n";
 
   fb.DrawTextBox(Point(3, 3), Point(8, 66), title_text, FrameBuffer::RED,
                  FrameBuffer::TRANSPARENT);
