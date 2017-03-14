@@ -263,3 +263,38 @@ double Zoo::CalculateTotalVegetable() const {
   return vegetable;
 }
 
+Animal *Zoo::FindAnimal(Point position) const {
+  for (int i = 0; i < zones.Size(); i++) {
+    Cage *cage = dynamic_cast<Cage *> (zones[i]);
+    if (cage != nullptr) {
+      Array<Animal*> animals = cage->GetAnimals();
+      for (int j = 0; j < animals.Size(); j++) {
+        if (animals[j]->GetPosition() == position) {
+          return animals[j];
+        }
+      }
+    }
+  }
+  return nullptr;
+}
+
+string Zoo::ListInteractions(Point cell_position) const {
+  string interactions = "";
+  if (cell_position.InArea(rows, cols)) {
+    Animal *animal = FindAnimal(cell_position);
+    if (animal != nullptr) {
+      interactions += animal->Interact() + "\n";
+    }
+  }
+  return interactions;
+}
+
+string Zoo::ListNeighboringInteractions(Point cell_position) const {
+  string interactions = "";
+  interactions += ListInteractions(cell_position);
+  interactions += ListInteractions(cell_position + Point(0, 1));
+  interactions += ListInteractions(cell_position + Point(0, -1));
+  interactions += ListInteractions(cell_position + Point(1, 0));
+  interactions += ListInteractions(cell_position + Point(-1, 0));
+  return interactions;
+}

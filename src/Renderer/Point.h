@@ -67,6 +67,19 @@ public:
     return Point(r - rhs.r, c - rhs.c);
   }
 
+  /**
+   * @brief Operator==.
+   * @param rhs Point yang akan dibandingkan dengan point ini.
+   * @return Mengembalikan true jika point ini dengan point rhs bernilai sama.
+   */
+  bool operator==(const Point &rhs) const {
+    return r == rhs.r && c== rhs.c;
+  }
+
+  bool operator!=(const Point &rhs) const {
+    return !(rhs == *this);
+  }
+
 private:
   /** @brief Nilai baris (ordinat).
     */

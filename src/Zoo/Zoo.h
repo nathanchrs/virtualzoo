@@ -110,9 +110,32 @@ public:
   /**
    * @brief Mencari zona yang namanya adalah zoneName.
    * @param zoneName Nama zona yang ingin dicari.
-   * @return Pointer ke zona yang ingin dicari.
+   * @return Pointer ke zona yang ingin dicari, atau nullptr jika tidak ada.
    */
   Zone *FindZone(string zoneName) const;
+
+  /**
+   * @brief Mencari salah satu hewan yang posisinya ada di position.
+   * @param position Posisi hewan yang ingin dicari.
+   * @return Pointer ke hewan tersebut.
+   */
+  Animal *FindAnimal(Point position) const;
+
+  /**
+   * @brief Menghasilkan string berisi interaksi apa saja yang terkandung dalam
+   * sebuah petak.
+   * @param cell_position posisi petak.
+   * @return Daftar interaksi di petak tersebut.
+   */
+  string ListInteractions(Point cell_position) const;
+
+  /**
+   * @brief Menghasilkan string berisi interaksi apa saja yang terkandung dalam
+   * sebuah petak dan petak-petak lainnya yang berada tepat di sebelahnya.
+   * @param cell_position posisi petak.
+   * @return Daftar interaksi di petak tersebut dan petak-petak sebelahnya.
+   */
+  string ListNeighboringInteractions(Point cell_position) const;
 
 private:
 
@@ -124,8 +147,8 @@ private:
     return p.GetR() * cols + p.GetC();
   }
 
-  Array<Cell *> cells;
-  Array<Zone *> zones;
+  Array<Cell*> cells;
+  Array<Zone*> zones;
   int rows;
   int cols;
 };
