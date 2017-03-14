@@ -241,7 +241,7 @@ double Zoo::calculateTotalMeat() const {
         if (cage != nullptr) {
             Array<Animal*> animals = cage->getAnimals();
             for (int j = 0; j < animals.size(); j++) {
-                meat += animals[j].getDiet().calculateMeat();
+                // meat += animals[j].getDiet().calculateMeat(); TODO
             }
         }
     }
@@ -255,7 +255,7 @@ double Zoo::calculateTotalVegetable() const {
         if (cage != nullptr) {
             Array<Animal*> animals = cage->getAnimals();
             for (int j = 0; j < animals.size(); j++) {
-                vegetable += animals[j].getDiet().calculateVegetable();
+               // vegetable += animals[j].getDiet().calculateVegetable(); TODO
             }
         }
     }

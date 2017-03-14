@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
     Zoo zoo(fin);
     fin.close();
 
-    Controller::displayZoo(zoo, useColor);
+    Controller::displayMenu(zoo, useColor);
 
     return 0;
 }

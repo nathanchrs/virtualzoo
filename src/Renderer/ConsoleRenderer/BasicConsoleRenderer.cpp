@@ -63,11 +63,33 @@ void BasicConsoleRenderer::render(const Zoo &zoo, bool useColor) {
         }
     }
 
-    fb.setInputPrompt("Input [back] to return to menu");
+    fb.setInputPrompt("Input [back] to return to menu: ");
     fb.clearScreen();
     cout << fb;
 }
 
 void BasicConsoleRenderer::displayMenu(bool useColor) {
+    FrameBuffer fb(20, 72, useColor);
+    fb.clear();
 
+    const string titleText =
+            "__      __ _        _                  _   ______             \n"
+            "\\ \\    / /(_)      | |                | | |___  /             \n"
+            " \\ \\  / /  _  _ __ | |_  _   _   __ _ | |    / /  ___    ___  \n"
+            "  \\ \\/ /  | || '__|| __|| | | | / _` || |   / /  / _ \\  / _ \\ \n"
+            "   \\  /   | || |   | |_ | |_| || (_| || |  / /__| (_) || (_) |\n"
+            "    \\/    |_||_|    \\__| \\__,_| \\__,_||_| /_____|\\___/  \\___/ \n";
+
+    const string menuText =
+            "    1. Display zoo\n"
+            "    2. Tour zoo\n"
+            "    3. Display food statistics\n"
+            "    4. Exit\n";
+
+    fb.drawTextBox(Point(3, 3), Point(8, 66), titleText, FrameBuffer::RED, FrameBuffer::TRANSPARENT);
+    fb.drawTextBox(Point(11, 3), Point(14, 66), menuText, FrameBuffer::LIGHT_GRAY, FrameBuffer::TRANSPARENT);
+
+    fb.setInputPrompt("Select menu option [1|2|3|4]: ");
+    fb.clearScreen();
+    cout << fb;
 }

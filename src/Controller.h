@@ -10,7 +10,7 @@ public:
     /**
      * @brief Menampilkan main menu
      */
-    static void displayMenu(bool useColor = false);
+    static void displayMenu(const Zoo &zoo, bool useColor = false);
 
     /** @brief Menampilkan kebun binatang di atas layar dengan batas yang ditentukan pengguna.
       * Menampilkan juga posisi hewan-hewan di atas layar.
@@ -24,9 +24,9 @@ public:
       * Jika ada lebih dari satu Cell bertipe Road yang dapat dipilih, pemilihan dilakukan secara acak.
       * Penulusuran akan berhenti saat sudah tidak ada lagi Road yang dapat dipilih, atau telah mencapai jalan keluar (Exit).
       */
-    static void tourZoo(const Zoo &zoo);
+    static void tourZoo(const Zoo &zoo, bool useColor = false);
 
-    static void displayFoodStatistics(const Zoo &zoo);
+    static void displayFoodStatistics(const Zoo &zoo, bool useColor = false);
 
 };
 
