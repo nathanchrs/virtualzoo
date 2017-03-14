@@ -109,7 +109,7 @@ public:
   }
 
   /** @brief Melakukan interaksi dengan seekor hewan.
-    * Merupakan pure virtual function.
+    * @details Merupakan pure virtual function.
     * @return string yang menggambarkan experience yang dapat didengar,
     * dirasakan, atau dilihat seorang pengunjung.
     */

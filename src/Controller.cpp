@@ -66,10 +66,11 @@ void Controller::TourZoo() {
   srand((unsigned int) time(NULL));
   int nentrance = rand() % entrances.Size();
   Point start = entrances[nentrance] -> GetPosition();
-  bool pathexist = false;
+  bool pathexist;
   int cdirection;
   bool direction[4];
   do {
+    pathexist = false;
     memset(direction,false,4);
     cout << "Current Position : " << start.GetR() << " " << start.GetC() << endl;
     cout << (zoo -> ListNeighboringInteractions(start));
@@ -109,7 +110,7 @@ void Controller::TourZoo() {
           break;
       }
     }
-    sleep(1);
+   sleep(1);
   } while (pathexist && isaccesible[start.GetR()][start.GetC()] != 2);
 
   cout << "Input [back] to return to menu: ";

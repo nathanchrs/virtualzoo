@@ -1,5 +1,5 @@
-#ifndef VIRTUALZOO_CONTROLLER_H
-#define VIRTUALZOO_CONTROLLER_H
+#ifndef CONTROLLER_H
+#define CONTROLLER_H
 
 #include "Zoo/Zoo.h"
 
@@ -46,4 +46,4 @@ private:
 };
 
 
-#endif //VIRTUALZOO_CONTROLLER_H
+#endif //CONTROLLER_H
