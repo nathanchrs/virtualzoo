@@ -27,7 +27,7 @@ public:
 
     char render() const {
         switch (type) {
-            case AirHabitat: // TODO habitat dalam cage itu huruf besar rendernya
+            case AirHabitat:
                 return 'a';
             case LandHabitat:
                 return 'l';

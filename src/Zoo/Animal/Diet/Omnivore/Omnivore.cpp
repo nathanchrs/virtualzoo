@@ -2,10 +2,10 @@
 
 Omnivore::Omnivore(int _weight, double _ratio) : Diet(_weight, _ratio) {}
 
-int Omnivore::calculateTotalMeat() const {
-    return weight*ratio/2;
+double Omnivore::calculateTotalMeat() const {
+    return weight*ratio/2.0;
 }
 
-int Omnivore::calculateTotalVegetable() const {
-    return weight*ratio/2;
+double Omnivore::calculateTotalVegetable() const {
+    return weight*ratio/2.0;
 }

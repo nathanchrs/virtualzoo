@@ -1,11 +1,13 @@
 #include <iostream>
 #include <fstream>
-#include "Renderer/ConsoleRenderer/BasicConsoleRenderer.h"
-#include "Zoo/Animal/Aves/Eagle/Eagle.h"
+#include "Zoo/Zoo.h"
+#include "Controller.h"
+
 using namespace std;
 
 int main(int argc, char **argv) {
 
+    // Process command-line arguments
     bool useColor = false;
     for (int i = 1; i < argc; i++) {
         string arg = string(argv[i]);
@@ -14,13 +16,13 @@ int main(int argc, char **argv) {
         }
     }
 
+    // Read zoo from input file
     ifstream fin;
     fin.open("zoo.in");
     Zoo zoo(fin);
     fin.close();
 
-    BasicConsoleRenderer renderer;
-    renderer.render(zoo, useColor);
+    Controller::displayZoo(zoo, useColor);
 
     return 0;
 }

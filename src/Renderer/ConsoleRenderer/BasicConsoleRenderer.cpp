@@ -63,7 +63,11 @@ void BasicConsoleRenderer::render(const Zoo &zoo, bool useColor) {
         }
     }
 
-    fb.setInputPrompt("Input [back] to return to menu: ");
+    fb.setInputPrompt("Input [back] to return to menu");
     fb.clearScreen();
     cout << fb;
+}
+
+void BasicConsoleRenderer::displayMenu(bool useColor) {
+
 }

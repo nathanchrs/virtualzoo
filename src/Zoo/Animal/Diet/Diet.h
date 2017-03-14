@@ -7,34 +7,40 @@
 class Diet {
 public:
 
-    Diet(int _weight, double _ratio);
+    Diet(int weight, double ratio) : weight(weight), ratio (ratio) {}
 
     /** @brief Memeriksa apakah hewan karnivora atau tidak.
       * @return True jika hewan adalah hewan karnivora dan False jika tidak.
       */
-    bool IsCarnivore() const;
+    bool IsCarnivore() const {
+        return carnivore;
+    }
 
     /** @brief Memeriksa apakah hewan herbivora atau tidak.
       * @return True jika hewan adalah hewan herbivora dan False jika tidak.
       */
-    bool IsHerbivore() const;
+    bool IsHerbivore() const {
+        return herbivore;
+    };
 
     /** @brief Memeriksa apakah hewan omnivora atau tidak.
       * @return True jika hewan adalah hewan omnivora dan False jika tidak.
       */
-    bool IsOmnivore() const;
+    bool IsOmnivore() const {
+        return carnivore && herbivore;
+    };
 
     /** @brief Menghitung banyaknya daging yang dikonsumsi setiap hari relatif terhadap berat badannnya.
       * Kelas virtual
       * @return Banyaknya daging yang dikonsumsi setiap hari.
       */
-    virtual int calculateTotalMeat() const = 0;
+    virtual double calculateTotalMeat() const = 0;
 
     /** @brief Menghitung banyaknya sayuran yang dikonsumsi setiap hari relatif terhadap berat badannnya.
       * Kelas virtual
       * @return Banyaknya sayuran yang dikonsumsi setiap hari.
       */
-    virtual int calculateTotalVegetable() const = 0;
+    virtual double calculateTotalVegetable() const = 0;
 
 protected:
     int weight;

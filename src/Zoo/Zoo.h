@@ -71,34 +71,17 @@ public:
 
     int getCols() const;
 
-    /** @brief Menampilkan kebun binatang di atas layar dengan batas yang ditentukan pengguna.
-      * Menampilkan juga posisi hewan-hewan di atas layar.
-      * Memanfaatkan method render.
-      * @param topLeft Koordinat atas kiri.
-      * @param topRight Koordinat bawah-kanan.
-      */
-    //void displayZoo(const Point &topLeft, const Point &topRight);
-
-    /** @brief Melakukan tour keliling kebun binatang.
-      * Memilih salah satu jalan masuk (Entrance) secara acak dan menampilkan serangkaian experience yang dialami pengunjung.
-      * Experience yang dirasakan berdasarkan interaksi dengan hewan-hewan yang ada di setiap Cage yang bersinggungan dengan current Cell.
-      * Pemilihan jalan tour dilakukan dengan memilih next Cell bertipe Road yang bersinggungan dengan current Cell yang belum pernah dikunjungi sebelumnya.
-      * Jika ada lebih dari satu Cell bertipe Road yang dapat dipilih, pemilihan dilakukan secara acak.
-      * Penulusuran akan berhenti saat sudah tidak ada lagi Road yang dapat dipilih, atau telah mencapai jalan keluar (Exit).
-      */
-    //void tourZoo();
-
     /** @brief Menghitung dan menampilkan banyaknya makanan (daging dan sayuran) yang dikonsumsi oleh semua hewan di kebun binatang setiap harinya.
      *  @return Berat total daging yang dibutuhkan.
      */
-    int calculateTotalMeat() const;
+    double calculateTotalMeat() const;
 
     /** @brief Menghitung dan menampilkan banyaknya makanan (daging dan sayuran) yang dikonsumsi oleh semua hewan di kebun binatang setiap harinya.
      *  @return Berat total sayuran yang dibutuhkan.
      */
-    int calculateTotalVegetable() const;
+    double calculateTotalVegetable() const;
 
-    Zone* findZone(string zoneName) const;
+    Zone* findZone(string zoneName) const; // TODO
 
 private:
 

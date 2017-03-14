@@ -234,3 +234,31 @@ int Zoo::getCols() const {
     return cols;
 }
 
+double Zoo::calculateTotalMeat() const {
+    double meat = 0.0;
+    for (int i = 0; i < zones.size(); i++) {
+        Cage *cage = dynamic_cast<Cage*> (zones[i]);
+        if (cage != nullptr) {
+            Array<Animal*> animals = cage->getAnimals();
+            for (int j = 0; j < animals.size(); j++) {
+                meat += animals[j].getDiet().calculateMeat();
+            }
+        }
+    }
+    return meat;
+}
+
+double Zoo::calculateTotalVegetable() const {
+    double vegetable = 0.0;
+    for (int i = 0; i < zones.size(); i++) {
+        Cage *cage = dynamic_cast<Cage*> (zones[i]);
+        if (cage != nullptr) {
+            Array<Animal*> animals = cage->getAnimals();
+            for (int j = 0; j < animals.size(); j++) {
+                vegetable += animals[j].getDiet().calculateVegetable();
+            }
+        }
+    }
+    return vegetable;
+}
+

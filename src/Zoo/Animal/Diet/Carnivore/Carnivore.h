@@ -14,12 +14,12 @@ public:
     /** @brief Menghitung banyaknya daging yang dikonsumsi setiap hari relatif terhadap berat badannnya.
       * @return Banyaknya daging yang dikonsumsi setiap hari.
       */
-    int calculateTotalMeat() const;
+    double calculateTotalMeat() const;
 
     /** @brief Menghitung banyaknya sayuran yang dikonsumsi setiap hari relatif terhadap berat badannnya.
       * @return Banyaknya sayuran yang dikonsumsi setiap hari.
       */
-    int calculateTotalVegetable() const;
+    double calculateTotalVegetable() const;
 };
 
 #endif //CARNIVORE_H

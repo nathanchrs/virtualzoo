@@ -6,7 +6,10 @@
 
 class BasicConsoleRenderer : public Renderer {
 public:
+
     void render(const Zoo &zoo, bool useColor = false);
+
+    void displayMenu(bool useColor = false);
 };
 
 #endif //VIRTUALZOO_BASICCONSOLERENDERER_H
