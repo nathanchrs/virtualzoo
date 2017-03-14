@@ -127,7 +127,7 @@ SET(TEST_FILES
         test/Ray_test.cpp
         test/Seahorse_test.cpp
         test/Array_test.cpp
-    ) # Add new test files here
+        test/Habitat_test.cpp test/Park_test.cpp test/Restaurant_test.cpp test/Road_test.cpp test/Point_test.cpp test/Zone_test.cpp test/Cage_test.cpp test/FrameBuffer_test.cpp test/Controller_test.cpp) # Add new test files here
 
 add_executable(virtualzoo_test ${TEST_FILES} ${SOURCE_FILES})
 target_link_libraries(virtualzoo_test ${PThreadLib} ${GTEST_BOTH_LIBRARIES})
