@@ -12,8 +12,6 @@ TEST_F(OrangutanTest, OrangutanConstructorWithParameter) {
     ASSERT_EQ(Test.GetName(),"Orangutan");
     ASSERT_EQ(Test.GetSkinType(),Animal::Fur);
     ASSERT_EQ(Test.GetReproduction(),Animal::Vivipar);
-    ASSERT_TRUE(Test.IsLandAnimal());
-    ASSERT_TRUE(Test.IsOmnivore());
     ASSERT_TRUE(Test.CalculateTotalMeat()>0);
     ASSERT_TRUE(Test.CalculateTotalVegetable()>0);
     ASSERT_TRUE(!Test.IsWild());

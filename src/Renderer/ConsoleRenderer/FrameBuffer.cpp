@@ -10,8 +10,9 @@
 #elif __linux__
   // Linux-specific implementation
   #include <cstdlib>
+#include <iostream>
 
-  void FrameBuffer::ClearScreen() {
+void FrameBuffer::ClearScreen() {
     system("clear");
   }
 #endif
@@ -150,11 +151,11 @@ ostream &operator<<(ostream &os, const FrameBuffer &fb) {
       if (fb.colored) {
         outputBuffer += (FrameBuffer::CS_INITIATOR + FrameBuffer::RESET);
         if (fb.fg_colors[fb.idx(p)] != FrameBuffer::TRANSPARENT) {
-          Color color = fb.fg_colors[fb.idx(p)];
+          FrameBuffer::Color color = fb.fg_colors[fb.idx(p)];
           outputBuffer += (FrameBuffer::FG_COLOR_CONSTANTS[color] + ";");
         }
         if (fb.bg_colors[fb.idx(p)] != FrameBuffer::TRANSPARENT) {
-          Color color = fb.bg_colors[fb.idx(p)];
+          FrameBuffer::Color color = fb.bg_colors[fb.idx(p)];
           outputBuffer += FrameBuffer::BG_COLOR_CONSTANTS[color];
         }
         outputBuffer += FrameBuffer::CS_TERMINATOR;

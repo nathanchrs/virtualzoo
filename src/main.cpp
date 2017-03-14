@@ -7,27 +7,23 @@ using namespace std;
 
 int main(int argc, char **argv) {
 
-    // Process command-line arguments
-    bool useColor = false;
-    for (int i = 1; i < argc; i++) {
-        string arg = string(argv[i]);
-        if (arg == "--color" || arg == "--colour") {
-            useColor = true;
-        }
+  // Process command-line arguments
+  bool use_color = false;
+  for (int i = 1; i < argc; i++) {
+    string arg = string(argv[i]);
+    if (arg == "--color" || arg == "--colour") {
+      use_color = true;
     }
+  }
 
-    // Read zoo from input file
-    ifstream fin;
-    fin.open("zoo.in");
-    Zoo zoo(fin);
-    fin.close();
+  // Read zoo from input file
+  ifstream fin;
+  fin.open("zoo.in");
+  Zoo zoo(fin);
+  fin.close();
 
-<<<<<<< HEAD
-    Controller::displayMenu(zoo, useColor);
-=======
-    BasicConsoleRenderer renderer;
-  renderer.Render(zoo);
->>>>>>> b61e04a9cf04f2ae0aabff891ca6877ddcc16990
+  Controller controller(&zoo, use_color);
+  controller.DisplayMenu();
 
-    return 0;
+  return 0;
 }

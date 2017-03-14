@@ -12,8 +12,6 @@ TEST_F(FrenchAngelFishTest, FrenchAngelFishConstructorWithParameter) {
     ASSERT_EQ(Test.GetName(),"FrenchAngelFish");
     ASSERT_EQ(Test.GetSkinType(),Animal::Scales);
     ASSERT_EQ(Test.GetReproduction(),Animal::Ovipar);
-    ASSERT_TRUE(Test.IsWaterAnimal());
-    ASSERT_TRUE(Test.IsHerbivore());
     ASSERT_TRUE(Test.CalculateTotalMeat()==0);
     ASSERT_TRUE(Test.CalculateTotalVegetable()>0);
     ASSERT_TRUE(!Test.IsWild());

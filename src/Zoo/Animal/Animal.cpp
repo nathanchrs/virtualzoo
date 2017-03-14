@@ -1,7 +1,7 @@
 #include "Animal.h"
 
-bool Animal::IsValidHabitat(Habitat::HabitatType habitatType) const {
-  switch (habitatType) {
+bool Animal::IsValidHabitat(Habitat::HabitatType habitat_type) const {
+  switch (habitat_type) {
     case Habitat::AirHabitat:
       return air_animal;
     case Habitat::LandHabitat:
@@ -16,8 +16,5 @@ void Animal::AddPrey(const string &prey_name) {
 }
 
 bool Animal::IsPrey(const string &prey_name) const {
-  if (prey_list.Find(prey_name) >= 0) {
-    return true;
-  }
-  return false;
+  return prey_list.Find(prey_name) >= 0;
 }

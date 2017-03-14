@@ -12,7 +12,7 @@ public:
     * Merupakan pure virtual function.
     * @param zoo Kebun binatang yang akan digambarkan di atas console teks.
     */
-  virtual void Render(const Zoo &zoo) = 0;
+  virtual void Render(const Zoo &zoo, bool use_color = false) = 0;
 };
 
 #endif //RENDERER_H

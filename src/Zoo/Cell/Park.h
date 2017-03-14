@@ -8,23 +8,27 @@
   */
 class Park : public Cell {
 public:
-    /** @brief Constructor.
-      * Menciptakan sebuah taman dengan status aksesibilitas tertentu.
-      * @param accessible Status aksesibilitas taman.
-      */
-    Park(Point position, bool accessible = false) : Cell(position, accessible) {}
 
-    /**
-     * @brief Menampilkan taman ke console teks.
-     * @return Representasi teks taman.
-     */
-    char render() const {
-        return 'p';
-    }
+  /** @brief Constructor.
+    * Menciptakan sebuah taman dengan status aksesibilitas tertentu.
+    * @param accessible Status aksesibilitas taman.
+    */
+  Park(Point position, bool accessible = false) : Cell(position, accessible) {}
 
-    Cell* clone() const {
-        return new Park(*this);
-    };
+  /**
+   * @brief Menampilkan taman ke console teks.
+   * @return Representasi teks taman.
+   */
+  char Render() const {
+    return 'p';
+  }
+
+  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
+  * @return Pointer ke objek yang baru dibuat.
+  */
+  Cell *Clone() const {
+    return new Park(*this);
+  };
 };
 
 #endif //PARK_H
