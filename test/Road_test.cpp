@@ -1,7 +1,3 @@
-//
-// Created by aegis on 14/03/17.
-//
-
 #include <gtest/gtest.h>
 #include "../src/Renderer/Point.h"
 #include "../src/Zoo/Cell/Road.h"
@@ -12,18 +8,18 @@ protected:
 };
 
 TEST_F(RoadTest, RoadTestConstructor) {
-  Point P(2,2);
-  Road R(P,true,true,true);
-  ASSERT_EQ(R.GetPosition().GetC(),P.GetC());
-  ASSERT_EQ(R.GetPosition().GetR(),P.GetR());
+  Point P(2, 2);
+  Road R(P, true, true, true);
+  ASSERT_EQ(R.GetPosition().GetC(), P.GetC());
+  ASSERT_EQ(R.GetPosition().GetR(), P.GetR());
   ASSERT_TRUE(R.IsAccessible());
   ASSERT_TRUE(R.IsExit());
   ASSERT_TRUE(R.IsEntrance());
 }
 
 TEST_F(RoadTest, RoadTestMethod) {
-  Point P(2,2);
-  Road R(P,true,true,true);
+  Point P(2, 2);
+  Road R(P, true, true, true);
   ASSERT_TRUE(R.IsEntrance());
   ASSERT_TRUE(R.IsExit());
   ASSERT_TRUE(R.IsAccessible());
@@ -32,6 +28,6 @@ TEST_F(RoadTest, RoadTestMethod) {
   ASSERT_FALSE(R.IsEntrance());
   ASSERT_FALSE(R.IsExit());
   char ch = R.Render();
-  ASSERT_EQ('.',ch);
+  ASSERT_EQ('.', ch);
 }
 

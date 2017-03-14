@@ -1,7 +1,3 @@
-//
-// Created by aegis on 14/03/17.
-//
-
 #include <gtest/gtest.h>
 #include "../src/Controller.h"
 
@@ -11,7 +7,7 @@ protected:
 };
 
 TEST_F(ControllerTest, ControllerTestConstructorWithParameter) {
-  Zoo Z(20,20);
-  Controller C(&Z,true);
-  ASSERT_TRUE(&C != NULL );
+  Zoo Z(20, 20);
+  Controller C(&Z, true);
+  ASSERT_TRUE(&C != NULL);
 }
