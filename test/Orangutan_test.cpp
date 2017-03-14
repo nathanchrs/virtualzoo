@@ -1,7 +1,3 @@
-//
-// Created by aegis on 12/03/17.
-//
-
 #include "gtest/gtest.h"
 #include "../src/Zoo/Animal/Mammals/Orangutan/Orangutan.h"
 

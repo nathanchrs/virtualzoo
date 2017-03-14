@@ -2,7 +2,6 @@
 #define VIRTUALZOO_ARRAY_H
 
 #include <stdexcept>
-#include <functional>
 
 template <typename T>
 class Array {

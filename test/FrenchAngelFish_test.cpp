@@ -1,7 +1,3 @@
-//
-// Created by alvin on 13/03/17.
-//
-
 #include "gtest/gtest.h"
 #include "../src/Zoo/Animal/Pisces/FrenchAngelFish/FrenchAngelFish.h"
 

@@ -1,7 +1,3 @@
-//
-// Created by alvin on 12/03/17.
-//
-
 #include "gtest/gtest.h"
 #include "../src/Zoo/Animal/Aves/Eagle/Eagle.h"
 

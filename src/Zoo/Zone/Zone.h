@@ -23,6 +23,10 @@ public:
         Zone::name = name;
     }
 
+    const Array<Cell *> &getCells() const {
+        return cells;
+    }
+
     int size() const { return cells.size(); }
 
     virtual Zone* clone() const {

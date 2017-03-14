@@ -1,7 +1,3 @@
-//
-// Created by aegis on 12/03/17.
-//
-
 #include "gtest/gtest.h"
 #include "../src/Zoo/Animal/Reptile/Chameleon/Chameleon.h"
 
