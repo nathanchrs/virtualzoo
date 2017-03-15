@@ -70,15 +70,20 @@ public:
     return Point(r - rhs.r, c - rhs.c);
   }
 
-  /**
-   * @brief Operator==.
-   * @param rhs Point yang akan dibandingkan dengan point ini.
-   * @return Mengembalikan true jika point ini dengan point rhs bernilai sama.
-   */
+  /** @brief Operator==.
+    * @details Memeriksa kesamaan point ini dengan point rhs.
+    * @param rhs Point yang akan dibandingkan dengan point ini.
+    * @return Mengembalikan true jika point ini dengan point rhs bernilai sama.
+    */
   bool operator==(const Point &rhs) const {
     return r == rhs.r && c== rhs.c;
   }
 
+  /** @brief Operator!=.
+    * @details Memeriksa ketidakkesamaan point ini dengan point rhs.
+    * @param rhs Point yang akan dibandingkan dengan point ini.
+    * @return Mengembalikan true jika point ini dengan point rhs tidak sama.
+    */
   bool operator!=(const Point &rhs) const {
     return !(rhs == *this);
   }

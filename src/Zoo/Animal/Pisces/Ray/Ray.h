@@ -12,7 +12,11 @@
 class Ray : public Pisces, public Carnivore {
 public:
   /** @brief Constructor.
-    * Menciptakan ikan pari.
+    * @details Menciptakan seekor ikan pari dengan posisi, berat,
+    * dan kelakuan (buas atau jinak) yang ditentukan.
+    * @param pos Posisi ikan pari.
+    * @param weight berat ikan pari.
+    * @param wild Kelakuan ikan pari.
     */
   Ray(const Point &pos, int weight, bool wild);
 
@@ -21,8 +25,8 @@ public:
     */
   string Interact() const;
 
-  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-    * @return Pointer ke objek yang baru dibuat.
+  /** @brief Mengembalikan pointer ke objek ikan pari baru yang dibuat secara dinamis.
+    * @return Pointer ke objek ikan pari yang baru dibuat.
     */
   Animal *Clone() const {
     return new Ray(*this);

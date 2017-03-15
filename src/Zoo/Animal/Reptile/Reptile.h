@@ -12,7 +12,7 @@ class Reptile : public virtual Animal {
 public:
   /** @brief Constructor.
     * Menciptakan Reptil yang memiliki skinType "Scales" dan reproduction "Ovipar".
-    * @param name Nama hewan
+    * @param name Nama hewan.
     */
   Reptile(const string &name);
 };

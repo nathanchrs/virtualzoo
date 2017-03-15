@@ -12,7 +12,11 @@
 class Lionfish : public Pisces, public Carnivore {
 public:
   /** @brief Constructor.
-    * Menciptakan lionfish.
+    * @details Menciptakan seekor lionfish dengan posisi, berat,
+    * dan kelakuan (buas atau jinak) yang ditentukan.
+    * @param pos Posisi lionfish.
+    * @param weight berat lionfish.
+    * @param wild Kelakuan lionfish.
     */
   Lionfish(const Point &pos, int weight, bool wild);
 
@@ -21,8 +25,8 @@ public:
     */
   string Interact() const;
 
-  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-    * @return Pointer ke objek yang baru dibuat.
+  /** @brief Mengembalikan pointer ke objek lionfish baru yang dibuat secara dinamis.
+    * @return Pointer ke objek lionfish yang baru dibuat.
     */
   Animal *Clone() const {
     return new Lionfish(*this);

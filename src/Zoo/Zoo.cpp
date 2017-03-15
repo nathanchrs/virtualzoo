@@ -2,7 +2,6 @@
 
 #include "Zoo.h"
 #include "Cell/Road.h"
-#include "Cell/Habitat.h"
 #include "Cell/Park.h"
 #include "Cell/Restaurant.h"
 #include "Animal/Aves/Eagle/Eagle.h"

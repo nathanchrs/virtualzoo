@@ -12,31 +12,28 @@
 class Habitat : public Cell {
 public:
 
-  /**
-   * @enum HabitatType
-   * Jenis-jenis habitat yang ada.
-   */
+  /** @enum HabitatType
+    * Jenis-jenis habitat yang ada.
+    */
   enum HabitatType { AirHabitat, LandHabitat, WaterHabitat };
 
   /** @brief Constructor.
-    * Menciptakan sebuah Habitat dengan jenis tertentu.
+    * @details Menciptakan sebuah Habitat dengan jenis tertentu pada posisii tertentu.
     * @param position Posisi sel habitat.
     * @param type Jenis dari habitat.
     */
   Habitat(Point position, HabitatType type) : Cell(position), type(type) {}
 
-  /**
-   * @brief Mengembalikan jenis habitat.
-   * @return Jenis habitat.
-   */
+  /** @brief Mengembalikan jenis habitat.
+    * @return Jenis habitat.
+    */
   HabitatType GetType() const {
     return type;
   }
 
-  /**
-   * @brief Mengembalikan representasi teks habitat.
-   * @return Sebuah char yang merupakan representasi teks habitat.
-   */
+  /** @brief Mengembalikan representasi teks habitat.
+    * @return Sebuah char yang merupakan representasi teks habitat.
+    */
   char Render() const {
     switch (type) {
       case AirHabitat:
@@ -49,8 +46,8 @@ public:
   }
 
   /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-   * @return Pointer ke objek yang baru dibuat.
-   */
+    * @return Pointer ke objek yang baru dibuat.
+    */
   Cell *Clone() const {
     return new Habitat(*this);
   };

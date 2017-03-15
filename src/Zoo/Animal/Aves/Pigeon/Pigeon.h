@@ -11,19 +11,26 @@
   */
 class Pigeon : public Aves, public Herbivore {
 public:
-    /** @brief Constructor.
-     * Menciptakan burung merpati.
-     */
-    Pigeon(const Point& pos, int weight, bool wild);
+  /** @brief Constructor.
+    * @details Menciptakan seekor burung merpati dengan posisi, berat,
+    * dan kelakuan (buas atau jinak) yang ditentukan.
+    * @param pos Posisi burung merpati.
+    * @param weight berat burung merpati.
+    * @param wild Kelakuan burung merpati.
+    */
+  Pigeon(const Point& pos, int weight, bool wild);
 
-    /** @brief Melakukan interaksi dengan burung merpati.
-      * @return Experience yang dirasakan ketika berinteraksi dengan burung merpati.
-      */
-    string Interact() const;
+  /** @brief Melakukan interaksi dengan burung merpati.
+    * @return Experience yang dirasakan ketika berinteraksi dengan burung merpati.
+    */
+  string Interact() const;
 
-    Animal* Clone() const {
-        return new Pigeon(*this);
-    };
+  /** @brief Mengembalikan pointer ke objek burung merpati baru yang dibuat secara dinamis.
+    * @return Pointer ke objek burung merpati yang baru dibuat.
+    */
+  Animal* Clone() const {
+    return new Pigeon(*this);
+  };
 };
 
 #endif //PIGEON_H

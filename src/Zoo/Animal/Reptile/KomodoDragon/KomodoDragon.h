@@ -12,7 +12,11 @@
 class KomodoDragon : public Reptile, public Carnivore {
 public:
   /** @brief Constructor.
-    * Menciptakan komodo.
+    * @details Menciptakan seekor komodo dengan posisi, berat,
+    * dan kelakuan (buas atau jinak) yang ditentukan.
+    * @param pos Posisi komodo.
+    * @param weight berat komodo.
+    * @param wild Kelakuan komodo.
     */
   KomodoDragon(const Point &pos, int weight, bool wild);
 
@@ -21,8 +25,8 @@ public:
     */
   string Interact() const;
 
-  /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.
-    * @return Pointer ke objek yang baru dibuat.
+  /** @brief Mengembalikan pointer ke objek komodo baru yang dibuat secara dinamis.
+    * @return Pointer ke objek komodo yang baru dibuat.
     */
   Animal *Clone() const {
     return new KomodoDragon(*this);
