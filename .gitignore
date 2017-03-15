@@ -43,6 +43,14 @@ bin/*
 !bin/zoo.in
 cmake-build-debug
 
+# Test cases
+!1.in
+!1.out
+!2.in
+!2.out
+!3.in
+!3.out
+
 # Doxygen output
 docs/*
 !docs/.gitkeep
