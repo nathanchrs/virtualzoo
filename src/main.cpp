@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include "Zoo/Zoo.h"
-#include "Controller.h"
+#include "zoo/zoo.h"
+#include "controller.h"
 
 using namespace std;
 
