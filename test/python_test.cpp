@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Reptile/Python/Python.h"
+#include "../src/zoo/animal/reptile/python/python.h"
 
 class PythonTest : public ::testing::Test {
 protected:

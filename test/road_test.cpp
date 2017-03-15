@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../src/Renderer/Point.h"
-#include "../src/Zoo/Cell/Road.h"
+#include "../src/renderer/point.h"
+#include "../src/zoo/cell/road.h"
 
 class RoadTest : public ::testing::Test {
 protected:

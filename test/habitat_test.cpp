@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Cell/Habitat.h"
+#include "../src/zoo/cell/habitat.h"
 
 class HabitatTest : public ::testing::Test {
 protected:

@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Mammals/Leopard/Leopard.h"
+#include "../src/zoo/animal/mammals/leopard/leopard.h"
 
 class LeopardTest : public ::testing::Test {
 protected:

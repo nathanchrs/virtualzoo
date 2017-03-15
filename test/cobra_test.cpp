@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Reptile/Cobra/Cobra.h"
+#include "../src/zoo/animal/reptile/cobra/cobra.h"
 
 class CobraTest : public ::testing::Test {
 protected:

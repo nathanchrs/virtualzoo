@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Aves/Peacock/Peacock.h"
+#include "../src/zoo/animal/aves/peacock/peacock.h"
 
 class PeacockTest : public ::testing::Test {
 protected:

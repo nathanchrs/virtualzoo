@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../src/Zoo/Zone/Zone.h"
-#include "../src/Zoo/Cell/Park.h"
+#include "../src/zoo/zone/zone.h"
+#include "../src/zoo/cell/park.h"
 
 class ZoneTest : public ::testing::Test {
 protected:

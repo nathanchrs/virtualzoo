@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Cell/Restaurant.h"
+#include "../src/zoo/cell/restaurant.h"
 
 class RestaurantTest : public ::testing::Test {
 protected:

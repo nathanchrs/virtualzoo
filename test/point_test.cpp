@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/Renderer/Point.h"
+#include "../src/renderer/point.h"
 
 class PointTest : public ::testing::Test {
 protected:

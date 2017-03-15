@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Pisces/Barracuda/Barracuda.h"
+#include "../src/zoo/animal/pisces/barracuda/barracuda.h"
 
 class BarracudaTest : public ::testing::Test {
 protected:

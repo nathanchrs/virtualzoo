@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../src/Zoo/Zone/Cage.h"
-#include "../src/Zoo/Animal/Mammals/Gorilla/Gorilla.h"
+#include "../src/zoo/zone/cage.h"
+#include "../src/zoo/animal/mammals/gorilla/gorilla.h"
 
 class CageTest : public ::testing::Test {
 protected:

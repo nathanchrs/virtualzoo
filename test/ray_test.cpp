@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Pisces/Ray/Ray.h"
+#include "../src/zoo/animal/pisces/ray/ray.h"
 
 class RayTest : public ::testing::Test {
 protected:

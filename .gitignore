@@ -36,8 +36,8 @@ desktop.ini
 .DS_store
 
 # Build output
-./main
-./virtualzoo_test
+main
+virtualzoo_test
 bin/*
 !bin/.gitkeep
 !bin/zoo.in

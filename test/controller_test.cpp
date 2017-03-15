@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/Controller.h"
+#include "../src/controller.h"
 
 class ControllerTest : public ::testing::Test {
 protected:

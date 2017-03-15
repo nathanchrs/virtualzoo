@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/Renderer/ConsoleRenderer/FrameBuffer.h"
+#include "../src/renderer/console_renderer/frame_buffer.h"
 
 class FrameBufferTest : public ::testing::Test {
 protected:

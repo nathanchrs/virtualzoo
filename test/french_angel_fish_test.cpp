@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Pisces/FrenchAngelFish/FrenchAngelFish.h"
+#include "../src/zoo/animal/pisces/french_angel_fish/french_angel_fish.h"
 
 class FrenchAngelFishTest : public ::testing::Test {
 protected:

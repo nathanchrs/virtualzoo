@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Reptile/KomodoDragon/KomodoDragon.h"
+#include "../src/zoo/animal/reptile/komodo_dragon/komodo_dragon.h"
 
 class KomodoDragonTest : public ::testing::Test {
 protected:

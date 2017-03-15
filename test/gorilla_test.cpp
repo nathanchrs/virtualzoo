@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Mammals/Gorilla/Gorilla.h"
+#include "../src/zoo/animal/mammals/gorilla/gorilla.h"
 
 class GorillaTest : public ::testing::Test {
 protected:

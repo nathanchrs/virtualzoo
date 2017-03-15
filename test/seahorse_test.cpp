@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Zoo/Animal/Pisces/Seahorse/Seahorse.h"
+#include "../src/zoo/animal/pisces/seahorse/seahorse.h"
 
 class SeahorseTest : public ::testing::Test {
 protected:
