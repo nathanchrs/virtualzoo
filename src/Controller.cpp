@@ -49,45 +49,53 @@ void Controller::DisplayZoo() {
 }
 
 void Controller::TourZoo() {
-  Array<Cell*> entrances;
-  Array<Cell*> arr = zoo -> GetCells();
-  int isaccesible[zoo -> GetRows()][zoo -> GetCols()] = {{0}};
+  Array<Cell *> entrances;
+  Array<Cell *> arr = zoo->GetCells();
+  int is_accessible[zoo->GetRows()][zoo->GetCols()];
+  for (int i = 0; i < zoo->GetRows(); i++) {
+    for (int j = 0; j < zoo->GetCols(); j++) {
+      is_accessible[i][j] = 0;
+    }
+  }
 
   for (int i = 0; i < arr.Size(); i++) {
-    if (arr[i] -> IsAccessible() ) {
-      Road* path = dynamic_cast<Road*> (arr[i]);
-      isaccesible[path -> GetPosition().GetR()][path -> GetPosition().GetC()] = 1;
-      if (path -> IsEntrance()) {
-        entrances.PushBack(arr[i] -> Clone());
-      } else if (path -> IsExit()) {
-        isaccesible[path -> GetPosition().GetR()][path -> GetPosition().GetC()] = 2;
+    if (arr[i]->IsAccessible()) {
+      Road *path = dynamic_cast<Road *> (arr[i]);
+      is_accessible[path->GetPosition().GetR()][path->GetPosition().GetC()] = 1;
+      if (path->IsEntrance()) {
+        entrances.PushBack(arr[i]->Clone());
+      } else if (path->IsExit()) {
+        is_accessible[path->GetPosition().GetR()][path->GetPosition().GetC()] = 2;
       }
     }
   }
 
   srand((unsigned int) time(NULL));
   int nentrance = rand() % entrances.Size();
-  Point start = entrances[nentrance] -> GetPosition();
+  Point start = entrances[nentrance]->GetPosition();
   bool pathexist;
   int cdirection;
   bool direction[4];
   do {
     pathexist = false;
-    memset(direction,false,4);
-    cout << "Current Position : " << start.GetR() << " " << start.GetC() << endl;
-    cout << (zoo -> ListNeighboringInteractions(start));
+    memset(direction, false, 4);
+    cout << "Current Position : " << start.GetR() << " " << start.GetC()
+         << endl;
+    cout << (zoo->ListNeighboringInteractions(start));
     cdirection = rand() % 4;
-    isaccesible[start.GetR()][start.GetC()] = 0;
-    if (start.GetR() + 1 < zoo->GetRows() && isaccesible[start.GetR()+1][start.GetC()]) {
+    is_accessible[start.GetR()][start.GetC()] = 0;
+    if (start.GetR() + 1 < zoo->GetRows() &&
+        is_accessible[start.GetR() + 1][start.GetC()]) {
       direction[2] = true;
     }
-    if (start.GetR() - 1 >= 0 && isaccesible[start.GetR()-1][start.GetC()]) {
+    if (start.GetR() - 1 >= 0 && is_accessible[start.GetR() - 1][start.GetC()]) {
       direction[0] = true;
     }
-    if (start.GetC() - 1 >= 0 && isaccesible[start.GetR()][start.GetC()-1]) {
+    if (start.GetC() - 1 >= 0 && is_accessible[start.GetR()][start.GetC() - 1]) {
       direction[3] = true;
     }
-    if (start.GetC() + 1 < zoo->GetCols() && isaccesible[start.GetR()][start.GetC()+1]) {
+    if (start.GetC() + 1 < zoo->GetCols() &&
+        is_accessible[start.GetR()][start.GetC() + 1]) {
       direction[1] = true;
     }
     for (int i = 0; i < 4; i++) {
@@ -99,21 +107,21 @@ void Controller::TourZoo() {
       } while (!direction[cdirection]);
       switch (cdirection) {
         case 0:
-          start = start + Point(-1,0);
+          start = start + Point(-1, 0);
           break;
         case 1:
-          start = start + Point(0,1);
+          start = start + Point(0, 1);
           break;
         case 2:
-          start = start + Point(1,0);
+          start = start + Point(1, 0);
           break;
         case 3:
-          start = start + Point(0,-1);
+          start = start + Point(0, -1);
           break;
       }
     }
-   sleep(1);
-  } while (pathexist && isaccesible[start.GetR()][start.GetC()] != 2);
+    sleep(1);
+  } while (pathexist && is_accessible[start.GetR()][start.GetC()] != 2);
 
   cout << "Input [back] to return to menu: ";
   string input;

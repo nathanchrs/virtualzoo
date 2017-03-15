@@ -6,9 +6,22 @@
 
 using namespace std;
 
+inline int GetMax(int a, int b) {
+  return a > b ? a : b;
+}
+
+inline int GetMin(int a, int b) {
+  return a < b ? a : b;
+}
+
 void
 BasicConsoleRenderer::Render(const Zoo &zoo, Point top_left, Point bottom_right,
                              bool use_color) {
+
+  top_left = Point(GetMax(top_left.GetR(), 0), GetMax(top_left.GetC(), 0));
+  bottom_right = Point(GetMin(bottom_right.GetR(), zoo.GetRows() - 1),
+                       GetMin(bottom_right.GetC(), zoo.GetCols() - 1g));
+
   const Point grid_offset = Point(3, 3);
   const int rows = bottom_right.GetR() - top_left.GetR() + 1;
   const int cols = bottom_right.GetC() - top_left.GetC() + 1;
