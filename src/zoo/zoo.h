@@ -138,10 +138,10 @@ private:
     return p.GetR() * cols + p.GetC();
   }
 
-  Array<Cell*> cells;
-  Array<Zone*> zones;
   int rows;
   int cols;
+  Array<Cell*> cells;
+  Array<Zone*> zones;
 };
 
 #endif //ZOO_H

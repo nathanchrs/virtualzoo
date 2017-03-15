@@ -45,8 +45,8 @@ public:
   virtual Cell *Clone() const = 0;
 
 private:
-  bool accessible;
   Point position;
+  bool accessible;
 };
 
 #endif //CELL_H

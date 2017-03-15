@@ -36,6 +36,8 @@ desktop.ini
 .DS_store
 
 # Build output
+./main
+./virtualzoo_test
 bin/*
 !bin/.gitkeep
 !bin/zoo.in
@@ -50,7 +52,7 @@ CMakeCache.txt
 CMakeFiles
 CMakeScripts
 Testing
-Makefile
+!Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json

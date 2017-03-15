@@ -218,6 +218,7 @@ Zone *Zoo::FindZone(string zoneName) const {
       return zones[i];
     }
   }
+  return nullptr;
 }
 
 const Array<Cell *> &Zoo::GetCells() const {

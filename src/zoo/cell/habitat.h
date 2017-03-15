@@ -43,6 +43,7 @@ public:
       case WaterHabitat:
         return 'w';
     }
+    return ' ';
   }
 
   /** @brief Mengembalikan pointer ke objek baru yang dibuat secara dinamis.

@@ -101,7 +101,7 @@ void FrameBuffer::DrawTextBox(const Point &top_left, const Point &bottom_right,
       for (int c = top_left.GetC(); c <= bottom_right.GetC() && !done; c++) {
         if (str[it] == '\n') {
           it++;
-          if (it >= str.size()) done = true;
+          if (it >= (int) str.size()) done = true;
           break;
         }
         Point p = Point(r, c);
@@ -111,7 +111,7 @@ void FrameBuffer::DrawTextBox(const Point &top_left, const Point &bottom_right,
           if (bg_color != TRANSPARENT) bg_colors[idx(p)] = bg_color;
         }
         it++;
-        if (it >= str.size()) done = true;
+        if (it >= (int) str.size()) done = true;
       }
     }
   }

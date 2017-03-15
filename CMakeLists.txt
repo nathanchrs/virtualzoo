@@ -92,7 +92,8 @@ SET(SOURCE_FILES
         src/zoo/zoo.h
 
         src/controller.cpp
-        src/controller.h) # Add new source files here
+        src/controller.h
+    ) # Add new source files here
 add_executable(main src/main.cpp ${SOURCE_FILES})
 
 # Load Google Test settings

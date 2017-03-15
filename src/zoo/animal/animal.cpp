@@ -11,6 +11,7 @@ bool Animal::IsValidHabitat(Habitat::HabitatType habitat_type) const {
     case Habitat::WaterHabitat:
       return water_animal;
   }
+  return false;
 }
 
 void Animal::AddPrey(const string &prey_name) {

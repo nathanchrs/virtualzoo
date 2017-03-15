@@ -13,12 +13,16 @@ An object-oriented virtual zoo program written in C++.
 Prerequisites: CMake 2.8+, Google Test, GCC/CLang with C++11 support
 Recommended IDE: CLion
 
-### Manual
+### Manual using CMake
 
 1. `cd bin`
 2. `cmake ..`
 3. `make`
-The generated executable is `bin/virtualzoo`
+The generated executable is `bin/main`.
 
-### Using CLion
+## Manual using Makefile
+
+Run `make`. The generated executable is `main`.
+
+### Using CLion (recommended)
 Simply build `virtualzoo` target.
