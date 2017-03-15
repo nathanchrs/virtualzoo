@@ -1,3 +1,5 @@
+//Author : Agus
+
 #include "Leopard.h"
 
 Leopard::Leopard(const Point &pos, int weight, bool wild) : Mammals("Leopard"),

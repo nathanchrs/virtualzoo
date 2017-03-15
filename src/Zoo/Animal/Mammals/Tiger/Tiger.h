@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #ifndef TIGER_H
 #define TIGER_H
 

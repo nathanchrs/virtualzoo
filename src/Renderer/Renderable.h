@@ -1,3 +1,6 @@
+//Author : Jonathan
+//Implementor : Jordhy
+
 #ifndef RENDERABLE_H
 #define RENDERABLE_H
 

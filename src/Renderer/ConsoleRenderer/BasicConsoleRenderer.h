@@ -1,3 +1,5 @@
+//Author : Jonathan
+
 #ifndef BASICCONSOLERENDERER_H
 #define BASICCONSOLERENDERER_H
 

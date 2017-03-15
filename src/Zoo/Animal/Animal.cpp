@@ -1,3 +1,5 @@
+//Author : Agus, Alvin
+
 #include "Animal.h"
 
 bool Animal::IsValidHabitat(Habitat::HabitatType habitat_type) const {

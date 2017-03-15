@@ -1,3 +1,5 @@
+//Author : Jordhy
+
 #include <iostream>
 #include "Controller.h"
 #include "Renderer/ConsoleRenderer/BasicConsoleRenderer.h"

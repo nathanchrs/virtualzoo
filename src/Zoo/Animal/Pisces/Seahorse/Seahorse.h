@@ -1,3 +1,5 @@
+//Author : Agus
+
 #ifndef SEAHORSE_H
 #define SEAHORSE_H
 

@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Ray.h"
 
 Ray::Ray(const Point &pos, int weight, bool wild) : Pisces("Ray"),

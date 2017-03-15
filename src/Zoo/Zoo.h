@@ -1,3 +1,5 @@
+//Author : Jordhy
+
 #ifndef ZOO_H
 #define ZOO_H
 

@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Owl.h"
 
 Owl::Owl(const Point& pos, int weight, bool wild) : Aves("Owl"),

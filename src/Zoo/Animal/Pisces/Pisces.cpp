@@ -1,3 +1,5 @@
+//Author : Agus, Alvin
+
 #include "Pisces.h"
 
 /** @brief Constructor.

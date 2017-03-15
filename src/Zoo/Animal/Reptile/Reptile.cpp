@@ -1,3 +1,5 @@
+//Author : Agus, Alvin
+
 #include "Reptile.h"
 
 /** @brief Constructor.

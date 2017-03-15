@@ -1,3 +1,5 @@
+//Author : Jordhy
+
 #include "FrameBuffer.h"
 
 #ifdef _WIN32

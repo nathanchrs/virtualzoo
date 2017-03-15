@@ -1,3 +1,5 @@
+//Author : Jordhy
+
 #ifndef MAMMALS_H
 #define MAMMALS_H
 

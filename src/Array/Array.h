@@ -1,3 +1,6 @@
+//Author : Jonathan
+//Implementor : Jordhy
+
 #ifndef ARRAY_H
 #define ARRAY_H
 

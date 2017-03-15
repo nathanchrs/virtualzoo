@@ -1,3 +1,6 @@
+//Author : Jordhy
+//Implementor : Alvin
+
 #ifndef DIET_H
 #define DIET_H
 

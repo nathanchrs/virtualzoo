@@ -1,3 +1,6 @@
+//Author : Jonathan
+//Implementor : Jordhy
+
 #ifndef VIRTUALZOO_ZONE_H
 #define VIRTUALZOO_ZONE_H
 

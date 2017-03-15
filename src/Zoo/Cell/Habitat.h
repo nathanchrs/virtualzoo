@@ -1,3 +1,6 @@
+//Author : Jordhy
+//Implementor : Agus
+
 #ifndef HABITAT_H
 #define HABITAT_H
 

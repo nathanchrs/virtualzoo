@@ -1,3 +1,5 @@
+//Author : Agus
+
 #include "KomodoDragon.h"
 
 KomodoDragon::KomodoDragon(const Point &pos, int weight, bool wild) : Reptile(

@@ -1,3 +1,5 @@
+//Author : Agus
+
 #include "Chameleon.h"
 
 Chameleon::Chameleon(const Point &pos, int weight, bool wild) : Reptile(

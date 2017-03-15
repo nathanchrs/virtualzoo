@@ -1,3 +1,5 @@
+//Author : Jordhy
+
 #ifndef OMNIVORE_H
 #define OMNIVORE_H
 

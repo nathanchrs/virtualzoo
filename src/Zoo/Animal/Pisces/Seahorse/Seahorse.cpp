@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Seahorse.h"
 
 Seahorse::Seahorse(const Point &pos, int weight, bool wild) : Pisces(

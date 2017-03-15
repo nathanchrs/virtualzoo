@@ -1,3 +1,5 @@
+//Author : Jordhy
+
 #include "BasicConsoleRenderer.h"
 #include "FrameBuffer.h"
 #include <iostream>

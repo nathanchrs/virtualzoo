@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Peacock.h"
 
 Peacock::Peacock(const Point &pos, int weight, bool wild) : Aves("Peacock"),

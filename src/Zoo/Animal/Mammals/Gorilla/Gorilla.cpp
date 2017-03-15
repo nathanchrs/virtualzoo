@@ -1,3 +1,5 @@
+//Author : Agus
+
 #include "Gorilla.h"
 
 Gorilla::Gorilla(const Point &pos, int weight, bool wild) : Mammals("Gorilla"),

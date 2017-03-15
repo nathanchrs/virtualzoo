@@ -1,3 +1,5 @@
+//Author : Agus
+
 #include "Orangutan.h"
 
 Orangutan::Orangutan(const Point &pos, int weight, bool wild) : Mammals(

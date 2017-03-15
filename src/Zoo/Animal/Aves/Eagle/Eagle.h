@@ -1,3 +1,5 @@
+//Author : Agus
+
 #ifndef EAGLE_H
 #define EAGLE_H
 

@@ -1,3 +1,5 @@
+//Author : Agus, Alvin
+
 #include "Mammals.h"
 
 /** @brief Constructor.

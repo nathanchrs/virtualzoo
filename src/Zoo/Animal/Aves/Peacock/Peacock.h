@@ -1,3 +1,5 @@
+//Author : Agus
+
 #ifndef PEACOCK_H
 #define PEACOCK_H
 

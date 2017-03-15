@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Herbivore.h"
 
 Herbivore::Herbivore(int weight, double ratio) : Diet(weight, ratio) {}

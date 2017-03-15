@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Pigeon.h"
 
 Pigeon::Pigeon(const Point &pos, int weight, bool wild) : Aves("Pigeon"),

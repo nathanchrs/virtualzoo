@@ -1,3 +1,5 @@
+//Author : Agus
+
 #ifndef PARROT_H
 #define PARROT_H
 

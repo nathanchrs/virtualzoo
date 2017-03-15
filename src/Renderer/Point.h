@@ -1,3 +1,6 @@
+//Author : Jonathan
+//Implementor : Jordhy
+
 #ifndef POINT_H
 #define POINT_H
 

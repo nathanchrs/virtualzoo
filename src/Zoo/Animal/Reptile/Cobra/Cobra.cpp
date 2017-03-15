@@ -1,3 +1,5 @@
+//Author : Agus
+
 #include "Cobra.h"
 
 Cobra::Cobra(const Point &pos, int weight, bool wild) : Reptile("Cobra"),

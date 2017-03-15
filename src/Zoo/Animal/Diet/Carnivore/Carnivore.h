@@ -1,3 +1,5 @@
+//Author : Jordhy
+
 #ifndef CARNIVORE_H
 #define CARNIVORE_H
 

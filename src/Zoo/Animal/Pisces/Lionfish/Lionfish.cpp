@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Lionfish.h"
 
 Lionfish::Lionfish(const Point &pos, int weight, bool wild) : Pisces(

@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "FrenchAngelFish.h"
 
 FrenchAngelFish::FrenchAngelFish(const Point &pos, int weight, bool wild)

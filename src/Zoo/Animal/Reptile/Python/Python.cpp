@@ -1,3 +1,5 @@
+//Author : Agus
+
 #include "Python.h"
 
 Python::Python(const Point &pos, int weight, bool wild) : Reptile("Python"),

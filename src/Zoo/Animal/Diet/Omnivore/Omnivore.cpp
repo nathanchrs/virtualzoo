@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Omnivore.h"
 
 Omnivore::Omnivore(int weight, double ratio) : Diet(weight, ratio) {}

@@ -1,3 +1,5 @@
+//Author : Jordhy
+
 #ifndef HERBIVORE_H
 #define HERBIVORE_H
 

@@ -1,3 +1,6 @@
+//Author : Jonathan
+//Implementor : Jordhy
+
 #ifndef CAGE_H
 #define CAGE_H
 

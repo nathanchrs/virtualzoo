@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Barracuda.h"
 
 Barracuda::Barracuda(const Point &pos, int weight, bool wild) : Pisces(

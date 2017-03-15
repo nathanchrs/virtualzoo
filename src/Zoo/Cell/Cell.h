@@ -1,3 +1,6 @@
+//Author : Jordhy
+//Implementor : Agus
+
 #ifndef CELL_H
 #define CELL_H
 

@@ -1,3 +1,6 @@
+//Author : Jonathan
+//Implementor : Jordhy
+
 #ifndef RENDERER_H
 #define RENDERER_H
 

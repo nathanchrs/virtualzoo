@@ -1,3 +1,5 @@
+//Author : Agus
+
 #include "Iguana.h"
 
 Iguana::Iguana(const Point &pos, int weight, bool wild) : Reptile("Iguana"),

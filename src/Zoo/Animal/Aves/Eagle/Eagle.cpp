@@ -1,3 +1,5 @@
+//Author : Alvin
+
 #include "Eagle.h"
 
 Eagle::Eagle(const Point &pos, int weight, bool wild) : Aves("Eagle"),
