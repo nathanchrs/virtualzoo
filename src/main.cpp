@@ -2,10 +2,14 @@
 #include <fstream>
 #include "zoo/zoo.h"
 #include "controller.h"
+#include "stdlib.h"
 
 using namespace std;
 
 int main(int argc, char **argv) {
+
+  // Seed random generator with constant value to facilitate testing. DEBUG
+  srand(123);
 
   // Process command-line arguments
   bool use_color = false;
@@ -18,7 +22,7 @@ int main(int argc, char **argv) {
 
   // Read zoo from input file
   ifstream fin;
-  fin.open("zoo.in");
+  fin.open("zoo.txt");
   Zoo zoo(fin);
   fin.close();
 

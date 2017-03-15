@@ -5,9 +5,7 @@
 #include "renderer/console_renderer/basic_console_renderer.h"
 #include "zoo/cell/road.h"
 #include "array/array.h"
-#include <ctime>
-#include <cstring>
-
+#include "stdlib.h"
 using namespace std;
 
 void Controller::DisplayMenu() {
@@ -71,7 +69,6 @@ void Controller::TourZoo() {
     }
   }
 
-  srand((unsigned int) time(NULL));
   int n_entrance = rand() % entrances.Size();
   Point start = entrances[n_entrance]->GetPosition();
   bool path_exist;
@@ -79,7 +76,10 @@ void Controller::TourZoo() {
   bool direction[4];
   do {
     path_exist = false;
-    memset(direction, false, 4);
+    direction[0] = false;
+    direction[1] = false;
+    direction[2] = false;
+    direction[3] = false;
     cout << "Current Position : " << start.GetR() << " " << start.GetC()
          << endl;
     cout << (zoo->ListNeighboringInteractions(start));
